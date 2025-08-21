@@ -1,49 +1,62 @@
 <template>
     <div>
-        <section class="need-section bg-black" ref="needSectionEl">
-            <div class="container-fluid container-fluid-custom pt-md-2 pt-lg-5">
-                <div>
-                    <h2 class="h2 mb-0 text-light h2-line pb-3 pb-md-4 pb-lg-0 col-lg-8">
-                        We’re Everything <br />you need.
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-6 col-md-12 col-lg-4 d-none d-md-block d-lg-block"></div>
-
-                    <div v-for="(column, colIndex) in linkColumns" :key="colIndex" :class="column.bootstrapClass">
-                        <a v-for="link in column.links" :key="link.name" :href="link.href"
-                            class="text-decoration-none text-light d-block links cat-btn">
-                            #{{ link.name }}
-                        </a>
+        <!-- We're Everything You Need Section -->
+        <section class="need-section" ref="needSectionEl">
+            <div class="container">
+                <div class="content-wrapper">
+                    <!-- Left Side - Heading and CTA -->
+                    <div class="left-content">
+                        <h2 class="main-heading">
+                            <span class="heading-line-1">We're Everything you</span>
+                            <span class="heading-line-2">need.</span>
+                        </h2>
+                        <div class="cta-wrapper">
+                            <a href="https://www.expandbuzz.com/contact-us/" class="cta-link">
+                                Request a proposal for your product
+                                <span class="bell-icon">🔔</span>
+                            </a>
+                        </div>
                     </div>
 
-                </div>
-                <div class="mt-4">
-                    <a href="https://www.expandbuzz.com/contact-us/" class="text-light cta1">
-                        Request a proposal for your product
-                    </a>
-                    <i class="ri-notification-2-fill bell"></i>
+                    <!-- Right Side - Hash Tags Grid -->
+                    <div class="right-content">
+                        <div class="tags-grid">
+                            <div class="tag-column">
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/food/" class="tag-link">#Food</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/spices/" class="tag-link">#Spices</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/dairy-products/" class="tag-link">#Dairy Products</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/frozen-food" class="tag-link">#Frozen Food</a>
+                            </div>
+                            <div class="tag-column">
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/fmcg/" class="tag-link">#FMCG</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/cosmetics/" class="tag-link">#Cosmetics</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/beverages/" class="tag-link">#Beverages</a>
+                            </div>
+                            <div class="tag-column">
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/tea/" class="tag-link">#Tea & Coffee</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/dry-fruits/" class="tag-link">#Dry Fruits</a>
+                                <a href="https://www.expandbuzz.com/packaging-design-agency/pharma-nutraceuticals" class="tag-link">#Pharma</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="agency-section bg-black pt-0" id="agency-section" ref="agencySectionEl">
-            <div class="container-fluid container-fluid-custom mt-lg-5 pt-lg-0">
-                <div class="text-center text-sm-justify">
-                    <h1 class="h4 text-center text-sm-justify text-light col-lg-8 m-auto home-h4">
-                        INDIA'S LEADING BRANDING & PACKAGING DESIGN AGENCY
+        <!-- India's Leading Agency Section -->
+        <section class="agency-section" ref="agencySectionEl">
+            <div class="container">
+                <div class="agency-content">
+                    <h1 class="agency-heading">
+                        INDIA'S LEADING BRANDING &<br/>
+                        PACKAGING DESIGN AGENCY
                     </h1>
-                    <p class="text-light text-center text-sm-justify col-lg-9 m-auto mt-2">
-                        With an experience of more than 10 prosperous years in the industry,
-                        we are privileged to be one of the prominent branding agencies in
-                        India. We also marked our identity in packaging and digital
-                        segments, becoming a leading
-                        <a href="https://www.expandbuzz.com/packaging-design-agency" class="text-decoration-none">
-                            packaging design agency
-                        </a>
-                        and India's top
-                        <a href="https://www.expandbuzz.com/digital-marketing-agency" class="text-decoration-none">
-                            digital marketing agency </a>.
+                    <p class="agency-description">
+                        With an experience of more than 10 prosperous years in the industry, we are privileged to be one of the prominent branding agencies in 
+                        India. We also marked our identity in packaging and digital segments, becoming a leading 
+                        <a href="https://www.expandbuzz.com/packaging-design-agency" class="inline-link">packaging design agency</a> 
+                        and India's top 
+                        <a href="https://www.expandbuzz.com/digital-marketing-agency" class="inline-link">digital marketing agency</a>.
                     </p>
                 </div>
             </div>
@@ -57,35 +70,6 @@ import { ref, onMounted } from 'vue';
 // Create refs to hold the elements we want to animate
 const needSectionEl = ref(null);
 const agencySectionEl = ref(null);
-
-// Store the link data in an array to keep the template clean
-const linkColumns = ref([
-    {
-        bootstrapClass: 'col-6 col-md-4 col-lg-3',
-        links: [
-            { name: 'Food', href: 'https://www.expandbuzz.com/packaging-design-agency/food/' },
-            { name: 'Spices', href: 'https://www.expandbuzz.com/packaging-design-agency/spices/' },
-            { name: 'Dairy Products', href: 'https://www.expandbuzz.com/packaging-design-agency/dairy-products/' },
-            { name: 'Frozen Food', href: 'https://www.expandbuzz.com/packaging-design-agency/frozen-food' },
-        ]
-    },
-    {
-        bootstrapClass: 'col-6 col-md-4 col-lg-3',
-        links: [
-            { name: 'FMCG', href: 'https://www.expandbuzz.com/packaging-design-agency/fmcg/' },
-            { name: 'Cosmetics', href: 'https://www.expandbuzz.com/packaging-design-agency/cosmetics/' },
-            { name: 'Beverages', href: 'https://www.expandbuzz.com/packaging-design-agency/beverages/' },
-        ]
-    },
-    {
-        bootstrapClass: 'col-6 col-md-4 col-lg-2',
-        links: [
-            { name: 'Tea & Coffee', href: 'https://www.expandbuzz.com/packaging-design-agency/tea/' },
-            { name: 'Dry Fruits', href: 'https://www.expandbuzz.com/packaging-design-agency/dry-fruits/' },
-            { name: 'Pharma', href: 'https://www.expandbuzz.com/packaging-design-agency/pharma-nutraceuticals' },
-        ]
-    }
-]);
 
 // onMounted hook runs after the component's HTML is on the page
 onMounted(() => {
@@ -117,196 +101,333 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* All CSS from your file is placed here and scoped to this component */
-.bg-black {
-    background-color: var(--black);
+/* Root variables */
+:root {
+    --primary-blue: #00A3FF;
+    --text-light: #FFFFFF;
+    --text-gray: #A0A0A0;
+    --bg-black: #000000;
+    --transition: all 0.3s ease;
 }
 
-.text-light {
-    color: var(--white) !important;
-}
-
-.h2 {
-    font-size: 70px;
-    font-weight: 600;
-    line-height: 1.1;
-}
-
-.h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.container-fluid-custom {
+/* Container */
+.container {
     max-width: 1400px;
     margin: 0 auto;
-    /* Centered for consistency */
-    padding: 0 2rem;
-    /* Added padding for smaller screens */
+    padding: 0 40px;
 }
 
+/* We're Everything You Need Section */
 .need-section {
+    background-color: var(--bg-black);
+    padding: 120px 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+}
+
+/* Left Content */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main-heading {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-light);
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.heading-line-1 {
+    display: block;
+    position: relative;
+    padding-top: 25px;
+}
+
+.heading-line-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-blue);
+}
+
+.heading-line-2 {
+    display: block;
+}
+
+/* CTA Wrapper */
+.cta-wrapper {
+    margin-top: 20px;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
     position: relative;
 }
 
-.need-section a {
-    font-size: 16px;
-    transition: var(--transition);
+.cta-link:hover {
+    color: var(--text-light);
+    transform: translateX(5px);
 }
 
-.need-section .row {
-    margin-top: 2rem;
-}
-
-.cat-btn {
-    color: var(--white) !important;
-    background: transparent;
-    text-decoration: none;
-    padding: 0.3rem 0;
-    transition: var(--transition);
-    display: block;
-    font-size: 14px;
-}
-
-.cat-btn:hover {
-    color: var(--primary) !important;
-    transform: scale(1.05);
-    /* Replaced JS hover effect */
-}
-
-.cta1 {
+.bell-icon {
+    font-size: 20px;
     display: inline-block;
-    margin-top: 2rem;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--primary) !important;
-    text-decoration: none;
-    animation-name: glow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transition: var(--transition);
-}
-
-.cta1:hover {
-    color: var(--white) !important;
-    transform: scale(1.05);
-}
-
-.cta1:active {
-    transform: scale(0.95);
-    /* Replaced JS click effect */
-}
-
-.bell {
-    margin-left: 6px;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    font-size: 16px;
-    color: var(--primary);
-    animation: 2s ease-in-out 0.7s infinite ring;
+    animation: ring 2s ease-in-out infinite;
     transform-origin: 50% 4px;
 }
 
-.agency-section {
-    padding: 3rem 0 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+/* Right Content - Tags Grid */
+.right-content {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.agency-section a {
-    color: var(--primary);
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 80px;
+    max-width: 700px;
+}
+
+.tag-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tag-link {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-light);
     text-decoration: none;
     transition: var(--transition);
+    white-space: nowrap;
+    opacity: 0.8;
 }
 
-.agency-section a:hover {
-    color: var(--white);
+.tag-link:hover {
+    color: var(--primary-blue);
+    transform: translateX(5px);
+    opacity: 1;
 }
 
-.agency-section p {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-top: 1rem;
+/* Agency Section */
+.agency-section {
+    background-color: var(--bg-black);
+    padding: 120px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.agency-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.agency-heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-light);
+    margin: 0 0 40px 0;
+    letter-spacing: -1px;
+}
+
+.agency-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.inline-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+}
+
+.inline-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.inline-link:hover {
+    color: var(--text-light);
+}
+
+.inline-link:hover::after {
+    width: 100%;
+    background-color: var(--text-light);
+}
+
+/* Animations */
 @keyframes ring {
-
-    0%,
-    100%,
-    43% {
-        transform: rotateZ(0);
+    0%, 100% {
+        transform: rotate(0deg);
     }
-
-    1%,
-    9% {
-        transform: rotateZ(30deg);
+    10%, 30% {
+        transform: rotate(-10deg);
     }
-
-    11%,
-    3% {
-        transform: rotateZ(-28deg);
-    }
-
-    5% {
-        transform: rotateZ(34deg);
-    }
-
-    7% {
-        transform: rotateZ(-32deg);
-    }
-
-    13% {
-        transform: rotateZ(26deg);
-    }
-
-    15% {
-        transform: rotateZ(-24deg);
-    }
-
-    17% {
-        transform: rotateZ(22deg);
-    }
-
-    19% {
-        transform: rotateZ(-20deg);
-    }
-
-    21% {
-        transform: rotateZ(18deg);
-    }
-
-    23% {
-        transform: rotateZ(-16deg);
-    }
-
-    25% {
-        transform: rotateZ(14deg);
-    }
-
-    27% {
-        transform: rotateZ(-12deg);
+    20%, 40% {
+        transform: rotate(10deg);
     }
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px var(--primary);
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .content-wrapper {
+        gap: 60px;
     }
+    
+    .tags-grid {
+        gap: 40px 60px;
+    }
+}
 
-    100% {
-        text-shadow: 0 0 20px var(--primary), 0 0 30px var(--primary);
+@media (max-width: 992px) {
+    .need-section {
+        padding: 80px 0;
+    }
+    
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .main-heading {
+        font-size: 56px;
+    }
+    
+    .right-content {
+        justify-content: flex-start;
+    }
+    
+    .tags-grid {
+        max-width: 100%;
+    }
+    
+    .agency-section {
+        padding: 80px 0;
+    }
+    
+    .agency-heading {
+        font-size: 36px;
     }
 }
 
 @media (max-width: 768px) {
-    .h2 {
-        font-size: 2.2rem;
+    .container {
+        padding: 0 30px;
     }
+    
+    .need-section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
+    .main-heading {
+        font-size: 42px;
+    }
+    
+    .cta-link {
+        font-size: 16px;
+    }
+    
+    .tags-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 40px;
+    }
+    
+    .tag-link {
+        font-size: 16px;
+    }
+    
+    .agency-section {
+        padding: 60px 0;
+    }
+    
+    .agency-heading {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    
+    .agency-description {
+        font-size: 16px;
+    }
+}
 
-    .h4 {
-        font-size: 1.25rem;
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .main-heading {
+        font-size: 32px;
+    }
+    
+    .heading-line-1::before {
+        width: 40px;
+        height: 3px;
+    }
+    
+    .left-content {
+        gap: 30px;
+    }
+    
+    .cta-link {
+        font-size: 14px;
+    }
+    
+    .tags-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tag-column {
+        gap: 15px;
+    }
+    
+    .tag-link {
+        font-size: 14px;
+    }
+    
+    .agency-heading {
+        font-size: 24px;
+    }
+    
+    .agency-description {
+        font-size: 14px;
+        line-height: 1.7;
     }
 }
 </style>
