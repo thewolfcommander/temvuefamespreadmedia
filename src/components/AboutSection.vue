@@ -784,7 +784,7 @@ const closeLightbox = () => {
 }
 
 .content-section {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
 }
 
 .content-section:last-child {
@@ -796,14 +796,15 @@ const closeLightbox = () => {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-white);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-top: var(--space-2);
   position: relative;
 }
 
 .content-section h3::before {
   content: '';
   position: absolute;
-  bottom: -var(--space-2);
+  bottom: -var(--space-3);
   left: 0;
   width: 40px;
   height: 2px;
@@ -842,19 +843,38 @@ const closeLightbox = () => {
 }
 
 /* Lightbox Transitions */
-.lightbox-enter-active,
-.lightbox-leave-active {
-  transition: all 0.3s ease;
+.lightbox-enter-active {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.lightbox-enter-from,
+.lightbox-leave-active {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.lightbox-enter-from {
+  opacity: 0;
+}
+
 .lightbox-leave-to {
   opacity: 0;
 }
 
-.lightbox-enter-from .lightbox-content,
+.lightbox-enter-from .lightbox-content {
+  transform: scale(0.85) translateY(60px);
+  opacity: 0;
+}
+
 .lightbox-leave-to .lightbox-content {
-  transform: scale(0.9) translateY(50px);
+  transform: scale(0.95) translateY(30px);
+  opacity: 0;
+}
+
+.lightbox-enter-active .lightbox-content {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0.05s;
+}
+
+.lightbox-leave-active .lightbox-content {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Responsive Lightbox */
@@ -920,11 +940,13 @@ const closeLightbox = () => {
   }
   
   .content-section {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
   }
   
   .content-section h3 {
     font-size: var(--font-size-lg);
+    margin-bottom: var(--space-5);
+    padding-top: var(--space-1);
   }
 }
 
