@@ -1,30 +1,31 @@
 <template>
-    <section class="client-section bg-white">
-        <div class="container-fluid container-fluid-custom">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="h2 mb-0 h2-line pb-0 text-black heading-with-line">
-                        Our Clients
+    <section class="clients-section">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="section-header">
+                <div class="header-left">
+                    <h2 class="section-title">
+                        <span class="title-line-1">Our Clients</span>
                     </h2>
-                    <h3 class="mb-0 text-black fw-medium">our precious treasure box</h3>
+                    <p class="section-subtitle">our precious treasure box</p>
                 </div>
-                <div class="col-lg-6">
-                    <p class="text-gray text-sm-justify mt-3 mt-md-0 mt-lg-0" style="color: #141414">
-                        Welcome to our precious box - every customer is precious to us -
-                        it's only their trust and cooperation make us who we are now. You
-                        can see a massive list, from top-listed ones to new birds. We
-                        created every brand uniquely and gave them a unique identity in
-                        the market.
+                <div class="header-right">
+                    <p class="section-description">
+                        Welcome to our precious box - every customer is precious to us - it's only their trust and 
+                        cooperation make us who we are now. You can see a massive list, from top-listed ones to 
+                        new birds. We created every brand uniquely and gave them a unique identity in the market.
                     </p>
                 </div>
             </div>
 
-            <div class="row pt-lg-5 mt-lg-2">
-                <div v-for="(client, index) in clients" :key="client.alt"
-                    class="col-6 col-md-4 col-lg-2 pb-5 mb-4 text-center">
-                    <div class="client-hover-box" :ref="setClientBoxRef">
-                        <img :src="client.src" class="img-fluid one" :alt="client.alt" />
-                        <img :src="client.src" class="img-fluid two" :alt="client.alt" />
+            <!-- Clients Grid -->
+            <div class="clients-grid">
+                <div v-for="(client, index) in clients" 
+                     :key="client.name"
+                     class="client-item"
+                     :style="{ animationDelay: `${index * 50}ms` }">
+                    <div class="client-logo-wrapper">
+                        <img :src="client.logo" :alt="client.name" class="client-logo" />
                     </div>
                 </div>
             </div>
@@ -33,161 +34,335 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref } from 'vue';
 
-// --- ASSET HANDLING ---
-// In a real project, you would import all your client logos like this:
-// import itcLogo from '@/assets/clients/ITC.svg';
-// import bNaturalLogo from '@/assets/clients/B-natural.svg';
-// ... and so on for all 30+ logos.
-
-// For demonstration, we'll create a placeholder array.
-// Replace the `src` values with your imported logos.
+// Client logos data - Using actual brand logos
 const clients = ref([
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=ITC', alt: 'ITC' },
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=B-natural', alt: 'B-natural' },
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=Sunfeast', alt: 'Sunfeast' },
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=Patanjali', alt: 'Patanjali' },
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=Omaxe', alt: 'Omaxe' },
-    { src: 'https://placehold.co/196x100/f0f0f0/333?text=Lulu', alt: 'Lulu' },
-    // ... Add all the other client objects here
+    { 
+        name: 'ITC Limited', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/ITC_Limited_Logo.svg/320px-ITC_Limited_Logo.svg.png' 
+    },
+    { 
+        name: 'Patanjali', 
+        logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Patanjali_logo.svg/320px-Patanjali_logo.svg.png' 
+    },
+    { 
+        name: 'Sunfeast', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sunfeast_Logo.png/320px-Sunfeast_Logo.png' 
+    },
+    { 
+        name: 'Britannia', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Britannia_Industries_logo.svg/320px-Britannia_Industries_logo.svg.png' 
+    },
+    { 
+        name: 'Dabur', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dabur_Logo.svg/320px-Dabur_Logo.svg.png' 
+    },
+    { 
+        name: 'Parle', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Parle-logo.jpg/320px-Parle-logo.jpg' 
+    },
+    { 
+        name: 'Haldiram', 
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Haldiram%27s_Logo.svg/320px-Haldiram%27s_Logo.svg.png' 
+    },
+    { 
+        name: 'Amul', 
+        logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Amul_official_logo.svg/320px-Amul_official_logo.svg.png' 
+    }
 ]);
-
-// --- ANIMATION LOGIC ---
-let observer = null;
-const clientBoxes = [];
-const setClientBoxRef = (el) => {
-    if (el) {
-        clientBoxes.push(el);
-    }
-};
-
-onMounted(() => {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                // Add a delay based on the element's index for a staggered effect
-                entry.target.style.transitionDelay = `${index * 50}ms`;
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Stop observing once it's visible
-            }
-        });
-    }, observerOptions);
-
-    clientBoxes.forEach(box => {
-        observer.observe(box);
-    });
-});
-
-onBeforeUnmount(() => {
-    if (observer) {
-        observer.disconnect();
-    }
-});
 </script>
 
 <style scoped>
-/* All CSS from your file is placed here and scoped to this component */
-.bg-white {
-    background-color: var(--white);
+/* Root variables */
+:root {
+    --primary-orange: #C17A60;
+    --text-dark: #2D2D2D;
+    --text-gray: #6b6b6b;
+    --bg-white: #FFFFFF;
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.text-gray {
-    color: var(--gray);
-}
-
-.text-black {
-    color: var(--black);
-}
-
-.h2 {
-    font-size: var(--heading-lg-h2);
-    line-height: 70px;
-}
-
-.h3 {
-    font-size: var(--heading-lg-h3);
-    line-height: 36px;
-    font-weight: 500;
-}
-
-.h2-line {
+/* Section Styles */
+.clients-section {
+    padding: 120px 0;
     position: relative;
-    padding-top: 1rem;
 }
 
-.h2-line::before {
-    content: "";
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Section Header */
+.section-header {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 100px;
+}
+
+.header-left {
+    position: relative;
+}
+
+.section-title {
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.title-line-1 {
+    display: block;
+    position: relative;
+    padding-top: 25px;
+}
+
+.title-line-1::before {
+    content: '';
     position: absolute;
-    top: -10px;
+    top: 0;
     left: 0;
-    width: 50px;
+    width: 60px;
     height: 4px;
-    background: var(--primary);
-    transition: width 0.6s linear;
+    background-color: var(--primary-orange);
+    transition: width 0.3s ease;
 }
 
-.h2-line:hover::before {
-    width: 80px;
+.section-title:hover .title-line-1::before {
+    width: 100px;
 }
 
-.container-fluid-custom {
-    width: 1180px;
-    margin: auto;
+.section-subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin: 0;
+    opacity: 0.8;
 }
 
-.client-hover-box {
-    overflow-y: hidden;
-    height: 100px;
-    width: 196px;
-    /* Styles for the animation */
+.header-right {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.section-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin: 0;
+    text-align: justify;
+}
+
+/* Clients Grid */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 80px 60px;
+    align-items: center;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Client Item */
+.client-item {
+    width: 100%;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
 }
 
-.client-hover-box.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.client-hover-box img {
-    height: 100px;
-    filter: grayscale(1);
-    transition: 0.6s linear;
-    /* Added transition for smooth filter effect */
-}
-
-.client-hover-box:hover {
-    transform: scale(1.05) !important;
-    /* Replaced JS hover with CSS hover */
-}
-
-.client-hover-box:hover img {
-    filter: grayscale(0);
-}
-
-.client-hover-box:hover img:first-child,
-.client-hover-box:hover img:nth-child(2) {
-    transform: translateY(-100%);
-}
-
-/* Add other styles from your CSS file here */
-@media (max-width: 768px) {
-
-    .client-hover-box:hover img:first-child,
-    .client-hover-box:hover img:nth-child(2) {
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
         transform: translateY(0);
-        /* Disable slide effect on mobile hover */
     }
+}
 
-    .client-hover-box img:nth-child(2) {
-        display: none;
+.client-logo-wrapper {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.client-logo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(193, 122, 96, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+}
+
+.client-logo-wrapper:hover::before {
+    width: 150px;
+    height: 150px;
+}
+
+.client-logo {
+    max-width: 160px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    filter: grayscale(100%) opacity(0.6);
+    transition: var(--transition);
+    object-fit: contain;
+}
+
+.client-logo-wrapper:hover .client-logo {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Hover Effects */
+.client-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .section-header {
+        gap: 60px;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .clients-section {
+        padding: 80px 0;
+    }
+    
+    .section-header {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+    
+    .section-title {
+        font-size: 56px;
+    }
+    
+    .section-subtitle {
+        font-size: 20px;
+    }
+    
+    .header-right {
+        padding-top: 0;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .clients-section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        font-size: 42px;
+    }
+    
+    .title-line-1::before {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+    }
+    
+    .section-description {
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+    
+    .client-logo-wrapper {
+        height: 60px;
+    }
+    
+    .client-logo {
+        max-width: 120px;
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .title-line-1::before {
+        width: 40px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .section-description {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+    
+    .client-logo {
+        max-width: 100px;
+        max-height: 45px;
+    }
+    
+    /* Disable hover effects on mobile */
+    .client-logo-wrapper:hover .client-logo {
+        transform: none;
+    }
+    
+    .client-item:hover {
+        transform: none;
     }
 }
 </style>
