@@ -2,16 +2,6 @@
   <div class="about-section">
     <!-- Top accent line -->
     <div class="top-accent-line"></div>
-    
-    <!-- CTA Header -->
-    <div class="cta-header">
-      <a href="tel:+919871521144" class="phone-number">
-        +91 9871521144
-      </a>
-      <a href="#" class="quote-button">
-        <span class="quote-button-text">Get a Quote</span>
-      </a>
-    </div>
 
     <!-- Main Hero Section -->
     <section class="hero-content">
