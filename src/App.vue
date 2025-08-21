@@ -1,22 +1,17 @@
 <script setup>
-
-import Navbar from './components/Navbar.vue';
-import HeroSection from './components/HeroSection.vue';
-import Areyou from './components/Areyou.vue';
-import OurServices from './components/OurServices.vue';
-import Weareeverything from './components/Weareeverything.vue';
-import OurClients from './components/OurClients.vue';
-
-
+import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <Navbar />
-  <HeroSection />
-  <Areyou />
-  <OurServices />
-  <Weareeverything />
-  <OurClients />
+  <div id="app">
+    <Navbar />
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+</style>
