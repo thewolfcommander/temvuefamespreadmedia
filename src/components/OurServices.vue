@@ -1,40 +1,52 @@
 <template>
-    <section class="services-section bg-black pt-lg-0">
-        <div class="container-fluid container-fluid-custom pt-lg-4">
-            <div>
-                <h2 class="h2 mb-0 text-light h2-line text-uppercase">Our</h2>
-                <h2 class="h2 mb-0 text-light text-uppercase">Services</h2>
-                <h3 class="text-light mb-0 col-md-9 col-lg-5">
-                    everything you need for a brand under one roof
-                </h3>
-            </div>
-        </div>
-        <div class="container-fluid container-fluid-custom">
-            <div v-for="service in services" :key="service.title" class="row pt-5 align-items">
-                <div class="col-lg-6 px-lg-3">
-                    <video class="big_scr" width="100%" height="auto" :poster="service.video.poster" autoplay loop muted
-                        playsinline>
-                        <source :src="service.video.src" type="video/mp4" />
-                    </video>
+    <section class="services-section">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="services-header">
+                <div class="heading-wrapper">
+                    <h2 class="main-heading">
+                        <span class="heading-line-1">OUR</span>
+                        <span class="heading-line-2">SERVICES</span>
+                    </h2>
+                    <p class="sub-heading">
+                        everything you need for a brand under one roof
+                    </p>
                 </div>
-                <div class="col-lg-6 px-lg-3">
-                    <div class="tags-wrapper">
-                        <a v-for="tag in service.tags" :key="tag.name" :href="tag.link" class="btn1">{{ tag.name }}</a>
+            </div>
+
+            <!-- Services List -->
+            <div class="services-list">
+                <div v-for="(service, index) in services" :key="service.title" 
+                     class="service-card" 
+                     :class="{ 'reverse': index % 2 !== 0 }">
+                    
+                    <!-- Image Section -->
+                    <div class="service-image">
+                        <video v-if="service.video" 
+                               width="100%" 
+                               height="100%" 
+                               :poster="service.video.poster" 
+                               autoplay 
+                               loop 
+                               muted
+                               playsinline>
+                            <source :src="service.video.src" type="video/mp4" />
+                        </video>
+                        <img v-else :src="service.image" :alt="service.title" />
                     </div>
-                    <div>
-                        <a :href="service.link" class="h2 text-decoration-none text-light pt-4 d-block">{{ service.title
-                        }}</a>
-                        <p class="text-light pt-2 text-sm-justify mt-3">
+
+                    <!-- Content Section -->
+                    <div class="service-content">
+                        <h3 class="service-title">{{ service.title }}</h3>
+                        <p class="service-description">
                             {{ service.description }}
                         </p>
-                        <div class="pt-2">
-                            <a :href="service.link" class="btn2">
-                                <img :src="rightArrowIcon" alt="right-arrow" style="width: 35px" />
-                            </a>
-                            <a :href="service.link" class="text-light text-decoration-none ps-4 cat-btn">
-                                Learn more
-                            </a>
-                        </div>
+                        <a :href="service.link" class="learn-more-btn">
+                            <span class="btn-text">Learn more</span>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -44,11 +56,7 @@
 
 <script setup>
 import { ref } from 'vue';
-// 1. Import the arrow icon from your assets folder
-// import rightArrowIcon from '@/assets/right-arrow.png';
 
-// 2. Create a data array for all your services.
-// This makes your template clean and easy to update.
 const services = ref([
     {
         title: 'Branding',
@@ -57,12 +65,7 @@ const services = ref([
         video: {
             poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Branding.png',
             src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/branding.mp4'
-        },
-        tags: [
-            { name: 'Brand Identity', link: 'https://www.expandbuzz.com/branding/brand-identity/' },
-            { name: 'Brand Naming', link: 'https://www.expandbuzz.com/#' },
-            { name: 'Brand Guidelines', link: 'https://www.expandbuzz.com/branding/brand-guidelines/' }
-        ]
+        }
     },
     {
         title: 'Packaging',
@@ -71,12 +74,7 @@ const services = ref([
         video: {
             poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Packaging.png',
             src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/packaging-design.mp4'
-        },
-        tags: [
-            { name: 'Label Design', link: 'https://www.expandbuzz.com/packaging-design-agency/label-designs/' },
-            { name: 'Food Packaging', link: 'https://www.expandbuzz.com/#' },
-            { name: 'Mockup', link: 'https://www.expandbuzz.com/packaging-design-agency/mockups/' }
-        ]
+        }
     },
     {
         title: 'Digital Marketing',
@@ -85,298 +83,305 @@ const services = ref([
         video: {
             poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Packaging.png',
             src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/digital-marketing2.mp4'
-        },
-        tags: [
-            { name: 'Social Media', link: 'https://www.expandbuzz.com/digital-marketing-agency/social-media' },
-            { name: 'Paid Ads', link: 'https://www.expandbuzz.com/#' },
-            { name: 'Seo', link: 'https://www.expandbuzz.com/#' }
-        ]
-    },
-    // Add the other service objects here...
+        }
+    }
 ]);
 </script>
 
 <style scoped>
-/* As requested, all CSS from both files is included here to make the component self-contained */
-
-/* From bootstrap_cleaned.css */
-.container-fluid {
-    width: 100%;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    margin-right: auto;
-    margin-left: auto;
+/* Root variables for consistent theming */
+:root {
+    --primary-blue: #00A3FF;
+    --text-light: #FFFFFF;
+    --text-gray: #A0A0A0;
+    --bg-black: #000000;
+    --transition: all 0.3s ease;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -1.5rem;
-    margin-left: -1.5rem;
-}
-
-.col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.px-lg-3 {
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
-}
-
-.pt-5 {
-    padding-top: 3rem !important;
-}
-
-.align-items-center {
-    align-items: center !important;
-}
-
-.mt-lg-5 {
-    margin-top: 3rem !important;
-}
-
-.pt-lg-4 {
-    padding-top: 1.5rem !important;
-}
-
-.mb-0 {
-    margin-bottom: 0 !important;
-}
-
-.text-light {
-    color: #f8f9fa !important;
-}
-
-.text-uppercase {
-    text-transform: uppercase !important;
-}
-
-.col-md-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-}
-
-.col-lg-5 {
-    flex: 0 0 41.66666667%;
-    max-width: 41.66666667%;
-}
-
-.h2 {
-    font-size: var(--heading-lg-h2);
-    line-height: 70px;
-}
-
-.text-decoration-none {
-    text-decoration: none !important;
-}
-
-.pt-4 {
-    padding-top: 1.5rem !important;
-}
-
-.d-block {
-    display: block !important;
-}
-
-.pt-2 {
-    padding-top: 0.5rem !important;
-}
-
-.text-sm-justify {
-    text-align: justify !important;
-}
-
-.mt-3 {
-    margin-top: 1rem !important;
-}
-
-.ps-4 {
-    padding-left: 1.5rem !important;
-}
-
-/* From cleaned.css */
-.h2-line::before {
-    position: absolute;
-    top: -5px;
-    width: 50px;
-    background: var(--primary);
-    transition: .6s linear;
-    right: 50%;
-    height: 5px;
-    content: ""
-}
-
-.btn1 {
-    cursor: pointer
-}
-
-section {
-    padding: 3rem 0;
-    margin-top: 0
-}
-
-.bg-black {
-    background-color: var(--black)
-}
-
-.h2-line {
-    position: relative;
-    padding-top: 1rem
-}
-
-.h2-line:hover::before {
-    width: 80px
-}
-
-.h2-line::before {
-    left: 0
-}
-
-.container-fluid-custom {
-    width: 1180px;
-    margin: auto
-}
-
-.btn1 {
-    background: 0 0;
-    padding: 8px 16px;
-    color: var(--white) !important;
-    border-radius: 30px;
-    border: 1px solid var(--white);
-    transition: var(--transition);
-    background: linear-gradient(to right, var(--primary) 50%, var(--black) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: .5s ease-out
-}
-
-.btn1.active,
-.btn1:hover {
-    border: 1px solid var(--primary);
-    background-position: left bottom
-}
-
-.btn2::before {
-    background: var(--primary)
-}
-
-.btn2 img {
-    position: relative;
-    z-index: 9999
-}
-
-.btn2::before {
-    content: "";
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px
-}
-
-.cat-btn {
-    z-index: 1;
-    -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(to right, var(--primary), 50%, #fff 50%);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-color: white;
-    padding-top: 2rem
-}
-
-.cat-btn:hover {
-    background-position: 0
-}
-
+/* Section Styles */
 .services-section {
-    padding-top: 0;
+    background-color: var(--bg-black);
+    padding: 80px 0;
+    min-height: 100vh;
 }
 
-.services-section .h2-line {
-    padding-bottom: 0.5rem;
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header Section */
+.services-header {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.heading-wrapper {
+    position: relative;
     display: inline-block;
+    margin: 0 auto;
 }
 
-.services-section .big_scr {
-    border-radius: 50px;
+.main-heading {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-light);
+    margin: 0;
+    letter-spacing: -2px;
 }
 
-.services-section .tags-wrapper {
+.heading-line-1 {
+    display: block;
+    position: relative;
+    padding-top: 20px;
+}
+
+.heading-line-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-blue);
+}
+
+.heading-line-2 {
+    display: block;
+    margin-top: 10px;
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-top: 30px;
+    margin-bottom: 0;
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+/* Services List */
+.services-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    gap: 120px;
 }
 
-.services-section .btn1 {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.services-section .btn1:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.services-section .cat-btn {
-    font-weight: 600;
-    transition: letter-spacing 0.3s;
-}
-
-.services-section .cat-btn:hover {
-    letter-spacing: 1px;
-}
-
-.services-section .text-sm-justify {
-    text-align: justify;
-}
-
-.services-section .align-items {
+/* Service Card */
+.service-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 991.98px) {
-    .container-fluid-custom {
-        width: auto;
-        margin: auto;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+.service-card.reverse {
+    direction: rtl;
+}
 
-    .pt-lg-0 {
-        padding-top: 3rem !important;
-    }
+.service-card.reverse > * {
+    direction: ltr;
+}
 
-    .col-lg-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+/* Service Image */
+.service-image {
+    width: 100%;
+    height: 450px;
+    border-radius: 40px;
+    overflow: hidden;
+    background: #1a1a1a;
+}
 
-    .h2 {
-        line-height: normal;
-    }
+.service-image video,
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .col-md-9 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+/* Service Content */
+.service-content {
+    padding: 20px 0;
+}
 
-    .col-lg-5 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.service-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0 0 30px 0;
+    letter-spacing: -1px;
+}
 
-    .text-sm-justify {
+.service-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.learn-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-blue);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+.learn-more-btn:hover::before {
+    left: 0;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.learn-more-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .service-card {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-heading {
+        font-size: 56px;
+    }
+    
+    .service-title {
+        font-size: 42px;
+    }
+    
+    .service-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .service-card.reverse {
+        direction: ltr;
+    }
+    
+    .service-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+    
+    .services-header {
+        margin-bottom: 60px;
+    }
+    
+    .main-heading {
+        font-size: 42px;
+    }
+    
+    .sub-heading {
+        font-size: 18px;
+    }
+    
+    .services-list {
+        gap: 80px;
+    }
+    
+    .service-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .service-description {
+        font-size: 14px;
+        margin-bottom: 30px;
         text-align: left;
+    }
+    
+    .service-image {
+        height: 250px;
+        border-radius: 20px;
+    }
+    
+    .learn-more-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 32px;
+    }
+    
+    .heading-line-1::before {
+        width: 40px;
+        height: 3px;
+    }
+    
+    .sub-heading {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .service-title {
+        font-size: 28px;
+    }
+    
+    .service-description {
+        font-size: 13px;
+    }
+    
+    .service-image {
+        height: 200px;
     }
 }
 </style>
