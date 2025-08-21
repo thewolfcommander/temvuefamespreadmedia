@@ -1,10 +1,10 @@
 <template>
   <div class="home-page">
     <HeroSection />
-    <Areyou />
+    <AboutSection />
     <OurServices />
-    <Weareeverything />
-    <OurClients />
+    <ServicesOverview />
+    <ClientsSection />
     <ContactFormSection />
   </div>
 </template>
@@ -13,10 +13,10 @@
 import { onMounted } from 'vue'
 import { useAppStore } from '@/stores'
 import HeroSection from '@/components/HeroSection.vue'
-import Areyou from '@/components/Areyou.vue'
+import AboutSection from '@/components/AboutSection.vue'
 import OurServices from '@/components/OurServices.vue'
-import Weareeverything from '@/components/Weareeverything.vue'
-import OurClients from '@/components/Ourclients.vue'
+import ServicesOverview from '@/components/ServicesOverview.vue'
+import ClientsSection from '@/components/ClientsSection.vue'
 import ContactFormSection from '@/components/ContactFormSection.vue'
 
 const appStore = useAppStore()
