@@ -101,7 +101,7 @@
 <script setup>
 import { ref } from 'vue';
 // 1. Import your logo asset from the assets folder
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.svg';
 
 // 2. Create a "reactive" variable to track the menu's open/closed state
 const isNavOpen = ref(false);
@@ -349,7 +349,7 @@ function closeNav() {
     left: 0;
     width: 100%;
     height: auto;
-    background: var(--color-black);
+    background: var(--bg-dark);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

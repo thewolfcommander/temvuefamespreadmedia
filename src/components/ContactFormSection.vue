@@ -29,14 +29,14 @@
       <div class="consultation-section">
         <div class="consultation-icon">
           <svg width="80" height="80" viewBox="0 0 100 100" fill="none">
-            <circle cx="50" cy="50" r="45" fill="#4A90E2" opacity="0.1"/>
-            <path d="M30 40C30 35.5817 33.5817 32 38 32H62C66.4183 32 70 35.5817 70 40V55C70 59.4183 66.4183 63 62 63H45L35 70V63H38C33.5817 63 30 59.4183 30 55V40Z" fill="#4A90E2"/>
+            <circle cx="50" cy="50" r="45" fill="var(--color-primary)" opacity="0.1"/>
+            <path d="M30 40C30 35.5817 33.5817 32 38 32H62C66.4183 32 70 35.5817 70 40V55C70 59.4183 66.4183 63 62 63H45L35 70V63H38C33.5817 63 30 59.4183 30 55V40Z" fill="var(--color-primary)"/>
             <circle cx="42" cy="47" r="3" fill="white"/>
             <circle cx="50" cy="47" r="3" fill="white"/>
             <circle cx="58" cy="47" r="3" fill="white"/>
-            <path d="M65 25C65 22.2386 67.2386 20 70 20C72.7614 20 75 22.2386 75 25V35C75 37.7614 72.7614 40 70 40C67.2386 40 65 37.7614 65 35V25Z" fill="#4A90E2"/>
-            <path d="M25 25C25 22.2386 27.2386 20 30 20C32.7614 20 35 22.2386 35 25V35C35 37.7614 32.7614 40 30 40C27.2386 40 25 37.7614 25 35V25Z" fill="#4A90E2"/>
-            <path d="M40 70C40 72.7614 37.7614 75 35 75H30C27.2386 75 25 72.7614 25 70C25 67.2386 27.2386 65 30 65H35C37.7614 65 40 67.2386 40 70Z" fill="#4A90E2"/>
+            <path d="M65 25C65 22.2386 67.2386 20 70 20C72.7614 20 75 22.2386 75 25V35C75 37.7614 72.7614 40 70 40C67.2386 40 65 37.7614 65 35V25Z" fill="var(--color-primary)"/>
+            <path d="M25 25C25 22.2386 27.2386 20 30 20C32.7614 20 35 22.2386 35 25V35C35 37.7614 32.7614 40 30 40C27.2386 40 25 37.7614 25 35V25Z" fill="var(--color-primary)"/>
+            <path d="M40 70C40 72.7614 37.7614 75 35 75H30C27.2386 75 25 72.7614 25 70C25 67.2386 27.2386 65 30 65H35C37.7614 65 40 67.2386 40 70Z" fill="var(--color-primary)"/>
           </svg>
         </div>
         <h2 class="consultation-title">
@@ -133,9 +133,9 @@ const submitForm = () => {
 
 <style scoped>
 .contact-form-section {
-  background: #000;
+  background: var(--bg-dark);
   min-height: 100vh;
-  padding: 80px 0;
+  padding: var(--space-20) 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -155,20 +155,20 @@ const submitForm = () => {
 }
 
 .social-icon {
-  color: rgba(255, 255, 255, 0.6);
-  transition: all 0.3s ease;
+  color: var(--color-text-muted);
+  transition: var(--transition-base);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  background: rgba(var(--color-white-rgb), 0.05);
 }
 
 .social-icon:hover {
-  color: #4A90E2;
-  background: rgba(74, 144, 226, 0.1);
+  color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.1);
   transform: translateX(5px);
 }
 
@@ -177,43 +177,45 @@ const submitForm = () => {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 var(--space-10);
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
+  gap: var(--space-20);
   align-items: center;
 }
 
 /* Consultation Section */
 .consultation-section {
-  color: #fff;
+  color: var(--color-text-white);
 }
 
 .consultation-icon {
-  margin-bottom: 40px;
+  margin-bottom: var(--space-10);
 }
 
 .consultation-title {
+  font-family: var(--font-family-heading);
   font-size: clamp(36px, 5vw, 52px);
-  font-weight: 300;
-  margin-bottom: 24px;
-  line-height: 1.2;
+  font-weight: var(--font-weight-light);
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-tight);
 }
 
 .free-text {
-  color: #4A90E2;
-  font-weight: 400;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-normal);
 }
 
 .consultation-text {
-  color: #fff;
-  font-weight: 300;
+  color: var(--color-text-white);
+  font-weight: var(--font-weight-light);
 }
 
 .consultation-description {
-  font-size: 18px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
   margin: 0;
   max-width: 480px;
 }
@@ -230,8 +232,8 @@ const submitForm = () => {
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
 }
 
 .form-group {
@@ -241,31 +243,31 @@ const submitForm = () => {
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 18px 24px;
+  padding: var(--space-4) var(--space-6);
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  font-family: inherit;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(var(--color-white-rgb), 0.2);
+  border-radius: var(--radius-base);
+  color: var(--color-text-white);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-body);
+  transition: var(--transition-base);
   outline: none;
 }
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 .form-input:focus,
 .form-textarea:focus {
-  border-color: #4A90E2;
-  background: rgba(74, 144, 226, 0.05);
+  border-color: var(--color-primary);
+  background: rgba(var(--color-primary-rgb), 0.05);
 }
 
 .message-group {
   grid-column: 1 / -1;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-8);
 }
 
 .form-textarea {
@@ -279,50 +281,51 @@ const submitForm = () => {
 }
 
 .submit-btn {
-  background: #4A90E2;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-text-white);
   border: none;
-  padding: 16px 40px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 8px;
+  padding: var(--space-4) var(--space-10);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-heading);
+  letter-spacing: var(--letter-spacing-wide);
+  border-radius: var(--radius-base);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
   text-transform: uppercase;
 }
 
 .submit-btn:hover {
-  background: #357ABD;
+  background: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.3);
 }
 
 /* Floating Chat Button */
 .chat-button {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #4A90E2;
-  color: #fff;
-  padding: 15px 25px;
-  border-radius: 50px;
+  bottom: var(--space-8);
+  right: var(--space-8);
+  background: var(--color-primary);
+  color: var(--color-text-white);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-full);
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  font-size: 14px;
+  gap: var(--space-2);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family-heading);
   letter-spacing: 0.5px;
-  box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
-  transition: all 0.3s ease;
-  z-index: 100;
-  position: relative;
+  box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.4);
+  transition: var(--transition-base);
+  z-index: var(--z-toast);
 }
 
 .chat-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(74, 144, 226, 0.5);
+  box-shadow: 0 12px 35px rgba(var(--color-primary-rgb), 0.5);
 }
 
 .chat-text {
@@ -331,29 +334,29 @@ const submitForm = () => {
 
 .chat-notification {
   background: #ff4757;
-  color: #fff;
+  color: var(--color-text-white);
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
 }
 
 /* Responsive Design */
 @media (max-width: 1200px) {
   .contact-container {
-    gap: 60px;
-    padding: 0 30px;
+    gap: var(--space-16);
+    padding: 0 var(--space-8);
   }
 }
 
 @media (max-width: 968px) {
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: var(--space-16);
     text-align: center;
   }
 
@@ -368,36 +371,36 @@ const submitForm = () => {
 
 @media (max-width: 768px) {
   .contact-form-section {
-    padding: 60px 0;
+    padding: var(--space-16) 0;
   }
 
   .contact-container {
-    padding: 0 20px;
-    gap: 40px;
+    padding: 0 var(--space-5);
+    gap: var(--space-10);
   }
 
   .form-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: var(--space-4);
   }
 
   .consultation-title {
-    font-size: 32px;
+    font-size: var(--font-size-4xl);
   }
 
   .consultation-description {
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
 
   .form-input,
   .form-textarea {
-    padding: 15px 20px;
-    font-size: 15px;
+    padding: var(--space-4) var(--space-5);
+    font-size: var(--font-size-sm);
   }
 
   .submit-btn {
     width: 100%;
-    padding: 18px;
+    padding: var(--space-4);
   }
 
   .form-submit {
@@ -405,16 +408,16 @@ const submitForm = () => {
   }
 
   .chat-button {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    font-size: 13px;
+    bottom: var(--space-5);
+    right: var(--space-5);
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--font-size-xs);
   }
 }
 
 @media (max-width: 480px) {
   .contact-container {
-    padding: 0 15px;
+    padding: 0 var(--space-4);
   }
 
   .consultation-icon svg {

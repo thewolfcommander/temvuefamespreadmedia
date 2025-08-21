@@ -244,7 +244,7 @@ onBeforeUnmount(() => {
 .hero-container {
     width: 100%;
     min-height: 100vh;
-    background: var(--color-black);
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
 }
@@ -261,7 +261,7 @@ onBeforeUnmount(() => {
 }
 
 .phone-number {
-    color: var(--color-white);
+    color: var(--color-text-white);
     text-decoration: none;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
@@ -277,7 +277,7 @@ onBeforeUnmount(() => {
 }
 
 .quote-button {
-    background: linear-gradient(135deg, #ff0080, #ff0080, #d946ef);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark), var(--color-primary-light));
     padding: var(--space-3) var(--space-6);
     border-radius: var(--radius-full);
     text-decoration: none;
@@ -289,11 +289,11 @@ onBeforeUnmount(() => {
 
 .quote-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 0, 128, 0.3);
+    box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.3);
 }
 
 .quote-button-text {
-    color: var(--color-white);
+    color: var(--color-text-white);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
     position: relative;
@@ -348,9 +348,10 @@ onBeforeUnmount(() => {
 }
 
 .main-heading {
+    font-family: var(--font-family-heading);
     font-size: var(--heading-h2);
     font-weight: var(--font-weight-bold);
-    color: var(--color-white);
+    color: var(--color-text-white);
     margin-bottom: var(--space-6);
     line-height: var(--line-height-tight);
     text-transform: uppercase;
@@ -358,8 +359,9 @@ onBeforeUnmount(() => {
 }
 
 .sub-text {
+    font-family: var(--font-family-body);
     font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-lg));
-    color: var(--text-muted);
+    color: var(--color-text-secondary);
     line-height: var(--line-height-relaxed);
     margin: 0;
 }
@@ -425,7 +427,7 @@ onBeforeUnmount(() => {
 .timeline-dot {
     width: 12px;
     height: 12px;
-    background: var(--color-gray-darker);
+    background: var(--color-secondary);
     border: 2px solid rgba(var(--color-white-rgb), 0.3);
     border-radius: var(--radius-full);
     margin-bottom: var(--space-4);
@@ -434,8 +436,8 @@ onBeforeUnmount(() => {
 }
 
 .timeline-item.active .timeline-dot {
-    background: var(--color-white);
-    border-color: var(--color-white);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
     width: 16px;
     height: 16px;
 }
@@ -446,8 +448,9 @@ onBeforeUnmount(() => {
 }
 
 .timeline-label {
+    font-family: var(--font-family-body);
     font-size: var(--font-size-sm);
-    color: var(--text-light);
+    color: var(--color-text-muted);
     white-space: nowrap;
     transition: var(--transition-base);
     text-align: center;
@@ -458,10 +461,10 @@ onBeforeUnmount(() => {
 }
 
 .timeline-item.active .timeline-label {
-    color: var(--color-white);
+    color: var(--color-text-white);
     font-weight: var(--font-weight-semibold);
-    background: rgba(var(--color-black-rgb), 0.8);
-    border-color: rgba(var(--color-white-rgb), 0.3);
+    background: rgba(var(--color-primary-rgb), 0.2);
+    border-color: var(--color-primary);
 }
 
 .timeline-item:hover .timeline-label {

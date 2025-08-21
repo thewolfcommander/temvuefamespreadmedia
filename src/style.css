@@ -206,5 +206,7 @@ html {
 
 .sub_heading,
 .top_heading {
+    font-family: var(--font-family-body);
+    color: var(--color-text-secondary);
     text-align: left;
 }

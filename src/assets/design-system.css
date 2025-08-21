@@ -1,41 +1,52 @@
 /* Design System - Unified CSS Variables for Colors and Typography */
+/* Updated to match brand specifications */
+
+/* Font Loading - Using fallbacks for now as these might not be available */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette */
-  --color-primary: #009fe3;
-  --color-primary-rgb: 0, 159, 227;
-  --color-primary-dark: #0078b3;
-  --color-primary-light: #33b3e8;
+  /* Brand Color Palette - Based on provided design guide */
+  --color-primary: #C17A60; /* Orange - Background, Highlights, CTAs */
+  --color-primary-rgb: 193, 122, 96;
+  --color-primary-dark: #B05A3B;
+  --color-primary-light: #D8A085;
   
-  --color-white: #ffffff;
+  --color-secondary: #B0A59B; /* Grey orange - Background */
+  --color-secondary-rgb: 176, 165, 155;
+  --color-secondary-dark: #8B7F73;
+  --color-secondary-light: #CCC3BC;
+  
+  --color-accent: #F7F2EC; /* Light Orange - Subtle Depth, Soft text */
+  --color-accent-rgb: 247, 242, 236;
+  
+  --color-white: #FFFFFF; /* Secondary Background, Generic body text */
   --color-white-rgb: 255, 255, 255;
+  
   --color-black: #000000;
   --color-black-rgb: 0, 0, 0;
   
-  /* Gray Palette */
-  --color-gray: #b9b9b9;
-  --color-gray-rgb: 185, 185, 185;
-  --color-gray-light: #e5e5e5;
-  --color-gray-dark: #666666;
-  --color-gray-darker: #333333;
+  /* Text Colors - Based on design guide */
+  --color-text-primary: #2D2D2D; /* Dark Grey - Primary Text & Logo */
+  --color-text-primary-rgb: 45, 45, 45;
+  --color-text-secondary: #F7F2EC; /* Light Orange - Soft/Secondary text on backgrounds */
+  --color-text-emphasis: #2D2D2D; /* Dark Grey - Headlines, Emphasis, Bold Callouts */
+  --color-text-white: #FFFFFF; /* White text for dark backgrounds */
+  --color-text-muted: rgba(247, 242, 236, 0.7); /* Muted text on dark backgrounds */
   
   /* Background Colors */
   --bg-primary: var(--color-primary);
-  --bg-secondary: var(--color-black);
+  --bg-secondary: var(--color-secondary);
+  --bg-accent: var(--color-accent);
   --bg-white: var(--color-white);
-  --bg-gray-light: #f8f9fa;
   --bg-dark: var(--color-black);
+  --bg-gray-light: var(--color-accent);
   
-  /* Text Colors */
-  --text-primary: var(--color-black);
-  --text-secondary: var(--color-gray);
-  --text-white: var(--color-white);
-  --text-muted: rgba(255, 255, 255, 0.7);
-  --text-light: rgba(255, 255, 255, 0.6);
-  
-  /* Typography System */
-  --font-family-primary: 'Poppins', sans-serif;
-  --font-family-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Typography System - Based on design guide */
+  /* Using fallbacks as custom fonts may not be available */
+  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-primary: var(--font-family-heading);
+  --font-family-secondary: var(--font-family-body);
   
   /* Font Weights */
   --font-weight-light: 300;
@@ -124,6 +135,14 @@
   --z-navbar: 99999;
   --z-max: 99999999;
   
+  /* Legacy Support - Map old variables to new ones */
+  --primary: var(--color-primary);
+  --white: var(--color-white);
+  --black: var(--color-black);
+  --gray: var(--color-secondary);
+  --font-main: var(--font-family-primary);
+  --transition: var(--transition-slow);
+  
   /* Breakpoints (for reference in CSS) */
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -149,21 +168,21 @@ html {
 }
 
 body {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
-  color: var(--text-primary);
-  background-color: var(--bg-white);
+  color: var(--color-text-white);
+  background-color: var(--bg-dark);
   overflow-x: hidden;
 }
 
-/* Heading Styles */
+/* Heading Styles - Using Neue Montreal equivalent */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: inherit;
+  color: var(--color-text-white);
   margin-bottom: var(--space-4);
 }
 
@@ -174,10 +193,12 @@ h4 { font-size: var(--heading-h4); }
 h5 { font-size: var(--heading-h5); }
 h6 { font-size: var(--heading-h6); }
 
-/* Paragraph Styles */
+/* Paragraph Styles - Using Avenir Next equivalent */
 p {
+  font-family: var(--font-family-body);
   margin-bottom: var(--space-4);
   line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
 }
 
 /* Link Styles */
@@ -192,17 +213,21 @@ a:hover {
 }
 
 /* Utility Classes */
-.text-primary { color: var(--text-primary) !important; }
-.text-secondary { color: var(--text-secondary) !important; }
-.text-white { color: var(--text-white) !important; }
-.text-muted { color: var(--text-muted) !important; }
-.text-gray { color: var(--color-gray) !important; }
+.text-primary { color: var(--color-text-primary) !important; }
+.text-secondary { color: var(--color-text-secondary) !important; }
+.text-white { color: var(--color-text-white) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+.text-emphasis { color: var(--color-text-emphasis) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.text-gray { color: var(--color-secondary) !important; }
 .text-black { color: var(--color-black) !important; }
 
 .bg-primary { background-color: var(--bg-primary) !important; }
 .bg-secondary { background-color: var(--bg-secondary) !important; }
+.bg-accent { background-color: var(--bg-accent) !important; }
 .bg-white { background-color: var(--bg-white) !important; }
 .bg-black { background-color: var(--color-black) !important; }
+.bg-dark { background-color: var(--bg-dark) !important; }
 .bg-gray-light { background-color: var(--bg-gray-light) !important; }
 
 .font-light { font-weight: var(--font-weight-light) !important; }
