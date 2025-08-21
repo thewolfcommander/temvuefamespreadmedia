@@ -5,6 +5,7 @@
     <OurServices />
     <Weareeverything />
     <OurClients />
+    <ContactFormSection />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Areyou from '@/components/Areyou.vue'
 import OurServices from '@/components/OurServices.vue'
 import Weareeverything from '@/components/Weareeverything.vue'
 import OurClients from '@/components/Ourclients.vue'
+import ContactFormSection from '@/components/ContactFormSection.vue'
 
 const appStore = useAppStore()
 
