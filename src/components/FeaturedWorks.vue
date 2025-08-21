@@ -4,11 +4,12 @@
             <!-- Header -->
             <div class="section-header">
                 <h2 class="section-title">Featured works</h2>
-                <a href="https://www.expandbuzz.com/portfolio/" class="view-projects-btn">
+                <a href="#" class="view-projects-btn">
                     <span class="btn-text">View Projects</span>
                     <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M11 8L15 12L11 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M11 8L15 12L11 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </a>
             </div>
@@ -18,11 +19,8 @@
                 <!-- Project Card 1 - Patanjali -->
                 <div class="project-card" @mouseenter="handleMouseEnter(0)" @mouseleave="handleMouseLeave(0)">
                     <div class="project-image-wrapper">
-                        <img 
-                            src="https://www.expandbuzz.com/wp-content/uploads/2025/01/patanjali-case-study.jpg" 
-                            alt="Patanjali Shishu Care"
-                            class="project-image"
-                        />
+                        <img src="https://4.imimg.com/data4/TO/CY/MY-22977716/all-patanjali-products-get-5-less.jpg"
+                            alt="Patanjali Shishu Care" class="project-image" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-info">
@@ -34,11 +32,8 @@
                 <!-- Project Card 2 - Shuddh Harvest -->
                 <div class="project-card" @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave(1)">
                     <div class="project-image-wrapper">
-                        <img 
-                            src="https://www.expandbuzz.com/wp-content/uploads/2025/01/dry-fruits-logo-design.jpg" 
-                            alt="Shuddh Harvest"
-                            class="project-image"
-                        />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRRkrQPoxqpDTWdfUBRcfeU4HvqWJSyTOT8g&s"
+                            alt="Shuddh Harvest" class="project-image" />
                         <div class="project-overlay"></div>
                     </div>
                     <div class="project-info">
@@ -220,10 +215,10 @@ const handleMouseLeave = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0) 0%, 
-        rgba(0, 0, 0, 0.3) 60%, 
-        rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.3) 60%,
+            rgba(0, 0, 0, 0.8) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -240,9 +235,9 @@ const handleMouseLeave = () => {
     left: 0;
     right: 0;
     padding: 40px 35px;
-    background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0) 0%, 
-        rgba(0, 0, 0, 0.95) 100%);
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.95) 100%);
     transform: translateY(20px);
     transition: transform 0.4s ease;
 }
@@ -284,7 +279,7 @@ const handleMouseLeave = () => {
     .section-title {
         font-size: 60px;
     }
-    
+
     .project-image-wrapper {
         height: 400px;
     }
@@ -294,23 +289,23 @@ const handleMouseLeave = () => {
     .featured-works-section {
         padding: 80px 0;
     }
-    
+
     .section-header {
         margin-bottom: 60px;
     }
-    
+
     .section-title {
         font-size: 48px;
     }
-    
+
     .projects-grid {
         gap: 30px;
     }
-    
+
     .project-image-wrapper {
         height: 350px;
     }
-    
+
     .project-title {
         font-size: 28px;
     }
@@ -320,55 +315,55 @@ const handleMouseLeave = () => {
     .container {
         padding: 0 30px;
     }
-    
+
     .featured-works-section {
         padding: 60px 0;
     }
-    
+
     .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
         margin-bottom: 40px;
     }
-    
+
     .section-title {
         font-size: 36px;
     }
-    
+
     .section-title::after {
         width: 60px;
         height: 3px;
         bottom: -15px;
     }
-    
+
     .view-projects-btn {
         padding: 14px 28px;
         font-size: 14px;
     }
-    
+
     .arrow-icon {
         width: 32px;
         height: 32px;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
-    
+
     .project-image-wrapper {
         height: 280px;
     }
-    
+
     .project-info {
         padding: 30px 25px;
     }
-    
+
     .project-title {
         font-size: 24px;
     }
-    
+
     .project-category {
         font-size: 12px;
     }
@@ -378,38 +373,38 @@ const handleMouseLeave = () => {
     .container {
         padding: 0 20px;
     }
-    
+
     .section-title {
         font-size: 28px;
     }
-    
+
     .view-projects-btn {
         padding: 12px 24px;
         gap: 10px;
     }
-    
+
     .project-image-wrapper {
         height: 220px;
         border-radius: 15px;
     }
-    
+
     .project-info {
         padding: 25px 20px;
     }
-    
+
     .project-title {
         font-size: 20px;
     }
-    
+
     /* Disable hover effects on mobile */
     .project-card:hover {
         transform: none;
     }
-    
+
     .project-card:hover .project-image {
         transform: none;
     }
-    
+
     .project-category {
         opacity: 1;
         transform: translateY(0);

@@ -11,7 +11,7 @@
                             <span class="heading-line-2">need.</span>
                         </h2>
                         <div class="cta-wrapper">
-                            <a href="https://www.expandbuzz.com/contact-us/" class="cta-link">
+                            <a href="#" class="cta-link">
                                 Request a proposal for your product
                                 <span class="bell-icon">🔔</span>
                             </a>
@@ -22,20 +22,20 @@
                     <div class="right-content">
                         <div class="tags-grid">
                             <div class="tag-column">
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/food/" class="tag-link">#Food</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/spices/" class="tag-link">#Spices</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/dairy-products/" class="tag-link">#Dairy Products</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/frozen-food" class="tag-link">#Frozen Food</a>
+                                <a href="#" class="tag-link">#Food</a>
+                                <a href="#" class="tag-link">#Spices</a>
+                                <a href="#" class="tag-link">#Dairy Products</a>
+                                <a href="#" class="tag-link">#Frozen Food</a>
                             </div>
                             <div class="tag-column">
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/fmcg/" class="tag-link">#FMCG</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/cosmetics/" class="tag-link">#Cosmetics</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/beverages/" class="tag-link">#Beverages</a>
+                                <a href="#" class="tag-link">#FMCG</a>
+                                <a href="#" class="tag-link">#Cosmetics</a>
+                                <a href="#" class="tag-link">#Beverages</a>
                             </div>
                             <div class="tag-column">
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/tea/" class="tag-link">#Tea & Coffee</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/dry-fruits/" class="tag-link">#Dry Fruits</a>
-                                <a href="https://www.expandbuzz.com/packaging-design-agency/pharma-nutraceuticals" class="tag-link">#Pharma</a>
+                                <a href="#" class="tag-link">#Tea & Coffee</a>
+                                <a href="#" class="tag-link">#Dry Fruits</a>
+                                <a href="#" class="tag-link">#Pharma</a>
                             </div>
                         </div>
                     </div>
@@ -48,15 +48,18 @@
             <div class="container">
                 <div class="agency-content">
                     <h1 class="agency-heading">
-                        INDIA'S LEADING BRANDING &<br/>
+                        INDIA'S LEADING BRANDING &<br />
                         PACKAGING DESIGN AGENCY
                     </h1>
                     <p class="agency-description">
-                        With an experience of more than 10 prosperous years in the industry, we are privileged to be one of the prominent branding agencies in 
-                        India. We also marked our identity in packaging and digital segments, becoming a leading 
-                        <a href="https://www.expandbuzz.com/packaging-design-agency" class="inline-link">packaging design agency</a> 
-                        and India's top 
-                        <a href="https://www.expandbuzz.com/digital-marketing-agency" class="inline-link">digital marketing agency</a>.
+                        With an experience of more than 10 prosperous years in the industry, we are privileged to be one
+                        of the prominent branding agencies in
+                        India. We also marked our identity in packaging and digital segments, becoming a leading
+                        <a href="#" class="inline-link">packaging
+                            design agency</a>
+                        and India's top
+                        <a href="#" class="inline-link">digital
+                            marketing agency</a>.
                     </p>
                 </div>
             </div>
@@ -292,13 +295,19 @@ onMounted(() => {
 
 /* Animations */
 @keyframes ring {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: rotate(0deg);
     }
-    10%, 30% {
+
+    10%,
+    30% {
         transform: rotate(-10deg);
     }
-    20%, 40% {
+
+    20%,
+    40% {
         transform: rotate(10deg);
     }
 }
@@ -308,7 +317,7 @@ onMounted(() => {
     .content-wrapper {
         gap: 60px;
     }
-    
+
     .tags-grid {
         gap: 40px 60px;
     }
@@ -318,28 +327,28 @@ onMounted(() => {
     .need-section {
         padding: 80px 0;
     }
-    
+
     .content-wrapper {
         grid-template-columns: 1fr;
         gap: 60px;
     }
-    
+
     .main-heading {
         font-size: 56px;
     }
-    
+
     .right-content {
         justify-content: flex-start;
     }
-    
+
     .tags-grid {
         max-width: 100%;
     }
-    
+
     .agency-section {
         padding: 80px 0;
     }
-    
+
     .agency-heading {
         font-size: 36px;
     }
@@ -349,38 +358,38 @@ onMounted(() => {
     .container {
         padding: 0 30px;
     }
-    
+
     .need-section {
         padding: 60px 0;
         min-height: auto;
     }
-    
+
     .main-heading {
         font-size: 42px;
     }
-    
+
     .cta-link {
         font-size: 16px;
     }
-    
+
     .tags-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 40px;
     }
-    
+
     .tag-link {
         font-size: 16px;
     }
-    
+
     .agency-section {
         padding: 60px 0;
     }
-    
+
     .agency-heading {
         font-size: 28px;
         line-height: 1.4;
     }
-    
+
     .agency-description {
         font-size: 16px;
     }
@@ -390,41 +399,41 @@ onMounted(() => {
     .container {
         padding: 0 20px;
     }
-    
+
     .main-heading {
         font-size: 32px;
     }
-    
+
     .heading-line-1::before {
         width: 40px;
         height: 3px;
     }
-    
+
     .left-content {
         gap: 30px;
     }
-    
+
     .cta-link {
         font-size: 14px;
     }
-    
+
     .tags-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .tag-column {
         gap: 15px;
     }
-    
+
     .tag-link {
         font-size: 14px;
     }
-    
+
     .agency-heading {
         font-size: 24px;
     }
-    
+
     .agency-description {
         font-size: 14px;
         line-height: 1.7;

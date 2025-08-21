@@ -16,20 +16,13 @@
 
             <!-- Services List -->
             <div class="services-list">
-                <div v-for="(service, index) in services" :key="service.title" 
-                     class="service-card" 
-                     :class="{ 'reverse': index % 2 !== 0 }">
-                    
+                <div v-for="(service, index) in services" :key="service.title" class="service-card"
+                    :class="{ 'reverse': index % 2 !== 0 }">
+
                     <!-- Image Section -->
                     <div class="service-image">
-                        <video v-if="service.video" 
-                               width="100%" 
-                               height="100%" 
-                               :poster="service.video.poster" 
-                               autoplay 
-                               loop 
-                               muted
-                               playsinline>
+                        <video v-if="service.video" width="100%" height="100%" :poster="service.video.poster" autoplay
+                            loop muted playsinline>
                             <source :src="service.video.src" type="video/mp4" />
                         </video>
                         <img v-else :src="service.image" :alt="service.title" />
@@ -44,7 +37,8 @@
                         <a :href="service.link" class="learn-more-btn">
                             <span class="btn-text">Learn more</span>
                             <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
                     </div>
@@ -61,28 +55,28 @@ const services = ref([
     {
         title: 'Branding',
         description: "Developing a brand is not everyone's cup of tea. It is the result of experience gained in years and teamwork that derives the result. As a leading branding agency in India, we provide branding packages that fulfil the fundamental elements of creating a brand. Our branding strategies are unique and personalized according to the nature of your business, resulting in better results within a short period.",
-        link: 'https://www.expandbuzz.com/branding/',
+        link: '#', // url where you want to sent user
         video: {
-            poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Branding.png',
-            src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/branding.mp4'
+            poster: '#', // image link in place of #
+            src: 'https://videos.pexels.com/video-files/7279475/7279475-uhd_2732_1440_24fps.mp4'
         }
     },
     {
         title: 'Packaging',
         description: "Being the primary pillar, one of our core expertise lies in packaging design. Only an effective packaging design can increase your product sales; getting the correct pitch required for each product and building an aesthetic design that matches the nature of the product is all you need. And we are there to help you, with highly skilled designers and project managers, we can deliver the final design required for your product.",
-        link: 'https://www.expandbuzz.com/packaging-design-agency/',
+        link: '#',
         video: {
-            poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Packaging.png',
-            src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/packaging-design.mp4'
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/3735652/3735652-hd_1920_1080_25fps.mp4'
         }
     },
     {
         title: 'Digital Marketing',
         description: "Our expert team in Digital Marketing develops campaigns that can't be ignored. With immense ideas and solutions, our digital enthusiasts associate with brands worldwide to help increase brand awareness, reach, and sales through optimized digital ad campaigns. We strive to enclose and engage users with the brand by identifying the perfect conversation opportunities and the significance of remarketing campaigns.",
-        link: 'https://www.expandbuzz.com/digital-marketing-agency/',
+        link: '#',
         video: {
-            poster: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/Packaging.png',
-            src: 'https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/videos/digital-marketing2.mp4'
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/6562012/6562012-uhd_2560_1440_25fps.mp4'
         }
     }
 ]);
@@ -183,7 +177,7 @@ const services = ref([
     direction: rtl;
 }
 
-.service-card.reverse > * {
+.service-card.reverse>* {
     direction: ltr;
 }
 
@@ -281,7 +275,7 @@ const services = ref([
     .container {
         padding: 0 30px;
     }
-    
+
     .service-card {
         gap: 60px;
     }
@@ -291,20 +285,20 @@ const services = ref([
     .main-heading {
         font-size: 56px;
     }
-    
+
     .service-title {
         font-size: 42px;
     }
-    
+
     .service-card {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .service-card.reverse {
         direction: ltr;
     }
-    
+
     .service-image {
         height: 350px;
     }
@@ -314,43 +308,43 @@ const services = ref([
     .services-section {
         padding: 60px 0;
     }
-    
+
     .container {
         padding: 0 20px;
     }
-    
+
     .services-header {
         margin-bottom: 60px;
     }
-    
+
     .main-heading {
         font-size: 42px;
     }
-    
+
     .sub-heading {
         font-size: 18px;
     }
-    
+
     .services-list {
         gap: 80px;
     }
-    
+
     .service-title {
         font-size: 32px;
         margin-bottom: 20px;
     }
-    
+
     .service-description {
         font-size: 14px;
         margin-bottom: 30px;
         text-align: left;
     }
-    
+
     .service-image {
         height: 250px;
         border-radius: 20px;
     }
-    
+
     .learn-more-btn {
         padding: 12px 24px;
         font-size: 14px;
@@ -361,25 +355,25 @@ const services = ref([
     .main-heading {
         font-size: 32px;
     }
-    
+
     .heading-line-1::before {
         width: 40px;
         height: 3px;
     }
-    
+
     .sub-heading {
         font-size: 16px;
         margin-top: 20px;
     }
-    
+
     .service-title {
         font-size: 28px;
     }
-    
+
     .service-description {
         font-size: 13px;
     }
-    
+
     .service-image {
         height: 200px;
     }
