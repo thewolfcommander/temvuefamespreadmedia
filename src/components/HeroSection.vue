@@ -244,7 +244,7 @@ onBeforeUnmount(() => {
 .hero-container {
     width: 100%;
     min-height: 100vh;
-    background: #000;
+    background: var(--color-black);
     position: relative;
     overflow: hidden;
 }
@@ -261,30 +261,30 @@ onBeforeUnmount(() => {
 }
 
 .phone-number {
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50px;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-2) var(--space-5);
+    background: rgba(var(--color-white-rgb), 0.1);
+    border-radius: var(--radius-full);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
 }
 
 .phone-number:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(var(--color-white-rgb), 0.2);
 }
 
 .quote-button {
     background: linear-gradient(135deg, #ff0080, #ff0080, #d946ef);
-    padding: 12px 28px;
-    border-radius: 50px;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
     text-decoration: none;
     display: inline-block;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
 }
 
 .quote-button:hover {
@@ -293,9 +293,9 @@ onBeforeUnmount(() => {
 }
 
 .quote-button-text {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
     position: relative;
     z-index: 1;
 }
@@ -348,19 +348,19 @@ onBeforeUnmount(() => {
 }
 
 .main-heading {
-    font-size: clamp(28px, 4vw, 48px);
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 24px;
-    line-height: 1.2;
+    font-size: var(--heading-h2);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    margin-bottom: var(--space-6);
+    line-height: var(--line-height-tight);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: var(--letter-spacing-wider);
 }
 
 .sub-text {
-    font-size: clamp(14px, 1.5vw, 18px);
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
+    font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-lg));
+    color: var(--text-muted);
+    line-height: var(--line-height-relaxed);
     margin: 0;
 }
 
@@ -402,7 +402,7 @@ onBeforeUnmount(() => {
     left: 0;
     right: 0;
     height: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(var(--color-white-rgb), 0.2);
     z-index: 0;
 }
 
@@ -425,47 +425,47 @@ onBeforeUnmount(() => {
 .timeline-dot {
     width: 12px;
     height: 12px;
-    background: #333;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    margin-bottom: 15px;
-    transition: all 0.3s ease;
+    background: var(--color-gray-darker);
+    border: 2px solid rgba(var(--color-white-rgb), 0.3);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-4);
+    transition: var(--transition-base);
     position: relative;
 }
 
 .timeline-item.active .timeline-dot {
-    background: #fff;
-    border-color: #fff;
+    background: var(--color-white);
+    border-color: var(--color-white);
     width: 16px;
     height: 16px;
 }
 
 .timeline-item:hover .timeline-dot {
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(var(--color-white-rgb), 0.5);
+    border-color: rgba(var(--color-white-rgb), 0.8);
 }
 
 .timeline-label {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
     white-space: nowrap;
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
     text-align: center;
-    padding: 8px 16px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(var(--color-black-rgb), 0.5);
+    border-radius: var(--radius-xl);
     border: 1px solid transparent;
 }
 
 .timeline-item.active .timeline-label {
-    color: #fff;
-    font-weight: 600;
-    background: rgba(0, 0, 0, 0.8);
-    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--color-white);
+    font-weight: var(--font-weight-semibold);
+    background: rgba(var(--color-black-rgb), 0.8);
+    border-color: rgba(var(--color-white-rgb), 0.3);
 }
 
 .timeline-item:hover .timeline-label {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(var(--color-white-rgb), 0.9);
 }
 
 /* Add connecting dots before and after timeline dots */
@@ -475,8 +475,8 @@ onBeforeUnmount(() => {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
+    background: rgba(var(--color-white-rgb), 0.4);
+    border-radius: var(--radius-full);
     top: 50%;
     transform: translateY(-50%);
 }

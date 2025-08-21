@@ -349,7 +349,7 @@ function closeNav() {
     left: 0;
     width: 100%;
     height: auto;
-    background: #000;
+    background: var(--color-black);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
