@@ -7,6 +7,7 @@
     <FeaturedWorks />
     <ClientsSection />
     <ContactFormSection />
+    <TestimonialSection />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import ServicesOverview from '@/components/ServicesOverview.vue'
 import FeaturedWorks from '@/components/FeaturedWorks.vue'
 import ClientsSection from '@/components/ClientsSection.vue'
 import ContactFormSection from '@/components/ContactFormSection.vue'
+import TestimonialSection from '@/components/TestimonialSection.vue'
 
 const appStore = useAppStore()
 
