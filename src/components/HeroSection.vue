@@ -504,11 +504,11 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 32px;
+        font-size: 2rem; /* Use rem for better accessibility */
     }
 
     .sub-text {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .timeline-navigation {
@@ -520,7 +520,7 @@ onBeforeUnmount(() => {
     .cta-div {
         top: 20px;
         right: 20px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .phone-number {
@@ -528,74 +528,91 @@ onBeforeUnmount(() => {
     }
 
     .quote-button {
-        padding: 10px 20px;
+        padding: 8px 16px;
     }
 
     .quote-button-text {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .hero-section {
-        height: 90vh;
-        margin-top: 3rem;
+        min-height: 90vh; /* Use min-height for flexibility */
+        height: auto;
+        margin-top: 4rem;
+        padding-bottom: 4rem; /* Add padding for timeline */
     }
 
     .main-slider {
-        height: 60vh;
+        height: 55vh;
     }
 
     .slide-content {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+        justify-content: center;
     }
 
     .content-left {
         max-width: 100%;
         padding-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .content-right {
-        max-width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .main-heading {
-        font-size: 24px;
-        margin-bottom: 16px;
+        font-size: 1.5rem;
+        margin-bottom: 12px;
     }
 
     .sub-text {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .timeline-navigation {
-        bottom: 40px;
-        width: 95%;
+        bottom: 20px;
+        width: 90%;
     }
 
     .timeline-label {
-        font-size: 12px;
-        padding: 6px 10px;
+        font-size: 0.75rem;
+        padding: 4px 8px;
     }
 
     .timeline-items {
-        overflow-x: auto;
-        padding-bottom: 10px;
+       justify-content: center;
+    }
+
+    .timeline-item {
+        display: none;
+    }
+
+    .timeline-item.active {
+        display: flex;
     }
 }
 
 @media (max-width: 480px) {
-    .timeline-navigation {
-        display: none;
-    }
-
     .hero-section {
-        height: 80vh;
+        min-height: 80vh;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .main-slider {
-        height: 70vh;
+        height: 60vh;
+    }
+
+    .main-heading {
+        font-size: 1.25rem;
+    }
+
+    .sub-text {
+        font-size: 0.8rem;
     }
 }
 </style>
