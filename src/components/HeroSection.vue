@@ -222,11 +222,11 @@ onMounted(() => {
             }
         },
         on: {
-            slideChange: function() {
+            slideChange: function () {
                 currentSlide.value = this.realIndex;
                 animateSlideContent(this);
             },
-            init: function() {
+            init: function () {
                 animateSlideContent(this);
             }
         }
@@ -537,6 +537,7 @@ onBeforeUnmount(() => {
 
     .hero-section {
         height: 90vh;
+        margin-top: 3rem;
     }
 
     .main-slider {
