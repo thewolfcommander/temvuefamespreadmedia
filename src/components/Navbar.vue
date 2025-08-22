@@ -92,9 +92,6 @@
         </div>
       </div>
     </div>
-    <div>
-      <img src="https://via.placeholder.com/200x200/009fe3/ffffff?text=BG" class="img-fluid bg-elm1" alt="bg-elm1" />
-    </div>
   </nav>
 </template>
 
@@ -332,14 +329,6 @@ function closeNav() {
   color: white;
 }
 
-.bg-elm1 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 200px;
-  height: auto;
-  opacity: 0.1;
-}
 
 /* Mobile Fixes Only */
 @media (max-width: 768px) {
