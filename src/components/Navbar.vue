@@ -42,7 +42,7 @@
   <nav id="mb_nav" class="nav" :class="{ active: isNavOpen }">
     <div class="container ps-lg-5">
       <li class="logo">
-        <a class="nav__link" href="#home" @click="closeNav">
+        <a class="nav__link d-none d-md-block" href="#home" @click="closeNav">
           <img :src="logo" class="img-fluid" alt="logo" style="width: 250px" />
         </a>
       </li>
