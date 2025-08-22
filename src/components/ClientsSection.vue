@@ -11,8 +11,8 @@
                 </div>
                 <div class="header-right">
                     <p class="section-description">
-                        Welcome to our precious box - every customer is precious to us - it's only their trust and 
-                        cooperation make us who we are now. You can see a massive list, from top-listed ones to 
+                        Welcome to our precious box - every customer is precious to us - it's only their trust and
+                        cooperation make us who we are now. You can see a massive list, from top-listed ones to
                         new birds. We created every brand uniquely and gave them a unique identity in the market.
                     </p>
                 </div>
@@ -20,10 +20,8 @@
 
             <!-- Clients Grid -->
             <div class="clients-grid">
-                <div v-for="(client, index) in clients" 
-                     :key="client.name"
-                     class="client-item"
-                     :style="{ animationDelay: `${index * 50}ms` }">
+                <div v-for="(client, index) in clients" :key="client.name" class="client-item"
+                    :style="{ animationDelay: `${index * 50}ms` }">
                     <div class="client-logo-wrapper">
                         <img :src="client.logo" :alt="client.name" class="client-logo" />
                     </div>
@@ -38,37 +36,37 @@ import { ref } from 'vue';
 
 // Client logos data - Using actual brand logos
 const clients = ref([
-    { 
-        name: 'ITC Limited', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/ITC_Limited_Logo.svg/320px-ITC_Limited_Logo.svg.png' 
+    {
+        name: 'ITC Limited',
+        logo: 'https://is2-ssl.mzstatic.com/image/thumb/Purple118/v4/86/5d/7a/865d7a64-b91e-1a9a-b854-dbb37bfdbd3e/source/512x512bb.jpg'
     },
-    { 
-        name: 'Patanjali', 
-        logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Patanjali_logo.svg/320px-Patanjali_logo.svg.png' 
+    {
+        name: 'Patanjali',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6yY3ov5BS-Qa5cvJsJgMblO_9FyeARqRRICuMsFEDdig4hVHDJhIsQxEXiBqBASzByNQ&usqp=CAU'
     },
-    { 
-        name: 'Sunfeast', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Sunfeast_Logo.png/320px-Sunfeast_Logo.png' 
+    {
+        name: 'Sunfeast',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS81_IYPRf9uMc_wnI7p8uGIQospl0aU9zClg&s'
     },
-    { 
-        name: 'Britannia', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Britannia_Industries_logo.svg/320px-Britannia_Industries_logo.svg.png' 
+    {
+        name: 'Britannia',
+        logo: 'https://interbrand.com/wp-content/uploads/2023/05/Britannia_images_Hero_600x400.jpg'
     },
-    { 
-        name: 'Dabur', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dabur_Logo.svg/320px-Dabur_Logo.svg.png' 
+    {
+        name: 'Dabur',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2u00ob9NVXTD9GcJqg-6WKHX6vbFS79y1Sg&s'
     },
-    { 
-        name: 'Parle', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Parle-logo.jpg/320px-Parle-logo.jpg' 
+    {
+        name: 'Parle',
+        logo: 'https://www.adgully.com/img/400x300/202205/untitled-design-2022-05-09t174734-809.png.jpg'
     },
-    { 
-        name: 'Haldiram', 
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Haldiram%27s_Logo.svg/320px-Haldiram%27s_Logo.svg.png' 
+    {
+        name: 'Haldiram',
+        logo: 'https://media.licdn.com/dms/image/v2/D5622AQGRFYWHtCBn-w/feedshare-shrink_800/feedshare-shrink_800/0/1681724738108?e=2147483647&v=beta&t=lG05VH-kPuCacaP8xLYviL4UkkaDh60QQp_2-UkI9oU'
     },
-    { 
-        name: 'Amul', 
-        logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Amul_official_logo.svg/320px-Amul_official_logo.svg.png' 
+    {
+        name: 'Amul',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7i_2Qs2TrlgEgpLP3E53xEdCq3JNK1SG6Xg&s'
     }
 ]);
 </script>
@@ -242,7 +240,7 @@ const clients = ref([
     .section-header {
         gap: 60px;
     }
-    
+
     .clients-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 60px 40px;
@@ -253,25 +251,25 @@ const clients = ref([
     .clients-section {
         padding: 80px 0;
     }
-    
+
     .section-header {
         grid-template-columns: 1fr;
         gap: 40px;
         margin-bottom: 70px;
     }
-    
+
     .section-title {
         font-size: 56px;
     }
-    
+
     .section-subtitle {
         font-size: 20px;
     }
-    
+
     .header-right {
         padding-top: 0;
     }
-    
+
     .clients-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 50px 35px;
@@ -282,42 +280,42 @@ const clients = ref([
     .container {
         padding: 0 30px;
     }
-    
+
     .clients-section {
         padding: 60px 0;
     }
-    
+
     .section-header {
         margin-bottom: 50px;
     }
-    
+
     .section-title {
         font-size: 42px;
     }
-    
+
     .title-line-1::before {
         width: 50px;
         height: 3px;
     }
-    
+
     .section-subtitle {
         font-size: 18px;
     }
-    
+
     .section-description {
         font-size: 14px;
         text-align: left;
     }
-    
+
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 30px;
     }
-    
+
     .client-logo-wrapper {
         height: 60px;
     }
-    
+
     .client-logo {
         max-width: 120px;
         max-height: 50px;
@@ -328,39 +326,39 @@ const clients = ref([
     .container {
         padding: 0 20px;
     }
-    
+
     .section-title {
         font-size: 32px;
     }
-    
+
     .title-line-1::before {
         width: 40px;
     }
-    
+
     .section-subtitle {
         font-size: 16px;
     }
-    
+
     .section-description {
         font-size: 13px;
         line-height: 1.7;
     }
-    
+
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 35px 20px;
     }
-    
+
     .client-logo {
         max-width: 100px;
         max-height: 45px;
     }
-    
+
     /* Disable hover effects on mobile */
     .client-logo-wrapper:hover .client-logo {
         transform: none;
     }
-    
+
     .client-item:hover {
         transform: none;
     }
