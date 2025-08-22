@@ -26,7 +26,7 @@
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="../assets/Gemini_Generated_Image_wbzjbowbzjbowbzj__1_-removebg-preview.png"
+                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/Gemini_Generated_Image_wbzjbowbzjbowbzj__1_-removebg-preview.png"
                                     alt="Packaging Design" />
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="../assets/seo-3218580_1280-removebg-preview.png"
+                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/seo-3218580_1280-removebg-preview.png"
                                     alt="Brand Design" />
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="../assets/image-removebg-preview.png"
+                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
                                     alt="Logo Design" />
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="../assets/image-removebg-preview.png"
+                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
                                     alt="Social Media" />
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="../assets/image-removebg-preview.png"
+                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
                                     alt="Website Design" />
                             </div>
                         </div>

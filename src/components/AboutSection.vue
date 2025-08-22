@@ -124,7 +124,7 @@ import { ref } from 'vue'
 // Portfolio images with detailed brand content
 const portfolioImages = [
   { 
-    src: 'https://images.pexels.com/photos/4829069/pexels-photo-4829069.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg', 
     alt: 'Premium Coffee Packaging Design',
     brand: 'Aurora Coffee Co.',
     category: 'Food & Beverage',
@@ -135,7 +135,7 @@ const portfolioImages = [
     results: ['40% increase in premium product sales', 'Featured in packaging design awards', 'Improved brand recognition by 60%']
   },
   { 
-    src: 'https://images.pexels.com/photos/11757216/pexels-photo-11757216.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11757216.jpeg', 
     alt: 'Organic Skincare Brand Identity',
     brand: 'Pure Elements',
     category: 'Beauty & Cosmetics',
@@ -146,7 +146,7 @@ const portfolioImages = [
     results: ['Launch in 150+ retail stores', '85% positive customer feedback', 'Featured in beauty industry publications']
   },
   { 
-    src: 'https://images.pexels.com/photos/6167329/pexels-photo-6167329.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6167329.jpeg', 
     alt: 'Artisan Chocolate Packaging',
     brand: 'Noir Confections',
     category: 'Gourmet Food',
@@ -157,7 +157,7 @@ const portfolioImages = [
     results: ['30% increase in gift sales', 'Expansion to luxury department stores', 'International design recognition']
   },
   { 
-    src: 'https://images.pexels.com/photos/6483579/pexels-photo-6483579.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg', 
     alt: 'Tech Startup Brand Design',
     brand: 'InnovateTech Solutions',
     category: 'Technology',
@@ -168,7 +168,7 @@ const portfolioImages = [
     results: ['Successful Series A funding', 'Partnership with major corporations', '200% growth in client acquisition']
   },
   { 
-    src: 'https://images.pexels.com/photos/18347938/pexels-photo-18347938.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-18347938.jpeg', 
     alt: 'Sustainable Fashion Brand',
     brand: 'EcoThread Apparel',
     category: 'Fashion & Lifestyle',
@@ -179,7 +179,7 @@ const portfolioImages = [
     results: ['Featured in sustainability publications', '50% of sales from repeat customers', 'B-Corp certification achieved']
   },
   { 
-    src: 'https://images.pexels.com/photos/59150/pexels-photo-59150.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-59150.jpeg', 
     alt: 'Craft Beer Brewery Identity',
     brand: 'Mountain Peak Brewery',
     category: 'Alcoholic Beverages',
@@ -190,7 +190,7 @@ const portfolioImages = [
     results: ['Expanded to 50+ local venues', 'Award-winning beer recognition', 'Successful crowdfunding campaign']
   },
   { 
-    src: 'https://images.pexels.com/photos/8101525/pexels-photo-8101525.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-8101525.jpeg', 
     alt: 'Wellness Center Branding',
     brand: 'Harmony Wellness Spa',
     category: 'Health & Wellness',
@@ -201,7 +201,7 @@ const portfolioImages = [
     results: ['300% increase in bookings', 'Expansion to three locations', 'Featured in wellness magazines']
   },
   { 
-    src: 'https://images.pexels.com/photos/11044468/pexels-photo-11044468.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg', 
     alt: 'Gourmet Restaurant Identity',
     brand: 'Saveur Fine Dining',
     category: 'Food & Restaurant',
@@ -212,7 +212,7 @@ const portfolioImages = [
     results: ['Michelin Guide recognition', 'Fully booked for 6 months ahead', '95% positive reviews']
   },
   { 
-    src: 'https://images.pexels.com/photos/12725463/pexels-photo-12725463.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-12725463.jpeg', 
     alt: 'Artisan Bakery Packaging',
     brand: 'Golden Grain Artisan Bakery',
     category: 'Bakery & Pastry',
@@ -223,7 +223,7 @@ const portfolioImages = [
     results: ['Featured in food magazines', '60% increase in weekend sales', 'Wholesale contracts with cafes']
   },
   { 
-    src: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-7688336.jpeg', 
     alt: 'Digital Agency Rebrand',
     brand: 'Pixel Perfect Digital',
     category: 'Digital Marketing',
@@ -234,7 +234,7 @@ const portfolioImages = [
     results: ['40% increase in enterprise clients', 'Team expansion by 150%', 'Industry award recognition']
   },
   { 
-    src: 'https://images.pexels.com/photos/3829446/pexels-photo-3829446.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-3829446.jpeg', 
     alt: 'Luxury Watch Brand Identity',
     brand: 'Chronos Timepieces',
     category: 'Luxury Goods',
@@ -245,7 +245,7 @@ const portfolioImages = [
     results: ['Partnership with luxury retailers', 'Celebrity endorsements', 'Waiting list for limited editions']
   },
   { 
-    src: 'https://images.pexels.com/photos/19147426/pexels-photo-19147426.jpeg', 
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-19147426.jpeg', 
     alt: 'Organic Farm Brand Design',
     brand: 'Heritage Organic Farms',
     category: 'Agriculture & Food',
