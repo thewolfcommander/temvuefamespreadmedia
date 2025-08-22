@@ -217,7 +217,7 @@ const clients = ref([
 
 .client-logo {
     max-width: 160px;
-    max-height: 70px;
+    max-height: 90px;
     width: auto;
     height: auto;
     filter: grayscale(100%) opacity(0.6);
@@ -350,8 +350,8 @@ const clients = ref([
     }
 
     .client-logo {
-        max-width: 100px;
-        max-height: 45px;
+        max-width: 140px;
+        max-height: 84px;
     }
 
     /* Disable hover effects on mobile */
