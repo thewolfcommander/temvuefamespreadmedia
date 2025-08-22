@@ -314,6 +314,7 @@ const clients = ref([
 
     .client-logo-wrapper {
         height: 60px;
+        margin-bottom: 1.3rem;
     }
 
     .client-logo {
