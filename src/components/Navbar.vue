@@ -42,8 +42,8 @@
   <nav id="mb_nav" class="nav" :class="{ active: isNavOpen }">
     <div class="container ps-lg-5">
       <li class="logo">
-        <a class="nav__link d-none d-md-block" href="#home" @click="closeNav">
-          <img :src="logo" class="img-fluid" alt="logo" style="width: 250px" />
+        <a class="nav__link mb-5 d-none d-md-block" href="#home" @click="closeNav">
+          <img :src="fullLogo" class="img-fluid" alt="logo" style="width: 250px" />
         </a>
       </li>
       <div class="row">
@@ -99,6 +99,7 @@
 import { ref } from 'vue';
 // 1. Import your logo asset from the assets folder
 import logo from '../assets/logo.svg';
+import fullLogo from '../assets/fullLogo.png';
 
 // 2. Create a "reactive" variable to track the menu's open/closed state
 const isNavOpen = ref(false);
