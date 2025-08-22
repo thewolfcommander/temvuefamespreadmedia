@@ -13,13 +13,18 @@
             <span class="heading-line">OPPORTUNITIES?</span>
           </h1>
           <h2 class="sub-heading">We build an immersive brand!</h2>
-          
+
           <div class="description-content">
             <p class="description-paragraph">
-              The best business relationships start with a simple discussion. You might be wondering how we know. With more than 10 years of proven experience, we got opportunities to interact with a wide range of potential clients worldwide.
+              The best business relationships start with a simple discussion. You might be wondering how we know. With
+              more than 10 years of proven experience, we got opportunities to interact with a wide range of potential
+              clients worldwide.
             </p>
             <p class="description-paragraph">
-              As a creative branding agency, we consider every instant of essential change conceals immense opportunity. That's what makes us come up with a powerful medium that drives the future. From idea to execution, we provide aesthetic branding experience and packaging solutions that enhance your brand and make it scale faster and more robust.
+              As a creative branding agency, we consider every instant of essential change conceals immense opportunity.
+              That's what makes us come up with a powerful medium that drives the future. From idea to execution, we
+              provide aesthetic branding experience and packaging solutions that enhance your brand and make it scale
+              faster and more robust.
             </p>
           </div>
         </div>
@@ -30,12 +35,8 @@
     <section class="portfolio-section">
       <div class="portfolio-container">
         <div class="portfolio-grid">
-          <div 
-            v-for="(image, index) in portfolioImages" 
-            :key="index" 
-            class="portfolio-item"
-            @click="openLightbox(image)"
-          >
+          <div v-for="(image, index) in portfolioImages" :key="index" class="portfolio-item"
+            @click="openLightbox(image)">
             <div class="image-wrapper">
               <img :src="image.src" :alt="image.alt" class="portfolio-image" />
               <div class="overlay">
@@ -44,8 +45,11 @@
                   <p class="brand-category">{{ image.category }}</p>
                   <div class="view-project">
                     <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                      </path>
                     </svg>
                     <span>View Project</span>
                   </div>
@@ -66,7 +70,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          
+
           <div class="lightbox-grid">
             <!-- Image Section -->
             <div class="lightbox-image-section">
@@ -74,7 +78,7 @@
                 <img :src="selectedImage?.src" :alt="selectedImage?.alt" class="lightbox-image" />
               </div>
             </div>
-            
+
             <!-- Content Section -->
             <div class="lightbox-content-section">
               <div class="lightbox-header">
@@ -86,23 +90,23 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="lightbox-body">
                 <div class="content-section">
                   <h3>Project Overview</h3>
                   <p>{{ selectedImage?.description }}</p>
                 </div>
-                
+
                 <div class="content-section">
                   <h3>The Challenge</h3>
                   <p>{{ selectedImage?.challenge }}</p>
                 </div>
-                
+
                 <div class="content-section">
                   <h3>Our Solution</h3>
                   <p>{{ selectedImage?.solution }}</p>
                 </div>
-                
+
                 <div class="content-section">
                   <h3>Results</h3>
                   <ul class="results-list">
@@ -123,8 +127,8 @@ import { ref } from 'vue'
 
 // Portfolio images with detailed brand content
 const portfolioImages = [
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg',
     alt: 'Premium Coffee Packaging Design',
     brand: 'Aurora Coffee Co.',
     category: 'Food & Beverage',
@@ -134,8 +138,8 @@ const portfolioImages = [
     solution: 'Developed a clean, minimalist design using recycled kraft paper with elegant typography and a subtle color palette that highlights the coffee origin story.',
     results: ['40% increase in premium product sales', 'Featured in packaging design awards', 'Improved brand recognition by 60%']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11757216.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11757216.jpeg',
     alt: 'Organic Skincare Brand Identity',
     brand: 'Pure Elements',
     category: 'Beauty & Cosmetics',
@@ -145,8 +149,8 @@ const portfolioImages = [
     solution: 'Created a cohesive visual identity using botanical elements, earth tones, and clean typography to convey purity and natural effectiveness.',
     results: ['Launch in 150+ retail stores', '85% positive customer feedback', 'Featured in beauty industry publications']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6167329.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6167329.jpeg',
     alt: 'Artisan Chocolate Packaging',
     brand: 'Noir Confections',
     category: 'Gourmet Food',
@@ -156,8 +160,8 @@ const portfolioImages = [
     solution: 'Developed an elegant design system using deep colors, gold accents, and tactile finishes that enhance the unboxing experience.',
     results: ['30% increase in gift sales', 'Expansion to luxury department stores', 'International design recognition']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg',
     alt: 'Tech Startup Brand Design',
     brand: 'InnovateTech Solutions',
     category: 'Technology',
@@ -167,8 +171,8 @@ const portfolioImages = [
     solution: 'Created a dynamic visual identity using geometric elements and a bold color palette that reflects technological advancement and reliability.',
     results: ['Successful Series A funding', 'Partnership with major corporations', '200% growth in client acquisition']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-18347938.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-18347938.jpeg',
     alt: 'Sustainable Fashion Brand',
     brand: 'EcoThread Apparel',
     category: 'Fashion & Lifestyle',
@@ -178,8 +182,8 @@ const portfolioImages = [
     solution: 'Developed a brand identity that balances environmental messaging with contemporary fashion aesthetics.',
     results: ['Featured in sustainability publications', '50% of sales from repeat customers', 'B-Corp certification achieved']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-59150.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-59150.jpeg',
     alt: 'Craft Beer Brewery Identity',
     brand: 'Mountain Peak Brewery',
     category: 'Alcoholic Beverages',
@@ -189,8 +193,8 @@ const portfolioImages = [
     solution: 'Created a distinctive visual identity using hand-crafted elements and local mountain imagery to establish strong regional connection.',
     results: ['Expanded to 50+ local venues', 'Award-winning beer recognition', 'Successful crowdfunding campaign']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-8101525.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-8101525.jpeg',
     alt: 'Wellness Center Branding',
     brand: 'Harmony Wellness Spa',
     category: 'Health & Wellness',
@@ -200,8 +204,8 @@ const portfolioImages = [
     solution: 'Developed a serene visual identity using soft gradients, natural forms, and calming typography to evoke tranquility and wellness.',
     results: ['300% increase in bookings', 'Expansion to three locations', 'Featured in wellness magazines']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg',
     alt: 'Gourmet Restaurant Identity',
     brand: 'Saveur Fine Dining',
     category: 'Food & Restaurant',
@@ -211,8 +215,8 @@ const portfolioImages = [
     solution: 'Created an elegant but approachable brand identity using sophisticated typography and warm color palette.',
     results: ['Michelin Guide recognition', 'Fully booked for 6 months ahead', '95% positive reviews']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-12725463.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-12725463.jpeg',
     alt: 'Artisan Bakery Packaging',
     brand: 'Golden Grain Artisan Bakery',
     category: 'Bakery & Pastry',
@@ -222,8 +226,8 @@ const portfolioImages = [
     solution: 'Developed packaging that celebrates traditional craftsmanship with hand-drawn illustrations and warm, earthy colors.',
     results: ['Featured in food magazines', '60% increase in weekend sales', 'Wholesale contracts with cafes']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-7688336.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-7688336.jpeg',
     alt: 'Digital Agency Rebrand',
     brand: 'Pixel Perfect Digital',
     category: 'Digital Marketing',
@@ -233,8 +237,8 @@ const portfolioImages = [
     solution: 'Created a professional yet creative brand identity that showcases both strategic thinking and creative execution.',
     results: ['40% increase in enterprise clients', 'Team expansion by 150%', 'Industry award recognition']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-3829446.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-3829446.jpeg',
     alt: 'Luxury Watch Brand Identity',
     brand: 'Chronos Timepieces',
     category: 'Luxury Goods',
@@ -244,8 +248,8 @@ const portfolioImages = [
     solution: 'Created a timeless visual identity that honors watchmaking tradition while introducing contemporary elegance.',
     results: ['Partnership with luxury retailers', 'Celebrity endorsements', 'Waiting list for limited editions']
   },
-  { 
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-19147426.jpeg', 
+  {
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-19147426.jpeg',
     alt: 'Organic Farm Brand Design',
     brand: 'Heritage Organic Farms',
     category: 'Agriculture & Food',
@@ -481,16 +485,16 @@ const closeLightbox = () => {
     right: var(--space-8);
     gap: var(--space-3);
   }
-  
+
   .phone-number {
     font-size: var(--font-size-sm);
     padding: var(--space-2) var(--space-4);
   }
-  
+
   .quote-button {
     padding: var(--space-2) var(--space-5);
   }
-  
+
   .quote-button-text {
     font-size: var(--font-size-xs);
   }
@@ -883,17 +887,17 @@ const closeLightbox = () => {
     grid-template-columns: 1fr;
     max-height: 90vh;
   }
-  
+
   .lightbox-image-section {
     min-height: 40vh;
     max-height: 50vh;
     padding: var(--space-6);
   }
-  
+
   .lightbox-content-section {
     padding: var(--space-6);
   }
-  
+
   .lightbox-brand-name {
     font-size: var(--font-size-2xl);
   }
@@ -902,47 +906,48 @@ const closeLightbox = () => {
 @media (max-width: 768px) {
   .lightbox-overlay {
     padding: var(--space-4);
+    margin-top: 3rem;
   }
-  
+
   .lightbox-content {
     border-radius: var(--radius-lg);
   }
-  
+
   .close-button {
     top: var(--space-4);
     right: var(--space-4);
     width: 40px;
     height: 40px;
   }
-  
+
   .lightbox-image-section {
     padding: var(--space-4);
     min-height: 35vh;
   }
-  
+
   .lightbox-content-section {
     padding: var(--space-4);
   }
-  
+
   .lightbox-header {
     margin-bottom: var(--space-6);
     padding-bottom: var(--space-4);
   }
-  
+
   .lightbox-brand-name {
     font-size: var(--font-size-xl);
   }
-  
+
   .brand-meta {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
   }
-  
+
   .content-section {
     margin-bottom: var(--space-8);
   }
-  
+
   .content-section h3 {
     font-size: var(--font-size-lg);
     margin-bottom: var(--space-5);
@@ -954,15 +959,15 @@ const closeLightbox = () => {
   .overlay-content {
     padding: var(--space-3);
   }
-  
+
   .brand-name {
     font-size: var(--font-size-base);
   }
-  
+
   .brand-category {
     font-size: var(--font-size-xs);
   }
-  
+
   .view-project {
     font-size: var(--font-size-xs);
   }
