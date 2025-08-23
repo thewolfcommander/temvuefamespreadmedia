@@ -349,7 +349,6 @@ const closeLightbox = () => {
 
 /* Hero Content */
 .hero-content {
-  padding: var(--space-24) 0 var(--space-20);
   display: flex;
   align-items: center;
   min-height: 90vh;
