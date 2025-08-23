@@ -409,6 +409,7 @@ onBeforeUnmount(() => {
     height: 2px;
     background: rgba(var(--color-white-rgb), 0.15);
     z-index: 0;
+    margin-top: -3px;
 }
 
 .timeline-items {
