@@ -388,7 +388,7 @@ onBeforeUnmount(() => {
 /* Timeline Navigation */
 .timeline-navigation {
     position: absolute;
-    bottom: 70px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
