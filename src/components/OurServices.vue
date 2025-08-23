@@ -35,7 +35,7 @@
                             {{ service.description }}
                         </p>
                         <a :href="service.link" class="learn-more-btn">
-                            <span class="btn-text">Learn more</span>
+                            <span class="btn-text">Get a Quote</span>
                             <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -53,30 +53,56 @@ import { ref } from 'vue';
 
 const services = ref([
     {
-        title: 'Branding',
-        description: "Developing a brand is not everyone's cup of tea. It is the result of experience gained in years and teamwork that derives the result. As a leading branding agency in India, we provide branding packages that fulfil the fundamental elements of creating a brand. Our branding strategies are unique and personalized according to the nature of your business, resulting in better results within a short period.",
+        title: 'Social Media Management',
+        description: "We boost client online presence with ethical, efficient campaigns across multiple channels. Our strategies are morally sound, effective, and secure, designed to maximize engagement and growth.",
         link: '#', // url where you want to sent user
         video: {
             poster: '#', // image link in place of #
-            src: 'https://videos.pexels.com/video-files/7279475/7279475-uhd_2732_1440_24fps.mp4'
-        }
-    },
-    {
-        title: 'Packaging',
-        description: "Being the primary pillar, one of our core expertise lies in packaging design. Only an effective packaging design can increase your product sales; getting the correct pitch required for each product and building an aesthetic design that matches the nature of the product is all you need. And we are there to help you, with highly skilled designers and project managers, we can deliver the final design required for your product.",
-        link: '#',
-        video: {
-            poster: '#',
-            src: 'https://videos.pexels.com/video-files/3735652/3735652-hd_1920_1080_25fps.mp4'
-        }
-    },
-    {
-        title: 'Digital Marketing',
-        description: "Our expert team in Digital Marketing develops campaigns that can't be ignored. With immense ideas and solutions, our digital enthusiasts associate with brands worldwide to help increase brand awareness, reach, and sales through optimized digital ad campaigns. We strive to enclose and engage users with the brand by identifying the perfect conversation opportunities and the significance of remarketing campaigns.",
-        link: '#',
-        video: {
-            poster: '#',
             src: 'https://videos.pexels.com/video-files/6562012/6562012-uhd_2560_1440_25fps.mp4'
+        }
+    },
+    {
+        title: 'Photography and Videography',
+        description: "We offer top-tier Photography and Videography services to bring your vision to life. From captivating images to dynamic videos, trust us to showcase your story with creativity and excellence.",
+        link: '#',
+        video: {
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/2084217/2084217-hd_1920_1080_24fps.mp4'
+        }
+    },
+    {
+        title: 'Search Engine Optimization (SEO)',
+        description: "We help select optimal keywords to boost your website's visibility. Ensure search engines connect users to your services effortlessly, enhancing your online presence and driving relevant traffic.",
+        link: '#',
+        video: {
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/4549682/4549682-hd_1920_1080_30fps.mp4'
+        }
+    }, {
+        title: 'Website Development',
+        description: "Our expert team in Website Development creates stunning, user-friendly websites that drive results. We focus on responsive design, seamless navigation, and optimized performance to ensure your online presence stands out.",
+        link: '#',
+        video: {
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/5076634/5076634-uhd_2732_1440_25fps.mp4'
+        }
+    },
+    {
+        title: 'AD Manager',
+        description: "Our expert team in Ad Management specializes in creating and optimizing campaigns across platforms like Google, Facebook, Instagram, and beyond. We design data-driven, targeted ads that maximize reach, boost conversions, and deliver measurable ROI. With a focus on audience insights, budget efficiency, and continuous optimization, we ensure your brand captures attention and achieves impactful results.",
+        link: '#',
+        video: {
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/7596776/7596776-uhd_2732_1440_25fps.mp4'
+        }
+    },
+    {
+        title: 'Social Media Optimization',
+        description: "Our expert team in Digital Marketing delivers customized solutions for eCommerce, Finance, Healthcare, Education, and more. We craft industry-specific strategies designed to boost visibility, drive engagement, and maximize growth. From targeted campaigns to data-driven optimization, we ensure your brand builds a strong online presence and connects with the right audience for lasting impact.",
+        link: '#',
+        video: {
+            poster: '#',
+            src: 'https://videos.pexels.com/video-files/5076634/5076634-uhd_2732_1440_25fps.mp4'
         }
     }
 ]);
@@ -184,7 +210,7 @@ const services = ref([
 /* Service Image */
 .service-image {
     width: 100%;
-    height: 450px;
+    height: 380px;
     border-radius: 40px;
     overflow: hidden;
     background: #1a1a1a;
@@ -228,7 +254,7 @@ const services = ref([
     background-color: transparent;
     border: 2px solid var(--primary-blue);
     border-radius: 50px;
-    color: var(--text-light);
+    color: var(--primary);
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;

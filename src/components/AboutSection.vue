@@ -16,15 +16,13 @@
 
           <div class="description-content">
             <p class="description-paragraph">
-              The best business relationships start with a simple discussion. You might be wondering how we know. With
-              more than 10 years of proven experience, we got opportunities to interact with a wide range of potential
-              clients worldwide.
+              Welcome to FameSpreadMedia, a growing digital marketing agency dedicated to optimizing your online
+              success. Our expert team crafts custom strategies fueled by data-driven insights to amplify your brand's
+              visibility and engagement.
             </p>
             <p class="description-paragraph">
-              As a creative branding agency, we consider every instant of essential change conceals immense opportunity.
-              That's what makes us come up with a powerful medium that drives the future. From idea to execution, we
-              provide aesthetic branding experience and packaging solutions that enhance your brand and make it scale
-              faster and more robust.
+              With a proven track record, we have successfully collaborated with 5+ brands across diverse industries. By
+              choosing us, you can trust that we will bring our expertise and passion to help you achieve your goals.
             </p>
           </div>
         </div>

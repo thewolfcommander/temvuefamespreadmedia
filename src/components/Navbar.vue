@@ -50,30 +50,29 @@
         <div class="col-lg-4">
           <ul>
             <li><a class="nav__link" href="#about" @click="closeNav">About Us</a></li>
-            <li><a class="nav__link" href="#work" @click="closeNav">Our Work</a></li>
-            <li><a class="nav__link" href="#case-study" @click="closeNav">Case Study</a></li>
-            <li><a class="nav__link" href="#branding" @click="closeNav">Branding</a></li>
-            <li><a class="nav__link" href="#packaging" @click="closeNav">Packaging Design</a></li>
+            <li><a class="nav__link" href="#work" @click="closeNav">Our Projects</a></li>
+            <li><a class="nav__link" href="#branding" @click="closeNav">Founder Story</a></li>
+            <li><a class="nav__link" href="#packaging" @click="closeNav">Testimonials</a></li>
+            <li><a class="nav__link" href="#case-study" @click="closeNav">Contact Us</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul>
-            <li><a class="nav__link" href="#logo" @click="closeNav">Logo Design</a></li>
-            <li><a class="nav__link" href="#web" @click="closeNav">Web Development</a></li>
-            <li><a class="nav__link" href="#marketing" @click="closeNav">Digital Marketing</a></li>
-            <li><a class="nav__link" href="#contact" @click="closeNav">Contact Us</a></li>
-            <li><a class="nav__link" href="#blog" @click="closeNav">Blog</a></li>
+            <li><a class="nav__link" href="#logo" @click="closeNav">Social Media Management</a></li>
+            <li><a class="nav__link" href="#web" @click="closeNav">Content Creation</a></li>
+            <li><a class="nav__link" href="#marketing" @click="closeNav">SEO</a></li>
+            <li><a class="nav__link" href="#contact" @click="closeNav">Website Development</a></li>
+            <li><a class="nav__link" href="#blog" @click="closeNav">AD Manager</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul>
             <li>
               <div class="nav__link nav_link_text">
-                <h3 class="d-none d-md-none d-lg-block">Want a<br />best selling brand?</h3>
+                <h3 class="d-none d-md-none d-lg-block">Want to<br /> Elevate Your Brand and Expand Your Reach?</h3>
                 <p class="d-none d-md-none d-lg-block">
-                  Tell us about your project Fancy a coffee and a chat? We
-                  would love to meet you. Drop us a line or slide into our DMs
-                  and we will help to create buzz in your social handles
+                  Tell us about your project. Elevate Your Brand, Expand Your Reach - Your Success, Our Strategy. Boost
+                  Your Online Presence with Our Expert Digital Marketing Agency Services.
                 </p>
                 <p>
                   <a href="mailto:famespreadmedia@gmail.com" class="nav__link call-link2 text-lowercase"

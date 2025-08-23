@@ -159,6 +159,7 @@ const handleMouseLeave = () => {
 .btn-text {
     position: relative;
     z-index: 1;
+    color: var(--primary);
 }
 
 .arrow-icon {

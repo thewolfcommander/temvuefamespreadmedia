@@ -11,9 +11,9 @@
                 </div>
                 <div class="header-right">
                     <p class="section-description">
-                        Welcome to our precious box - every customer is precious to us - it's only their trust and
-                        cooperation make us who we are now. You can see a massive list, from top-listed ones to
-                        new birds. We created every brand uniquely and gave them a unique identity in the market.
+                        Welcome to our precious box - every customer is precious to us. Explore our valued clients:
+                        trusted partners benefiting from our tailored digital solutions, driving growth and success in
+                        their industries.
                     </p>
                 </div>
             </div>

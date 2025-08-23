@@ -49,17 +49,12 @@
                 <div class="agency-content">
                     <h1 class="agency-heading">
                         INDIA'S LEADING BRANDING &<br />
-                        PACKAGING DESIGN AGENCY
+                        CREATIVE MARKETING AGENCY
                     </h1>
                     <p class="agency-description">
-                        With an experience of more than 10 prosperous years in the industry, we are privileged to be one
-                        of the prominent branding agencies in
-                        India. We also marked our identity in packaging and digital segments, becoming a leading
-                        <a href="#" class="inline-link">packaging
-                            design agency</a>
-                        and India's top
-                        <a href="#" class="inline-link">digital
-                            marketing agency</a>.
+                        With a passion for digital innovation, we are dedicated to helping brands find their voice.
+                        Discover our dynamic projects: from website optimization to social media campaigns, our diverse
+                        portfolio showcases impactful digital solutions driving measurable results for our clients.
                     </p>
                 </div>
             </div>
@@ -183,7 +178,7 @@ onMounted(() => {
     gap: 10px;
     font-size: 18px;
     font-weight: 500;
-    color: var(--primary-blue);
+    color: var(--primary);
     text-decoration: none;
     transition: var(--transition);
     position: relative;
