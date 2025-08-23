@@ -226,7 +226,7 @@ onMounted(() => {
 }
 
 .tag-link:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
     transform: translateX(5px);
     opacity: 1;
 }
