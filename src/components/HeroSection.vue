@@ -242,7 +242,7 @@ onBeforeUnmount(() => {
 .hero-container {
     width: 100%;
     min-height: 100vh;
-    background: var(--bg-dark);
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a1a 100%);
     position: relative;
     overflow: hidden;
 }
@@ -311,7 +311,7 @@ onBeforeUnmount(() => {
 /* Main Slider */
 .main-slider {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     position: relative;
 }
 
@@ -320,12 +320,16 @@ onBeforeUnmount(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease;
-    opacity: 0.3;
+    transition: all 0.7s ease;
+    opacity: 0.25;
+    transform: scale(0.85);
+    filter: blur(4px);
 }
 
 .swiper-slide-active {
     opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
 }
 
 .slide-content {
@@ -341,32 +345,33 @@ onBeforeUnmount(() => {
 
 .content-left {
     flex: 1;
-    max-width: 45%;
-    padding-right: 40px;
+    max-width: 50%;
+    padding-right: 50px;
 }
 
 .main-heading {
     font-family: var(--font-family-heading);
-    font-size: var(--heading-h2);
-    font-weight: var(--font-weight-bold);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: var(--font-weight-black);
     color: var(--color-text-white);
-    margin-bottom: var(--space-6);
-    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-7);
+    line-height: 1.1;
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing-wider);
+    letter-spacing: 1.5px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .sub-text {
     font-family: var(--font-family-body);
-    font-size: clamp(var(--font-size-sm), 1.5vw, var(--font-size-lg));
+    font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-lg));
     color: var(--color-text-secondary);
-    line-height: var(--line-height-relaxed);
+    line-height: 1.7;
     margin: 0;
 }
 
 .content-right {
     flex: 1;
-    max-width: 55%;
+    max-width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -375,15 +380,15 @@ onBeforeUnmount(() => {
 
 .content-right img {
     max-width: 100%;
-    max-height: 80%;
+    max-height: 85%;
     object-fit: contain;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
 }
 
 /* Timeline Navigation */
 .timeline-navigation {
     position: absolute;
-    bottom: 80px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -398,11 +403,11 @@ onBeforeUnmount(() => {
 
 .timeline-line {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0;
     right: 0;
-    height: 1px;
-    background: rgba(var(--color-white-rgb), 0.2);
+    height: 2px;
+    background: rgba(var(--color-white-rgb), 0.15);
     z-index: 0;
 }
 
@@ -418,17 +423,17 @@ onBeforeUnmount(() => {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     position: relative;
 }
 
 .timeline-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background: var(--color-secondary);
-    border: 2px solid rgba(var(--color-white-rgb), 0.3);
+    border: 3px solid rgba(var(--color-white-rgb), 0.3);
     border-radius: var(--radius-full);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-5);
     transition: var(--transition-base);
     position: relative;
 }
@@ -436,13 +441,11 @@ onBeforeUnmount(() => {
 .timeline-item.active .timeline-dot {
     background: var(--color-primary);
     border-color: var(--color-primary);
-    width: 16px;
-    height: 16px;
+    transform: scale(1.5);
 }
 
 .timeline-item:hover .timeline-dot {
-    background: rgba(var(--color-white-rgb), 0.5);
-    border-color: rgba(var(--color-white-rgb), 0.8);
+    transform: scale(1.2);
 }
 
 .timeline-label {
@@ -453,46 +456,20 @@ onBeforeUnmount(() => {
     transition: var(--transition-base);
     text-align: center;
     padding: var(--space-2) var(--space-4);
-    background: rgba(var(--color-black-rgb), 0.5);
-    border-radius: var(--radius-xl);
+    background: rgba(var(--color-black-rgb), 0.6);
+    border-radius: var(--radius-lg);
     border: 1px solid transparent;
 }
 
 .timeline-item.active .timeline-label {
     color: var(--color-text-white);
-    font-weight: var(--font-weight-semibold);
-    background: rgba(var(--color-primary-rgb), 0.2);
+    font-weight: var(--font-weight-bold);
+    background: rgba(var(--color-primary-rgb), 0.25);
     border-color: var(--color-primary);
 }
 
 .timeline-item:hover .timeline-label {
-    color: rgba(var(--color-white-rgb), 0.9);
-}
-
-/* Add connecting dots before and after timeline dots */
-.timeline-dot::before,
-.timeline-dot::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(var(--color-white-rgb), 0.4);
-    border-radius: var(--radius-full);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.timeline-dot::before {
-    left: -25px;
-}
-
-.timeline-dot::after {
-    right: -25px;
-}
-
-.timeline-item:first-child .timeline-dot::before,
-.timeline-item:last-child .timeline-dot::after {
-    display: none;
+    color: var(--color-text-white);
 }
 
 /* Responsive Design */
@@ -502,8 +479,7 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 2rem;
-        /* Use rem for better accessibility */
+        font-size: 2.2rem;
     }
 
     .sub-text {
@@ -511,7 +487,7 @@ onBeforeUnmount(() => {
     }
 
     .timeline-navigation {
-        bottom: 60px;
+        bottom: 50px;
     }
 }
 
@@ -527,7 +503,7 @@ onBeforeUnmount(() => {
     }
 
     .quote-button {
-        padding: 8px 16px;
+        padding: 10px 20px;
     }
 
     .quote-button-text {
@@ -536,15 +512,13 @@ onBeforeUnmount(() => {
 
     .hero-section {
         min-height: 90vh;
-        /* Use min-height for flexibility */
         height: auto;
         margin-top: 4rem;
         padding-bottom: 4rem;
-        /* Add padding for timeline */
     }
 
     .main-slider {
-        height: 55vh;
+        height: 60vh;
     }
 
     .slide-content {
@@ -557,7 +531,7 @@ onBeforeUnmount(() => {
     .content-left {
         max-width: 100%;
         padding-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .content-right {
@@ -566,22 +540,22 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 1.5rem;
-        margin-bottom: 12px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
     }
 
     .sub-text {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
     }
 
     .timeline-navigation {
-        bottom: 20px;
+        bottom: 30px;
         width: 90%;
     }
 
     .timeline-label {
-        font-size: 0.75rem;
-        padding: 4px 8px;
+        font-size: 0.8rem;
+        padding: 5px 10px;
     }
 
     .timeline-items {
@@ -599,21 +573,21 @@ onBeforeUnmount(() => {
 
 @media (max-width: 480px) {
     .hero-section {
-        min-height: 80vh;
+        min-height: 85vh;
         margin-top: 2rem;
         padding-bottom: 2rem;
     }
 
     .main-slider {
-        height: 60vh;
+        height: 65vh;
     }
 
     .main-heading {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     .sub-text {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }
 </style>
