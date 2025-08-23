@@ -14,15 +14,15 @@
         <section class="hero-section">
             <div class="swiper main-slider" ref="mainSliderEl">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1: Packaging Design -->
+                    <!-- Slide 1: Social Media -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">UNWRAP THE ART OF PACKAGING</h1>
+                                <h1 class="main-heading">ELEVATE YOUR DIGITAL PRESENCE</h1>
                                 <p class="sub-text">
-                                    Effective packaging that speaks volumes,<br>
-                                    designed with creative inserts to enhance your<br>
-                                    product sales. Your Product's Perfect Dress
+                                    We deliver holistic digital marketing solutions,<br>
+                                    guiding you through the constantly evolving realm of<br>
+                                    competitive digital landscapes.
                                 </p>
                             </div>
                             <div class="content-right">
@@ -32,14 +32,15 @@
                         </div>
                     </div>
 
-                    <!-- Slide 2: Brand Design -->
+                    <!-- Slide 2: Website -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">UNLEASHING THE POWER OF YOUR BRAND</h1>
+                                <h1 class="main-heading">CRAFTING YOUR ONLINE IDENTITY</h1>
                                 <p class="sub-text">
-                                    Build your Dreams Through Branding - Where Your Story<br>
-                                    Evolves into an Enduring Legacy.
+                                    Shaping Future Digital Landscapes Today - Your<br>
+                                    Imagination, Our expertise, and Limitless Potential<br>
+                                    Waiting to Be Unveiled.
                                 </p>
                             </div>
                             <div class="content-right">
@@ -49,15 +50,14 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3: Logo Design -->
+                    <!-- Slide 3: SEO -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">UNVEIL YOUR BRAND'S ESSENCE</h1>
+                                <h1 class="main-heading">UNLOCK YOUR WEBSITE'S POTENTIAL</h1>
                                 <p class="sub-text">
-                                    We design unique brand emblems,<br>
-                                    helping businesses find their special identity in the<br>
-                                    world of marketing and branding
+                                    Our SEO strategies are designed to increase your visibility,<br>
+                                    drive organic traffic, and boost your search engine rankings.
                                 </p>
                             </div>
                             <div class="content-right">
@@ -67,15 +67,14 @@
                         </div>
                     </div>
 
-                    <!-- Slide 4: Social Media -->
+                    <!-- Slide 4: Content Creation -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">ELEVATE YOUR DIGITAL PRESENCE</h1>
+                                <h1 class="main-heading">TELLING YOUR BRAND'S STORY</h1>
                                 <p class="sub-text">
-                                    We deliver holistic digital marketing solutions,<br>
-                                    guiding them through the constantly evolving realm of<br>
-                                    competitive digital landscapes
+                                    We create compelling content that resonates with your audience,<br>
+                                    builds brand loyalty, and drives engagement.
                                 </p>
                             </div>
                             <div class="content-right">
@@ -85,15 +84,14 @@
                         </div>
                     </div>
 
-                    <!-- Slide 5: Website -->
+                    <!-- Slide 5: AD Manager -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">CRAFTING YOUR ONLINE IDENTITY</h1>
+                                <h1 class="main-heading">MAXIMIZE YOUR ADVERTISING ROI</h1>
                                 <p class="sub-text">
-                                    Shaping Future Digital Landscapes Today - Your<br>
-                                    Imagination, Our expertise, and Limitless Potential<br>
-                                    Waiting to Be Unveiled.
+                                    We manage your ad campaigns with precision,<br>
+                                    ensuring your message reaches the right audience at the right time.
                                 </p>
                             </div>
                             <div class="content-right">
@@ -120,15 +118,15 @@
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 2 }" @click="goToSlide(2)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Packaging Design</span>
+                            <span class="timeline-label">SEO</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 3 }" @click="goToSlide(3)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Brand Design</span>
+                            <span class="timeline-label">Content Creation</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 4 }" @click="goToSlide(4)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Logo Design</span>
+                            <span class="timeline-label">AD Manager</span>
                         </div>
                     </div>
                 </div>
@@ -504,7 +502,8 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 2rem; /* Use rem for better accessibility */
+        font-size: 2rem;
+        /* Use rem for better accessibility */
     }
 
     .sub-text {
@@ -536,10 +535,12 @@ onBeforeUnmount(() => {
     }
 
     .hero-section {
-        min-height: 90vh; /* Use min-height for flexibility */
+        min-height: 90vh;
+        /* Use min-height for flexibility */
         height: auto;
         margin-top: 4rem;
-        padding-bottom: 4rem; /* Add padding for timeline */
+        padding-bottom: 4rem;
+        /* Add padding for timeline */
     }
 
     .main-slider {
@@ -584,7 +585,7 @@ onBeforeUnmount(() => {
     }
 
     .timeline-items {
-       justify-content: center;
+        justify-content: center;
     }
 
     .timeline-item {
