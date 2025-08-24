@@ -541,8 +541,8 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
+        font-size: 2.2rem;
+        margin-bottom: 22px;
     }
 
     .sub-text {
@@ -550,12 +550,12 @@ onBeforeUnmount(() => {
     }
 
     .timeline-navigation {
-        bottom: 30px;
+        bottom: -13px;
         width: 90%;
     }
 
     .timeline-label {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         padding: 5px 10px;
     }
 
@@ -584,11 +584,11 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 1rem;
+        font-size: 2.2rem;
     }
 
     .sub-text {
-        font-size: 0.65rem;
+        font-size: 1.1rem;
     }
 }
 </style>
