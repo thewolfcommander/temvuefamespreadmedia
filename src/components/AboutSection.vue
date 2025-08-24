@@ -501,7 +501,7 @@ const closeLightbox = () => {
   }
 
   .hero-content {
-    padding: var(--space-20) 0 var(--space-16);
+    /* padding: var(--space-20) 0 var(--space-16); */
   }
 
   .main-heading {
@@ -534,8 +534,8 @@ const closeLightbox = () => {
   }
 
   .hero-content {
-    padding: var(--space-16) 0 var(--space-12);
-    min-height: 80vh;
+    /* padding: var(--space-16) 0 var(--space-12); */
+    min-height: 52vh;
   }
 
   .intro-text {
@@ -567,9 +567,9 @@ const closeLightbox = () => {
     padding: 0 var(--space-4);
   }
 
-  .hero-content {
+  /* .hero-content {
     padding: var(--space-12) 0 var(--space-10);
-  }
+  } */
 
   .intro-text {
     font-size: var(--font-size-base);

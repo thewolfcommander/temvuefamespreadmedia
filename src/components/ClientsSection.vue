@@ -83,7 +83,7 @@ const clients = ref([
 
 /* Section Styles */
 .clients-section {
-    padding: 120px 0;
+
     position: relative;
 }
 
@@ -248,9 +248,7 @@ const clients = ref([
 }
 
 @media (max-width: 992px) {
-    .clients-section {
-        padding: 80px 0;
-    }
+    .clients-section {}
 
     .section-header {
         grid-template-columns: 1fr;
@@ -281,9 +279,7 @@ const clients = ref([
         padding: 0 30px;
     }
 
-    .clients-section {
-        padding: 60px 0;
-    }
+    .clients-section {}
 
     .section-header {
         margin-bottom: 50px;

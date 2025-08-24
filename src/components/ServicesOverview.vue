@@ -118,7 +118,7 @@ onMounted(() => {
 /* We're Everything You Need Section */
 .need-section {
     background-color: var(--bg-black);
-    padding: 120px 0;
+    padding: 30px 0;
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -234,7 +234,7 @@ onMounted(() => {
 /* Agency Section */
 .agency-section {
     background-color: var(--bg-black);
-    padding: 120px 0;
+    /* padding: 120px 0; */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -320,7 +320,7 @@ onMounted(() => {
 
 @media (max-width: 992px) {
     .need-section {
-        padding: 80px 0;
+        padding: 30px 0;
     }
 
     .content-wrapper {
@@ -355,7 +355,7 @@ onMounted(() => {
     }
 
     .need-section {
-        padding: 60px 0;
+        padding: 0px 0;
         min-height: auto;
     }
 
