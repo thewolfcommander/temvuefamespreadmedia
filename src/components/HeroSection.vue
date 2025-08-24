@@ -20,13 +20,13 @@
                             <div class="content-left">
                                 <h1 class="main-heading">ELEVATE YOUR DIGITAL PRESENCE</h1>
                                 <p class="sub-text">
-                                    We deliver holistic digital marketing solutions,<br>
-                                    guiding you through the constantly evolving realm of<br>
+                                    We deliver holistic digital marketing solutions,
+                                    guiding you through the constantly evolving realm of
                                     competitive digital landscapes.
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/Gemini_Generated_Image_wbzjbowbzjbowbzj__1_-removebg-preview.png"
+                                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/packaging-design.webp"
                                     alt="Packaging Design" />
                             </div>
                         </div>
@@ -38,13 +38,13 @@
                             <div class="content-left">
                                 <h1 class="main-heading">CRAFTING YOUR ONLINE IDENTITY</h1>
                                 <p class="sub-text">
-                                    Shaping Future Digital Landscapes Today - Your<br>
-                                    Imagination, Our expertise, and Limitless Potential<br>
+                                    Shaping Future Digital Landscapes Today - Your
+                                    Imagination, Our expertise, and Limitless Potential
                                     Waiting to Be Unveiled.
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/seo-3218580_1280-removebg-preview.png"
+                                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/website-design.webp"
                                     alt="Brand Design" />
                             </div>
                         </div>
@@ -56,12 +56,12 @@
                             <div class="content-left">
                                 <h1 class="main-heading">UNLOCK YOUR WEBSITE'S POTENTIAL</h1>
                                 <p class="sub-text">
-                                    Our SEO strategies are designed to increase your visibility,<br>
+                                    Our SEO strategies are designed to increase your visibility,
                                     drive organic traffic, and boost your search engine rankings.
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
+                                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/social-media-creative-design.webp"
                                     alt="Logo Design" />
                             </div>
                         </div>
@@ -73,12 +73,12 @@
                             <div class="content-left">
                                 <h1 class="main-heading">TELLING YOUR BRAND'S STORY</h1>
                                 <p class="sub-text">
-                                    We create compelling content that resonates with your audience,<br>
+                                    We create compelling content that resonates with your audience,
                                     builds brand loyalty, and drives engagement.
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
+                                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/logo-design.webp"
                                     alt="Social Media" />
                             </div>
                         </div>
@@ -90,12 +90,12 @@
                             <div class="content-left">
                                 <h1 class="main-heading">MAXIMIZE YOUR ADVERTISING ROI</h1>
                                 <p class="sub-text">
-                                    We manage your ad campaigns with precision,<br>
+                                    We manage your ad campaigns with precision,
                                     ensuring your message reaches the right audience at the right time.
                                 </p>
                             </div>
                             <div class="content-right">
-                                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/image-removebg-preview.png"
+                                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/brand-identity-design.webp"
                                     alt="Website Design" />
                             </div>
                         </div>
@@ -351,27 +351,27 @@ onBeforeUnmount(() => {
 
 .main-heading {
     font-family: var(--font-family-heading);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: 2.2rem;
     font-weight: var(--font-weight-black);
     color: var(--color-text-white);
-    margin-bottom: var(--space-7);
+    margin-bottom: 20px;
     line-height: 1.1;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .sub-text {
     font-family: var(--font-family-body);
-    font-size: clamp(var(--font-size-md), 1.5vw, var(--font-size-lg));
+    font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
     color: var(--color-text-secondary);
     line-height: 1.7;
     margin: 0;
 }
 
 .content-right {
-    flex: 1;
-    max-width: 50%;
+    flex: 2;
+    max-width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -379,8 +379,8 @@ onBeforeUnmount(() => {
 }
 
 .content-right img {
-    max-width: 100%;
-    max-height: 85%;
+    max-width: 120%;
+    max-height: 111%;
     object-fit: contain;
     filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.4));
 }
@@ -480,11 +480,11 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .sub-text {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .timeline-navigation {
@@ -541,12 +541,12 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         margin-bottom: 15px;
     }
 
     .sub-text {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .timeline-navigation {
@@ -584,11 +584,11 @@ onBeforeUnmount(() => {
     }
 
     .main-heading {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .sub-text {
-        font-size: 0.85rem;
+        font-size: 0.65rem;
     }
 }
 </style>
