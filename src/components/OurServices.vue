@@ -121,7 +121,7 @@ const services = ref([
 /* Section Styles */
 .services-section {
     background-color: var(--bg-black);
-    padding: 80px 0;
+    padding-bottom: 80px;
     min-height: 100vh;
 }
 
@@ -332,7 +332,7 @@ const services = ref([
 
 @media (max-width: 768px) {
     .services-section {
-        padding: 60px 0;
+        padding-bottom: 80px;
     }
 
     .container {

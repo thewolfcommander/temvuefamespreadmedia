@@ -166,7 +166,7 @@ const nextSlide = () => {
 /* Section Styles */
 .testimonial-section {
     background-color: var(--color-black);
-    padding: 120px 0;
+    padding-bottom: 3rem;
     position: relative;
     overflow: hidden;
 }
