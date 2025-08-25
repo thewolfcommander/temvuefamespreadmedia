@@ -254,7 +254,7 @@ a:hover {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 1.3vh;
 }
 
 ::-webkit-scrollbar-track {
