@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Header -->
             <div class="section-header">
-                <h2 class="section-title">Featured works</h2>
+                <h2 class="section-title intro-text ">Featured works</h2>
                 <a href="#" class="view-projects-btn">
                     <span class="btn-text">View Projects</span>
                     <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -82,6 +82,35 @@ const handleMouseLeave = () => {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.intro-text {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-white);
+    margin-bottom: var(--space-4);
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+    width: 120px;
 }
 
 /* Section Header */

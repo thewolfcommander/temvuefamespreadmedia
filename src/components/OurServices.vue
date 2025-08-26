@@ -4,7 +4,7 @@
             <!-- Header Section -->
             <div class="services-header">
                 <div class="heading-wrapper">
-                    <h2 class="main-heading">
+                    <h2 class="main-heading intro-text">
                         <span class="heading-line-1">OUR</span>
                         <span class="heading-line-2">SERVICES</span>
                     </h2>
@@ -129,6 +129,35 @@ const services = ref([
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.intro-text {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-white);
+    margin-bottom: var(--space-4);
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+    width: 120px;
 }
 
 /* Header Section */

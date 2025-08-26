@@ -6,7 +6,7 @@
                 <div class="content-wrapper">
                     <!-- Left Side - Heading and CTA -->
                     <div class="left-content">
-                        <h2 class="main-heading">
+                        <h2 class="main-heading intro-text ">
                             <span class="heading-line-1">We're Everything you</span>
                             <span class="heading-line-2">need.</span>
                         </h2>
@@ -129,6 +129,35 @@ onMounted(() => {
     grid-template-columns: 1fr 1.2fr;
     gap: 100px;
     align-items: center;
+}
+
+.intro-text {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-white);
+    /* margin-bottom: var(--space-4); */
+    position: relative;
+    display: block;
+    /* padding-top: 10px; */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+    width: 120px;
 }
 
 /* Left Content */

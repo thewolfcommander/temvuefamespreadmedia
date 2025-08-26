@@ -374,17 +374,27 @@ const closeLightbox = () => {
   color: var(--color-text-white);
   margin-bottom: var(--space-4);
   position: relative;
+  display: block;
+  padding-top: 25px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .intro-text::before {
   content: '';
   position: absolute;
-  top: -var(--space-4);
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
+  height: 4px;
   background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+  width: 120px;
 }
 
 .main-heading {
