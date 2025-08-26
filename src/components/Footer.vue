@@ -87,9 +87,9 @@
 }
 
 .footer-content {
-  max-width: 1350px;
-  margin: 0 160px;
-  padding: 0 var(--space-6);
+  max-width: 1600px;
+  margin-left: 160px;
+  padding-left: 102px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-16);
@@ -262,6 +262,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-12);
     text-align: center;
+    margin-left: 0;
   }
 
   .footer-nav {
