@@ -802,23 +802,6 @@ const closeLightbox = () => {
   position: relative;
 }
 
-.content-section h3::before {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-3);
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--color-primary);
-}
-
-.content-section p {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-text-secondary);
-}
-
 .results-list {
   list-style: none;
   padding: 0;
