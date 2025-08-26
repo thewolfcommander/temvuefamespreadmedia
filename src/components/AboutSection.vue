@@ -375,7 +375,7 @@ const closeLightbox = () => {
   margin-bottom: var(--space-4);
   position: relative;
   display: block;
-  padding-top: 25px;
+  padding-top: 27px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -508,6 +508,7 @@ const closeLightbox = () => {
 
   .container {
     padding: 0 var(--space-8);
+    margin-top: 9px;
   }
 
   .hero-content {
@@ -541,6 +542,7 @@ const closeLightbox = () => {
 
   .container {
     padding: 0 var(--space-6);
+    margin-top: 9px;
   }
 
   .hero-content {
@@ -575,6 +577,7 @@ const closeLightbox = () => {
 @media (max-width: 480px) {
   .container {
     padding: 0 var(--space-4);
+    margin-top: 9px;
   }
 
   /* .hero-content {
