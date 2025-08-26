@@ -4,12 +4,14 @@
       <!-- Left Section: Logo and Description -->
       <div class="footer-left">
         <div class="footer-brand">
-          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/logo.svg" alt="Fame Spread Media" class="footer-logo" />
+          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/logo.svg" alt="Fame Spread Media"
+            class="footer-logo" />
           <span class="footer-brand-name">Fame Spread Media</span>
         </div>
         <p class="footer-description">
           Tell us about your project<br />
-          Fancy a coffee and a chat? We would love to meet you. Drop us a line or slide into our DMs and we will help to create buzz in your social handles
+          Fancy a coffee and a chat? We would love to meet you. Drop us a line or slide into our DMs and we will help to
+          create buzz in your social handles
         </p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
@@ -27,15 +29,15 @@
           <a href="#" class="nav-link">HOME</a>
           <a href="#" class="nav-link">ABOUT US</a>
           <a href="#" class="nav-link">OUR WORK</a>
-          <a href="#" class="nav-link">BRANDING</a>
-          <a href="#" class="nav-link">PACKAGING DESIGN</a>
+          <a href="#" class="nav-link">TESTIMONIALS</a>
+          <a href="#" class="nav-link">CONTACT US</a>
         </div>
         <div class="nav-column">
-          <a href="#" class="nav-link">LOGO DESIGN</a>
+          <a href="#" class="nav-link">SOCIAL MEDIA MANAGEMENT</a>
+          <a href="#" class="nav-link">CONTENT CREATION</a>
+          <a href="#" class="nav-link">SEO</a>
           <a href="#" class="nav-link">WEB DEVELOPMENT</a>
-          <a href="#" class="nav-link">DIGITAL MARKETING</a>
-          <a href="#" class="nav-link">CONTACT US</a>
-          <a href="#" class="nav-link">BLOG</a>
+          <a href="#" class="nav-link">AD MANAGEMENT</a>
         </div>
       </div>
 
@@ -61,10 +63,10 @@
     </div>
 
     <!-- Chat Button -->
-    <div class="chat-button">
+    <!-- <div class="chat-button">
       <span>LET'S CHAT!</span>
       <div class="chat-arrow">→</div>
-    </div>
+    </div> -->
 
     <!-- Curved Design Element -->
     <div class="footer-curve"></div>
@@ -85,8 +87,8 @@
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1350px;
+  margin: 0 160px;
   padding: 0 var(--space-6);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -241,40 +243,7 @@
   font-size: var(--font-size-xs);
 }
 
-/* Chat Button */
-.chat-button {
-  position: fixed;
-  bottom: var(--space-8);
-  right: var(--space-8);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: var(--color-text-white);
-  padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-sm);
-  cursor: pointer;
-  transition: var(--transition-base);
-  box-shadow: var(--shadow-lg);
-  z-index: var(--z-fixed);
-  letter-spacing: var(--letter-spacing-wide);
-}
 
-.chat-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl);
-}
-
-.chat-arrow {
-  font-size: var(--font-size-lg);
-  transition: var(--transition-base);
-}
-
-.chat-button:hover .chat-arrow {
-  transform: translateX(4px);
-}
 
 /* Curved Design Element */
 .footer-curve {
