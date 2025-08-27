@@ -1,7 +1,7 @@
 <template>
   <div class="nav_toggle_wrapper">
-    <a href="#home">
-      <img :src="logo" class="mini-logo" alt="logo" />
+    <a href="#">
+      <img :src="logo" class="mini-logo" alt="logo" @click="closeNav" />
     </a>
 
     <div class="d-block d-md-none mob_number_box">
@@ -42,7 +42,7 @@
   <nav id="mb_nav" class="nav" :class="{ active: isNavOpen }">
     <div class="container ps-lg-5">
       <li class="logo">
-        <a class="nav__link mb-5 d-none d-md-block" href="#home" @click="closeNav">
+        <a class="nav__link mb-5 d-none d-md-block" href="#" @click="closeNav">
           <img :src="fullLogo" class="img-fluid" alt="logo" style="width: 250px" />
         </a>
       </li>
