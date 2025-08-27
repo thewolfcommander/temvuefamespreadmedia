@@ -374,17 +374,27 @@ const closeLightbox = () => {
   color: var(--color-text-white);
   margin-bottom: var(--space-4);
   position: relative;
+  display: block;
+  padding-top: 27px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .intro-text::before {
   content: '';
   position: absolute;
-  top: -var(--space-4);
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 3px;
+  height: 4px;
   background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+  width: 120px;
 }
 
 .main-heading {
@@ -436,7 +446,7 @@ const closeLightbox = () => {
 }
 
 .portfolio-container {
-  max-width: 1400px;
+
   margin: 0 auto;
   padding: 0;
 }
@@ -498,10 +508,11 @@ const closeLightbox = () => {
 
   .container {
     padding: 0 var(--space-8);
+    margin-top: 9px;
   }
 
   .hero-content {
-    padding: var(--space-20) 0 var(--space-16);
+    /* padding: var(--space-20) 0 var(--space-16); */
   }
 
   .main-heading {
@@ -531,11 +542,12 @@ const closeLightbox = () => {
 
   .container {
     padding: 0 var(--space-6);
+    margin-top: 9px;
   }
 
   .hero-content {
-    padding: var(--space-16) 0 var(--space-12);
-    min-height: 80vh;
+    /* padding: var(--space-16) 0 var(--space-12); */
+    min-height: 52vh;
   }
 
   .intro-text {
@@ -565,11 +577,12 @@ const closeLightbox = () => {
 @media (max-width: 480px) {
   .container {
     padding: 0 var(--space-4);
+    margin-top: 9px;
   }
 
-  .hero-content {
+  /* .hero-content {
     padding: var(--space-12) 0 var(--space-10);
-  }
+  } */
 
   .intro-text {
     font-size: var(--font-size-base);
@@ -800,23 +813,6 @@ const closeLightbox = () => {
   margin-bottom: var(--space-6);
   padding-top: var(--space-2);
   position: relative;
-}
-
-.content-section h3::before {
-  content: '';
-  position: absolute;
-  bottom: -var(--space-3);
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background: var(--color-primary);
-}
-
-.content-section p {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-text-secondary);
 }
 
 .results-list {

@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Header Section -->
             <div class="section-header">
-                <div class="header-left">
+                <div class="header-left intro-text">
                     <h2 class="section-title">
                         <span class="title-line-1">Our Clients</span>
                     </h2>
@@ -83,7 +83,7 @@ const clients = ref([
 
 /* Section Styles */
 .clients-section {
-    padding: 120px 0;
+
     position: relative;
 }
 
@@ -91,6 +91,35 @@ const clients = ref([
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+.intro-text {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-white);
+    /* margin-bottom: var(--space-4); */
+    position: relative;
+    display: block;
+    /* padding-top: 10px; */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.intro-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+
+.intro-text:hover::before {
+    width: 120px;
 }
 
 /* Section Header */
@@ -248,9 +277,7 @@ const clients = ref([
 }
 
 @media (max-width: 992px) {
-    .clients-section {
-        padding: 80px 0;
-    }
+    .clients-section {}
 
     .section-header {
         grid-template-columns: 1fr;
@@ -281,9 +308,7 @@ const clients = ref([
         padding: 0 30px;
     }
 
-    .clients-section {
-        padding: 60px 0;
-    }
+    .clients-section {}
 
     .section-header {
         margin-bottom: 50px;

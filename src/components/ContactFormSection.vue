@@ -63,11 +63,7 @@
       </div>
     </div>
 
-    <!-- Floating Chat Button -->
-    <div class="chat-button">
-      <span class="chat-text">LET'S CHAT!</span>
-      <div class="chat-notification">1</div>
-    </div>
+
   </section>
 </template>
 
@@ -229,49 +225,7 @@ const submitForm = () => {
   box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.3);
 }
 
-/* Floating Chat Button */
-.chat-button {
-  position: fixed;
-  bottom: var(--space-8);
-  right: var(--space-8);
-  background: var(--color-primary);
-  color: var(--color-text-white);
-  padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  font-family: var(--font-family-heading);
-  letter-spacing: 0.5px;
-  box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.4);
-  transition: var(--transition-base);
-  z-index: var(--z-toast);
-}
 
-.chat-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(var(--color-primary-rgb), 0.5);
-}
-
-.chat-text {
-  text-transform: uppercase;
-}
-
-.chat-notification {
-  background: #ff4757;
-  color: var(--color-text-white);
-  width: 20px;
-  height: 20px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-}
 
 /* Responsive Design */
 @media (max-width: 1200px) {
