@@ -58,11 +58,12 @@
         </div>
         <div class="col-lg-4">
           <ul>
-            <li><a class="nav__link" href="#logo" @click="closeNav">Social Media Management</a></li>
-            <li><a class="nav__link" href="#web" @click="closeNav">Content Creation</a></li>
-            <li><a class="nav__link" href="#marketing" @click="closeNav">SEO</a></li>
-            <li><a class="nav__link" href="#contact" @click="closeNav">Website Development</a></li>
-            <li><a class="nav__link" href="#blog" @click="closeNav">AD Manager</a></li>
+            <li><a class="nav__link" @click="scrollToSection('social-media-management')">Social Media Management</a>
+            </li>
+            <li><a class="nav__link" @click="scrollToSection('photography-and-videography')">Content Creation</a></li>
+            <li><a class="nav__link" @click="scrollToSection('search-engine-optimization-seo')">SEO</a></li>
+            <li><a class="nav__link" @click="scrollToSection('website-development')">Website Development</a></li>
+            <li><a class="nav__link" @click="scrollToSection('ad-manager')">AD Manager</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -118,6 +119,22 @@ function closeNav() {
   isNavOpen.value = false;
   // Re-enable body scroll when closing nav
   document.body.style.overflow = 'auto';
+}
+
+function scrollToSection(sectionId) {
+  closeNav(); // Close the navigation first
+
+  setTimeout(() => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    } else {
+      console.log(`Section with ID '${sectionId}' not found`);
+    }
+  }, 100); // Small delay to allow nav to close
 }
 </script>
 

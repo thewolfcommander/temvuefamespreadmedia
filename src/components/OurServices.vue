@@ -16,8 +16,9 @@
 
             <!-- Services List -->
             <div class="services-list">
-                <div v-for="(service, index) in services" :key="service.title" class="service-card"
-                    :class="{ 'reverse': index % 2 !== 0 }">
+                <div v-for="(service, index) in services" :key="service.title"
+                    :id="service.title.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '').replace(/&/g, 'and')"
+                    class="service-card" :class="{ 'reverse': index % 2 !== 0 }">
 
                     <!-- Image Section -->
                     <div class="service-image">
