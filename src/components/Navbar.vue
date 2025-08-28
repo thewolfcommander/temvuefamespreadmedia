@@ -106,10 +106,18 @@ const isNavOpen = ref(false);
 // 3. Create functions to control the state, replacing the old JavaScript
 function toggleNav() {
   isNavOpen.value = !isNavOpen.value;
+  // Disable/enable body scroll
+  if (isNavOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
 }
 
 function closeNav() {
   isNavOpen.value = false;
+  // Re-enable body scroll when closing nav
+  document.body.style.overflow = 'auto';
 }
 </script>
 
