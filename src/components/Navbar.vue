@@ -49,8 +49,8 @@
       <div class="row">
         <div class="col-lg-4">
           <ul>
+            <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
             <li><a class="nav__link" href="#about" @click="closeNav">About Us</a></li>
-            <li><a class="nav__link" href="#work" @click="closeNav">Our Projects</a></li>
             <li><a class="nav__link" href="#branding" @click="closeNav">Founder Story</a></li>
             <li><a class="nav__link" href="#packaging" @click="closeNav">Testimonials</a></li>
             <li><a class="nav__link" href="#case-study" @click="closeNav">Contact Us</a></li>
