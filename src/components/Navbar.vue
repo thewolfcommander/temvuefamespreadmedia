@@ -50,8 +50,8 @@
         <div class="col-lg-4">
           <ul>
             <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
-            <li><a class="nav__link" href="#about" @click="closeNav">About Us</a></li>
-            <li><a class="nav__link" href="#branding" @click="closeNav">Founder Story</a></li>
+            <li><a class="nav__link" href="#/about" @click="closeNav">About Us</a></li>
+            <li><a class="nav__link" @click="scrollToSection('founders-story')">Founder Story</a></li>
             <li><a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a></li>
             <li><a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a></li>
           </ul>
@@ -97,12 +97,15 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 // 1. Import your logo asset from the assets folder
 import logo from '../assets/logo.svg';
 import fullLogo from '../assets/fullLogo.png';
 
 // 2. Create a "reactive" variable to track the menu's open/closed state
 const isNavOpen = ref(false);
+const router = useRouter();
 
 // 3. Create functions to control the state, replacing the old JavaScript
 function toggleNav() {
@@ -121,20 +124,72 @@ function closeNav() {
   document.body.style.overflow = 'auto';
 }
 
+// Define which sections are on which pages
+const sectionPages = {
+  'founders-story': '/about',
+  'who-we-are': '/',
+  'testimonials': '/',
+  'contact-us': '/',
+  'social-media-management': '/',
+  'photography-and-videography': '/',
+  'search-engine-optimization-seo': '/',
+  'website-development': '/',
+  'ad-manager': '/'
+};
+
 function scrollToSection(sectionId) {
   closeNav(); // Close the navigation first
 
+  const targetPage = sectionPages[sectionId] || '/';
+  const currentPath = router.currentRoute.value.path;
+
   setTimeout(() => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    // If we're already on the correct page, just scroll
+    if (currentPath === targetPage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     } else {
-      console.log(`Section with ID '${sectionId}' not found`);
+      // Navigate to the correct page first, then scroll
+      router.push(targetPage).then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          } else {
+            console.log(`Section with ID '${sectionId}' not found on page ${targetPage}`);
+          }
+        }, 500); // Wait for page to load
+      });
     }
   }, 100); // Small delay to allow nav to close
+}
+
+// Alternative function for navigation that always goes to home first (for home page sections)
+function navigateToSection(sectionId) {
+  closeNav();
+
+  // Always navigate to home page first
+  router.push('/').then(() => {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else {
+        console.log(`Section with ID '${sectionId}' not found even on home page`);
+      }
+    }, 300);
+  });
 }
 </script>
 

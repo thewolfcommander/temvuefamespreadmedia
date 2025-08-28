@@ -2,6 +2,7 @@
   <div class="home-page">
     <div class="hero-wrapper">
       <HeroSection />
+      <Rollingnumber />
       <AboutSection />
     </div>
     <div class="sections-wrapper">
@@ -26,6 +27,7 @@ import FeaturedWorks from "@/components/FeaturedWorks.vue";
 import ClientsSection from "@/components/ClientsSection.vue";
 import ContactFormSection from "@/components/ContactFormSection.vue";
 import TestimonialSection from "@/components/TestimonialSection.vue";
+import Rollingnumber from "../components/Rollingnumber.vue";
 
 const appStore = useAppStore();
 
