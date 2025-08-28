@@ -25,11 +25,7 @@ export function useGoogleSheets() {
 
     try {
       // Prepare data for Google Sheets
-      const dataToSend = {
-        ...formData,
-        timestamp: new Date().toISOString(),
-        source: 'Fame Spread Media Contact Form'
-      }
+      const dataToSend = { ...formData }
 
       // If Google Apps Script URL is not configured, just log the data
       if (GOOGLE_APPS_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {

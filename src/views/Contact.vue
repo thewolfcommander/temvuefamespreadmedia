@@ -127,8 +127,10 @@ const handleSubmit = async () => {
       city: formData.value.city,
       phone: formData.value.phone,
       message: formData.value.message,
+      timestamp: new Date().toISOString(),
       service: formData.value.service,
-      company: formData.value.company
+      company: formData.value.company,
+      source: 'Fame Spread Media Contact Form'
     }
 
     await saveToGoogleSheets(orderedData)
