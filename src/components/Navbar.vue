@@ -50,7 +50,7 @@
         <div class="col-lg-4">
           <ul>
             <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
-            <li><a class="nav__link" href="#/about" @click="closeNav">About Us</a></li>
+            <li><a class="nav__link" @click="scrollToSection('who-we-are')">About Us</a></li>
             <li><a class="nav__link" @click="scrollToSection('founders-story')">Founder Story</a></li>
             <li><a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a></li>
             <li><a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a></li>
@@ -127,7 +127,7 @@ function closeNav() {
 // Define which sections are on which pages
 const sectionPages = {
   'founders-story': '/about',
-  'who-we-are': '/',
+  'who-we-are': '/about',
   'testimonials': '/',
   'contact-us': '/',
   'social-media-management': '/',
