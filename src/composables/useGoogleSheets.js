@@ -17,7 +17,7 @@ export function useGoogleSheets() {
    */
   
   // Replace with your Google Apps Script Web App URL
-  const GOOGLE_APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE'
+  const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVmgXVJ5M-Ml03GmLA4Hfry_6fTGDYcL_9PICDU2B0MCVMXnbLXZl1QOATvCf5xL7aAQ/exec'
 
   const saveToGoogleSheets = async (formData) => {
     isLoading.value = true

@@ -37,27 +37,28 @@
 
       <!-- Right Side - Contact Form -->
       <div class="form-section">
-        <form @submit.prevent="submitForm" class="contact-form">
+        <form @submit.prevent="handleSubmit" class="contact-form">
           <div class="form-grid">
             <div class="form-group">
-              <input type="text" v-model="form.name" placeholder="Name*" required class="form-input">
+              <input type="text" v-model="formData.name" placeholder="Name*" required class="form-input">
             </div>
             <div class="form-group">
-              <input type="email" v-model="form.email" placeholder="Email*" required class="form-input">
+              <input type="email" v-model="formData.email" placeholder="Email*" required class="form-input">
             </div>
             <div class="form-group">
-              <input type="text" v-model="form.city" placeholder="City*" required class="form-input">
+              <input type="text" v-model="formData.city" placeholder="City*" required class="form-input">
             </div>
             <div class="form-group">
-              <input type="tel" v-model="form.phone" placeholder="Phone*" required class="form-input">
+              <input type="tel" v-model="formData.phone" placeholder="Phone*" required class="form-input">
             </div>
           </div>
           <div class="form-group message-group">
-            <textarea v-model="form.message" placeholder="Your Message*" required class="form-textarea"
+            <textarea v-model="formData.message" placeholder="Your Message*" required class="form-textarea"
               rows="6"></textarea>
           </div>
           <div class="form-submit">
-            <button type="submit" class="submit-btn">SUBMIT</button>
+            <button type="submit" class="submit-btn" :disabled="isSubmitting">{{ isSubmitting ? 'SUBMITTING...' :
+              'SUBMIT' }}</button>
           </div>
         </form>
       </div>
@@ -69,8 +70,11 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useGoogleSheets } from '@/composables/useGoogleSheets'
 
-const form = ref({
+const { saveToGoogleSheets } = useGoogleSheets()
+
+const formData = ref({
   name: '',
   email: '',
   city: '',
@@ -78,9 +82,38 @@ const form = ref({
   message: ''
 })
 
-const submitForm = () => {
-  console.log('Form submitted:', form.value)
-  // Handle form submission here
+const isSubmitting = ref(false)
+
+const handleSubmit = async () => {
+  isSubmitting.value = true
+
+  try {
+    const orderedData = {
+      name: formData.value.name,
+      email: formData.value.email,
+      city: formData.value.city,
+      phone: formData.value.phone,
+      message: formData.value.message
+    }
+
+    await saveToGoogleSheets(orderedData)
+
+    // Reset form
+    formData.value = {
+      name: '',
+      email: '',
+      city: '',
+      phone: '',
+      message: ''
+    }
+
+    alert('Thank you for contacting us! We will get back to you soon.')
+  } catch (error) {
+    console.error('Error submitting form:', error)
+    alert('There was an error submitting your form. Please try again.')
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
@@ -141,7 +174,7 @@ const submitForm = () => {
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
   margin: 0;
-  max-width: 480px;
+  max-w: 480px;
 }
 
 /* Form Section */
@@ -165,9 +198,10 @@ const submitForm = () => {
 }
 
 .form-input,
-.form-textarea {
+.form-textarea,
+.form-select {
   width: 100%;
-  padding: var(--space-4) var(--space-6);
+  padding: var(--space-4) var(--space-5);
   background: transparent;
   border: 1px solid rgba(var(--color-white-rgb), 0.2);
   border-radius: var(--radius-base);
@@ -184,9 +218,45 @@ const submitForm = () => {
 }
 
 .form-input:focus,
-.form-textarea:focus {
+.form-textarea:focus,
+.form-select:focus {
   border-color: var(--color-primary);
   background: rgba(var(--color-primary-rgb), 0.05);
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+.form-select option {
+  background: var(--color-black);
+  color: var(--color-text-white);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.country-code {
+  font-size: var(--font-size-xl);
+  padding: var(--space-3);
+  background: rgba(var(--color-white-rgb), 0.05);
+  border-radius: var(--radius-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+}
+
+.phone-input {
+  flex: 1;
 }
 
 .message-group {
@@ -219,10 +289,15 @@ const submitForm = () => {
   text-transform: uppercase;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   background: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 

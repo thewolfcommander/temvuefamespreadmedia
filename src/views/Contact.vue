@@ -121,7 +121,17 @@ const handleSubmit = async () => {
   isSubmitting.value = true
 
   try {
-    await saveToGoogleSheets(formData.value)
+    const orderedData = {
+      name: formData.value.name,
+      email: formData.value.email,
+      city: formData.value.city,
+      phone: formData.value.phone,
+      message: formData.value.message,
+      service: formData.value.service,
+      company: formData.value.company
+    }
+
+    await saveToGoogleSheets(orderedData)
 
     // Reset form
     formData.value = {
