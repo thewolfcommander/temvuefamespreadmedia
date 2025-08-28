@@ -59,7 +59,12 @@
 
     <!-- Copyright Section -->
     <div class="footer-bottom">
-      <p>&copy; Fame Spread Media 2024, All Rights Reserved. | Privacy Policy</p>
+      <p>
+        <span>&copy; Fame Spread Media {{ currentYear }}, All Rights Reserved. | </span>
+        <router-link to="/privacy" class="footer-link">Privacy Policy</router-link>
+        <span> | </span>
+        <router-link to="/terms" class="footer-link">Terms & Conditions</router-link>
+      </p>
     </div>
 
     <!-- Chat Button -->
@@ -74,7 +79,9 @@
 </template>
 
 <script setup>
-// Component logic if needed
+import { computed } from 'vue';
+
+const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <style scoped>
@@ -235,9 +242,22 @@
   padding: var(--space-6);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
-.footer-bottom p {
+.footer-bottom .footer-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: var(--transition-base);
+  cursor: pointer;
+}
+
+.footer-bottom .footer-link:hover {
+  color: var(--color-primary);
+}
+
+.footer-bottom div {
   margin: 0;
   color: var(--color-text-muted);
   font-size: var(--font-size-xs);
