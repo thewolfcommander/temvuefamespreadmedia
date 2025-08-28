@@ -5,7 +5,7 @@
             <a href="tel:+919871521144" class="phone-number">
                 +91 9871521144
             </a>
-            <a href="#" class="quote-button">
+            <a href="#/contact" class="quote-button">
                 <span class="quote-button-text">Get a Quote</span>
             </a>
         </div>

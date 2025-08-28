@@ -52,8 +52,8 @@
             <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
             <li><a class="nav__link" href="#about" @click="closeNav">About Us</a></li>
             <li><a class="nav__link" href="#branding" @click="closeNav">Founder Story</a></li>
-            <li><a class="nav__link" href="#packaging" @click="closeNav">Testimonials</a></li>
-            <li><a class="nav__link" href="#case-study" @click="closeNav">Contact Us</a></li>
+            <li><a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a></li>
+            <li><a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a></li>
           </ul>
         </div>
         <div class="col-lg-4">

@@ -56,7 +56,7 @@ const services = ref([
     {
         title: 'Social Media Management',
         description: "We boost client online presence with ethical, efficient campaigns across multiple channels. Our strategies are morally sound, effective, and secure, designed to maximize engagement and growth.",
-        link: '#', // url where you want to sent user
+        link: '#/contact', // url where you want to sent user
         video: {
             poster: '#', // image link in place of #
             src: 'https://videos.pexels.com/video-files/6562012/6562012-uhd_2560_1440_25fps.mp4'
@@ -65,7 +65,7 @@ const services = ref([
     {
         title: 'Photography and Videography',
         description: "We offer top-tier Photography and Videography services to bring your vision to life. From captivating images to dynamic videos, trust us to showcase your story with creativity and excellence.",
-        link: '#',
+        link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/2084217/2084217-hd_1920_1080_24fps.mp4'
@@ -74,7 +74,7 @@ const services = ref([
     {
         title: 'Search Engine Optimization (SEO)',
         description: "We help select optimal keywords to boost your website's visibility. Ensure search engines connect users to your services effortlessly, enhancing your online presence and driving relevant traffic.",
-        link: '#',
+        link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/4549682/4549682-hd_1920_1080_30fps.mp4'
@@ -82,7 +82,7 @@ const services = ref([
     }, {
         title: 'Website Development',
         description: "Our expert team in Website Development creates stunning, user-friendly websites that drive results. We focus on responsive design, seamless navigation, and optimized performance to ensure your online presence stands out.",
-        link: '#',
+        link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/5076634/5076634-uhd_2732_1440_25fps.mp4'
@@ -91,7 +91,7 @@ const services = ref([
     {
         title: 'AD Manager',
         description: "Our expert team in Ad Management specializes in creating and optimizing campaigns across platforms like Google, Facebook, Instagram, and beyond. We design data-driven, targeted ads that maximize reach, boost conversions, and deliver measurable ROI. With a focus on audience insights, budget efficiency, and continuous optimization, we ensure your brand captures attention and achieves impactful results.",
-        link: '#',
+        link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/7596776/7596776-uhd_2732_1440_25fps.mp4'

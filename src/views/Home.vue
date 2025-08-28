@@ -2,9 +2,9 @@
   <div class="home-page">
     <div class="hero-wrapper">
       <HeroSection />
+      <AboutSection />
     </div>
     <div class="sections-wrapper">
-      <AboutSection />
       <OurServices />
       <ServicesOverview />
       <FeaturedWorks />
@@ -45,13 +45,13 @@ onMounted(() => {
   width: calc(100% + 2 * var(--wrapper-padding, 20px));
 }
 
-.sections-wrapper > * {
+.sections-wrapper>* {
   margin-bottom: 80px;
   display: flex;
   justify-content: center;
 }
 
-.sections-wrapper > *:last-child {
+.sections-wrapper>*:last-child {
   margin-bottom: 0;
 }
 
@@ -60,7 +60,7 @@ onMounted(() => {
     --wrapper-padding: 40px;
   }
 
-  .sections-wrapper > * {
+  .sections-wrapper>* {
     margin-bottom: 100px;
   }
 }
@@ -70,7 +70,7 @@ onMounted(() => {
     --wrapper-padding: 60px;
   }
 
-  .sections-wrapper > * {
+  .sections-wrapper>* {
     margin-bottom: 120px;
   }
 }
