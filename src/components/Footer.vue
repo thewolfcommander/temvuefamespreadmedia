@@ -46,7 +46,6 @@
         <h3 class="contact-heading">CONTACT DETAILS</h3>
         <div class="contact-info">
           <p>Mobile : <a href="tel:+919871521144">+91 9871521144</a></p>
-          <p>Mobile : <a href="tel:+919871531144">+91 9871531144</a></p>
           <p>Email : <a href="mailto:hi@famespreadmedia.com">hi@famespreadmedia.com</a></p>
         </div>
       </div>
