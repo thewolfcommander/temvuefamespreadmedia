@@ -14,89 +14,92 @@
         <section class="hero-section">
             <div class="swiper main-slider" ref="mainSliderEl">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1: Social Media -->
+                    <!-- Slide 1: Branding & Strategy -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">ELEVATE YOUR DIGITAL PRESENCE</h1>
+                                <h1 class="main-heading">KAPDA FOR YOUR BRAND</h1>
                                 <p class="sub-text">
-                                    We deliver holistic digital marketing solutions,
-                                    guiding you through the constantly evolving realm of
-                                    competitive digital landscapes.
+                                    Identity that's stitched to fit, not off-the-rack.
+                                    We craft brand strategies that resonate with your audience
+                                    and stand out in the competitive marketplace.
                                 </p>
                             </div>
                             <div class="content-right">
                                 <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/packaging-design.webp"
-                                    alt="Packaging Design" />
+                                    alt="Branding & Strategy" />
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 2: Website -->
+                    <!-- Slide 2: Social Media Marketing -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">CRAFTING YOUR ONLINE IDENTITY</h1>
+                                <h1 class="main-heading">AWAZ FOR YOUR BRAND</h1>
                                 <p class="sub-text">
-                                    Shaping Future Digital Landscapes Today - Your
-                                    Imagination, Our expertise, and Limitless Potential
-                                    Waiting to Be Unveiled.
+                                    Make the internet talk, trend, and trust.
+                                    We amplify your brand's voice across social platforms,
+                                    creating conversations that convert.
                                 </p>
                             </div>
                             <div class="content-right">
                                 <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/website-design.webp"
-                                    alt="Brand Design" />
+                                    alt="Social Media Marketing" />
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3: SEO -->
+                    <!-- Slide 3: Website & E-Commerce -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">UNLOCK YOUR WEBSITE'S POTENTIAL</h1>
+                                <h1 class="main-heading">MAKAAN FOR YOUR BRAND</h1>
                                 <p class="sub-text">
-                                    Our SEO strategies are designed to increase your visibility,
-                                    drive organic traffic, and boost your search engine rankings.
+                                    A high-converting home your customers return to.
+                                    We build digital experiences that transform visitors
+                                    into loyal customers.
                                 </p>
                             </div>
                             <div class="content-right">
                                 <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/social-media-creative-design.webp"
-                                    alt="Logo Design" />
+                                    alt="Website & E-Commerce" />
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4: Content Creation -->
+                    <!-- Slide 4: Performance Marketing -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">TELLING YOUR BRAND'S STORY</h1>
+                                <h1 class="main-heading">ROTI FOR YOUR BRAND</h1>
                                 <p class="sub-text">
-                                    We create compelling content that resonates with your audience,
-                                    builds brand loyalty, and drives engagement.
+                                    Campaigns that feed growth every single day.
+                                    We deliver ROI-focused marketing that sustains
+                                    and scales your business.
                                 </p>
                             </div>
                             <div class="content-right">
                                 <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/logo-design.webp"
-                                    alt="Social Media" />
+                                    alt="Performance Marketing" />
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 5: AD Manager -->
+                    <!-- Slide 5: Marketplace & Sales Support -->
                     <div class="swiper-slide">
                         <div class="slide-content">
                             <div class="content-left">
-                                <h1 class="main-heading">MAXIMIZE YOUR ADVERTISING ROI</h1>
+                                <h1 class="main-heading">DUKAAN FOR YOUR BRAND</h1>
                                 <p class="sub-text">
-                                    We manage your ad campaigns with precision,
-                                    ensuring your message reaches the right audience at the right time.
+                                    From listing to lightning deals, we turn shelves into sales.
+                                    Complete marketplace management that drives
+                                    revenue across all platforms.
                                 </p>
                             </div>
                             <div class="content-right">
                                 <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/brand-identity-design.webp"
-                                    alt="Website Design" />
+                                    alt="Marketplace & Sales" />
                             </div>
                         </div>
                     </div>
@@ -110,23 +113,23 @@
                     <div class="timeline-items">
                         <div class="timeline-item" :class="{ active: currentSlide === 0 }" @click="goToSlide(0)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Social Media</span>
+                            <span class="timeline-label">Branding</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 1 }" @click="goToSlide(1)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Website</span>
+                            <span class="timeline-label">Social Media</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 2 }" @click="goToSlide(2)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">SEO</span>
+                            <span class="timeline-label">Website</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 3 }" @click="goToSlide(3)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">Content Creation</span>
+                            <span class="timeline-label">Performance</span>
                         </div>
                         <div class="timeline-item" :class="{ active: currentSlide === 4 }" @click="goToSlide(4)">
                             <div class="timeline-dot"></div>
-                            <span class="timeline-label">AD Manager</span>
+                            <span class="timeline-label">Marketplace</span>
                         </div>
                     </div>
                 </div>
@@ -350,21 +353,37 @@ onBeforeUnmount(() => {
 }
 
 .main-heading {
-    font-family: var(--font-family-heading);
-    font-size: 2.2rem;
-    font-weight: var(--font-weight-black);
-    color: var(--color-text-white);
-    margin-bottom: 20px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-family-heading);
+  font-size: 3.6rem;
+  font-weight: var(--font-weight-black);
+  color: var(--color-text-white);
+  margin-bottom: 20px;
+  line-height: 1.05;
+  text-transform: uppercase; /* remove if you want "Proof of Fame" casing */
+  letter-spacing: 0.5px;
+
+  /* render nicely on dark backgrounds */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* subtle edge crispness */
+  -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.22);
+
+  /* layered drop shadows (tight → long) + slight top highlight */
+  text-shadow:
+    0 -1px 0 rgba(255, 255, 255, 0.12),   /* rim light from above */
+    0 1px 1px rgba(0, 0, 0, 0.40),        /* contact shadow for depth */
+    0 3px 6px rgba(0, 0, 0, 0.38),        /* short, soft shadow */
+    0 8px 18px rgba(0, 0, 0, 0.45),       /* medium throw */
+    0 18px 44px rgba(0, 0, 0, 0.55);      /* long ambient shadow */
 }
+
 
 .sub-text {
     font-family: var(--font-family-body);
     font-size: clamp(var(--font-size-xs), 1vw, var(--font-size-sm));
     color: var(--color-text-secondary);
+    font-size: 1.4rem;
     line-height: 1.7;
     margin: 0;
 }

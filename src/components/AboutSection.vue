@@ -543,7 +543,23 @@ const closeLightbox = () => {
   margin-bottom: var(--space-8);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wide);
+
+  /* crisp on dark bg */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* subtle edge definition */
+  -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.22);
+
+  /* layered metallic shadow (tight → long) + faint rim light */
+  text-shadow:
+    0 -1px 0 rgba(255, 255, 255, 0.12),
+    0 1px 1px rgba(0, 0, 0, 0.40),
+    0 3px 6px rgba(0, 0, 0, 0.38),
+    0 8px 18px rgba(0, 0, 0, 0.45),
+    0 18px 44px rgba(0, 0, 0, 0.55);
 }
+
 
 .heading-line {
   display: block;
