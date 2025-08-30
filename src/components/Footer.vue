@@ -4,7 +4,7 @@
       <!-- Left Section: Logo and Description -->
       <div class="footer-left">
         <div class="footer-brand">
-          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/logo.svg" alt="Fame Spread Media"
+          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png" alt="Fame Spread Media"
             class="footer-logo" />
           <span class="footer-brand-name">Fame Spread Media</span>
         </div>

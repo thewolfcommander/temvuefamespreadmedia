@@ -276,7 +276,7 @@ onBeforeUnmount(() => {
 .hero-container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a1a 100%);
+  /* background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a1a 100%); */
   position: relative;
   overflow: hidden;
 }

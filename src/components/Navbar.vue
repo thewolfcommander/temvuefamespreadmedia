@@ -1,7 +1,12 @@
 <template>
   <div class="nav_toggle_wrapper">
     <a href="#">
-      <img :src="logo" class="mini-logo" alt="logo" @click="closeNav" />
+      <img
+        src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
+        class="mini-logo"
+        alt="logo"
+        @click="closeNav"
+      />
     </a>
 
     <div class="d-block d-md-none mob_number_box">
@@ -30,7 +35,11 @@
       <a href="https://twitter.com/" class="text-decoration-none" target="_blank">
         <i class="ri-twitter-x-fill fill-anime"></i>
       </a>
-      <a href="https://www.linkedin.com/company/" class="text-decoration-none" target="_blank">
+      <a
+        href="https://www.linkedin.com/company/"
+        class="text-decoration-none"
+        target="_blank"
+      >
         <i class="ri-linkedin-fill fill-anime"></i>
       </a>
       <a href="https://www.instagram.com/" class="text-decoration-none" target="_blank">
@@ -43,41 +52,85 @@
     <div class="container ps-lg-5">
       <li class="logo">
         <a class="nav__link mb-5 d-none d-md-block" href="#" @click="closeNav">
-          <img :src="fullLogo" class="img-fluid" alt="logo" style="width: 250px" />
+          <img
+            src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
+            class="img-fluid"
+            alt="logo"
+            style="width: 250px"
+          />
+          <div class="main-heading">Fame Spread Media</div>
         </a>
       </li>
       <div class="row">
         <div class="col-lg-4">
           <ul>
             <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
-            <li><a class="nav__link" @click="scrollToSection('who-we-are')">About Us</a></li>
-            <li><a class="nav__link" @click="scrollToSection('founders-story')">Founder Story</a></li>
-            <li><a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a></li>
-            <li><a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a></li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('who-we-are')">About Us</a>
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('founders-story')"
+                >Founder Story</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('testimonials')"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a>
+            </li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul>
-            <li><a class="nav__link" @click="scrollToSection('social-media-management')">Social Media Management</a>
+            <li>
+              <a class="nav__link" @click="scrollToSection('social-media-management')"
+                >Social Media Management</a
+              >
             </li>
-            <li><a class="nav__link" @click="scrollToSection('photography-and-videography')">Content Creation</a></li>
-            <li><a class="nav__link" @click="scrollToSection('search-engine-optimization-seo')">SEO</a></li>
-            <li><a class="nav__link" @click="scrollToSection('website-development')">Website Development</a></li>
-            <li><a class="nav__link" @click="scrollToSection('ad-manager')">AD Manager</a></li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('photography-and-videography')"
+                >Content Creation</a
+              >
+            </li>
+            <li>
+              <a
+                class="nav__link"
+                @click="scrollToSection('search-engine-optimization-seo')"
+                >SEO</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('website-development')"
+                >Website Development</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('ad-manager')">AD Manager</a>
+            </li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul>
             <li>
               <div class="nav__link nav_link_text">
-                <h3 class="d-none d-md-none d-lg-block">Want to<br /> Elevate Your Brand and Expand Your Reach?</h3>
+                <h3 class="d-none d-md-none d-lg-block">
+                  Want to<br />
+                  Elevate Your Brand and Expand Your Reach?
+                </h3>
                 <p class="d-none d-md-none d-lg-block">
-                  Tell us about your project. Elevate Your Brand, Expand Your Reach - Your Success, Our Strategy. Boost
-                  Your Online Presence with Our Expert Digital Marketing Agency Services.
+                  Tell us about your project. Elevate Your Brand, Expand Your Reach - Your
+                  Success, Our Strategy. Boost Your Online Presence with Our Expert
+                  Digital Marketing Agency Services.
                 </p>
                 <p>
-                  <a href="mailto:famespreadmedia@gmail.com" class="nav__link call-link2 text-lowercase"
-                    style="font-size: 16px">
+                  <a
+                    href="mailto:famespreadmedia@gmail.com"
+                    class="nav__link call-link2 text-lowercase"
+                    style="font-size: 16px"
+                  >
                     famespreadmedia@gmail.com
                   </a>
                 </p>
@@ -96,12 +149,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-
-// 1. Import your logo asset from the assets folder
-import logo from '../assets/logo.svg';
-import fullLogo from '../assets/fullLogo.png';
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 // 2. Create a "reactive" variable to track the menu's open/closed state
 const isNavOpen = ref(false);
@@ -112,35 +161,35 @@ function toggleNav() {
   isNavOpen.value = !isNavOpen.value;
   // Disable/enable body scroll
   if (isNavOpen.value) {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   }
 }
 
 function closeNav() {
   isNavOpen.value = false;
   // Re-enable body scroll when closing nav
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = "auto";
 }
 
 // Define which sections are on which pages
 const sectionPages = {
-  'founders-story': '/about',
-  'who-we-are': '/about',
-  'testimonials': '/',
-  'contact-us': '/',
-  'social-media-management': '/',
-  'photography-and-videography': '/',
-  'search-engine-optimization-seo': '/',
-  'website-development': '/',
-  'ad-manager': '/'
+  "founders-story": "/about",
+  "who-we-are": "/about",
+  testimonials: "/",
+  "contact-us": "/",
+  "social-media-management": "/",
+  "photography-and-videography": "/",
+  "search-engine-optimization-seo": "/",
+  "website-development": "/",
+  "ad-manager": "/",
 };
 
 function scrollToSection(sectionId) {
   closeNav(); // Close the navigation first
 
-  const targetPage = sectionPages[sectionId] || '/';
+  const targetPage = sectionPages[sectionId] || "/";
   const currentPath = router.currentRoute.value.path;
 
   setTimeout(() => {
@@ -149,8 +198,8 @@ function scrollToSection(sectionId) {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start",
         });
       }
     } else {
@@ -160,8 +209,8 @@ function scrollToSection(sectionId) {
           const element = document.getElementById(sectionId);
           if (element) {
             element.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
+              behavior: "smooth",
+              block: "start",
             });
           } else {
             console.log(`Section with ID '${sectionId}' not found on page ${targetPage}`);
@@ -177,13 +226,13 @@ function navigateToSection(sectionId) {
   closeNav();
 
   // Always navigate to home page first
-  router.push('/').then(() => {
+  router.push("/").then(() => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+          behavior: "smooth",
+          block: "start",
         });
       } else {
         console.log(`Section with ID '${sectionId}' not found even on home page`);
@@ -198,11 +247,11 @@ function navigateToSection(sectionId) {
 
 .nav_toggle_wrapper {
   position: fixed;
-  width: 70px;
+  width: 100px;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.863);
+  background-color: var(--bg-black);
   z-index: 99999999;
   display: flex;
   align-items: center;
@@ -211,7 +260,7 @@ function navigateToSection(sectionId) {
 }
 
 .nav_toggle_wrapper .mini-logo {
-  width: 50px;
+  width: 90px;
   height: auto;
   margin-top: 20px;
 }
@@ -408,7 +457,6 @@ function navigateToSection(sectionId) {
   z-index: 9999;
   color: white;
 }
-
 
 /* Mobile Fixes Only */
 @media (max-width: 768px) {

@@ -5,6 +5,9 @@ import Footer from "./components/Footer.vue";
 
 <template>
   <div id="app">
+    <!-- Background Logo -->
+    <div class="hero-background-logo"></div>
+    
     <Navbar />
     <div class="main-content-wrapper">
       <router-view />
@@ -17,6 +20,24 @@ import Footer from "./components/Footer.vue";
 #app {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background-logo {
+  position: absolute;
+  top: 50%;
+  left: -40%;
+  transform: translateY(-50%);
+  width: 120vw;
+  height: 120vh;
+  background-image: url('https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .main-content-wrapper {
