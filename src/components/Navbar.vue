@@ -252,7 +252,7 @@ function navigateToSection(sectionId) {
   top: 0;
   left: 0;
   background-color: var(--bg-black);
-  z-index: 99999999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -279,7 +279,7 @@ function navigateToSection(sectionId) {
 /* Hamburger Menu Icon */
 .nav_toggle {
   position: relative;
-  z-index: 99999;
+  z-index: 999;
   display: inline-block;
   margin: 15px;
   background-color: transparent;
@@ -407,7 +407,7 @@ function navigateToSection(sectionId) {
 
 /* Main Navigation */
 .nav {
-  z-index: 9999999;
+  z-index: 999;
   position: fixed;
   top: 0;
   right: 0;
@@ -454,7 +454,7 @@ function navigateToSection(sectionId) {
 
 .nav_link_text {
   transition: 0.3s;
-  z-index: 9999;
+  z-index: 999;
   color: white;
 }
 

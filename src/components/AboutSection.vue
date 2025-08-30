@@ -2,7 +2,7 @@
   <div class="section">
     <div class="about-section">
       <!-- Top accent line -->
-      <div class="top-accent-line"></div>
+      <!-- <div class="top-accent-line"></div> -->
 
       <!-- Main Hero Section -->
       <section class="hero-content">

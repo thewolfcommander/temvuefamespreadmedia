@@ -109,7 +109,7 @@ onMounted(() => {
     overflow: hidden;
 }
 
-.rolling-numbers-section::before {
+/* .rolling-numbers-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -120,7 +120,7 @@ onMounted(() => {
             transparent 0%,
             var(--color-primary) 50%,
             transparent 100%);
-}
+} */
 
 .container {
     max-width: 1400px;
