@@ -5,15 +5,13 @@
             <div class="section-header">
                 <div class="header-left intro-text">
                     <h2 class="section-title">
-                        <span class="title-line-1">Our Clients</span>
+                        <span class="title-line-1">Trusted by Growing Brands</span>
                     </h2>
-                    <p class="section-subtitle">our precious treasure box</p>
+                    <p class="section-subtitle">Partners in Spreading Fame</p>
                 </div>
                 <div class="header-right">
                     <p class="section-description">
-                        Welcome to our precious box - every customer is precious to us. Explore our valued clients:
-                        trusted partners benefiting from our tailored digital solutions, driving growth and success in
-                        their industries.
+                        Join 20+ brands who have partnered with Fame Spread Media to build their presence, performance, and perception in the digital age.
                     </p>
                 </div>
             </div>
@@ -34,39 +32,47 @@
 <script setup>
 import { ref } from 'vue';
 
-// Client logos data - Using actual brand logos
+// Client logos data - Organized by industry categories
 const clients = ref([
     {
-        name: 'ITC Limited',
-        logo: 'https://is2-ssl.mzstatic.com/image/thumb/Purple118/v4/86/5d/7a/865d7a64-b91e-1a9a-b854-dbb37bfdbd3e/source/512x512bb.jpg'
+        name: 'Label Sakshi Nayyar',
+        logo: 'https://via.placeholder.com/200x100/ff6b8a/ffffff?text=Label+Sakshi+Nayyar',
+        category: 'Fashion'
     },
     {
-        name: 'Patanjali',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6yY3ov5BS-Qa5cvJsJgMblO_9FyeARqRRICuMsFEDdig4hVHDJhIsQxEXiBqBASzByNQ&usqp=CAU'
+        name: 'TOTEORGA',
+        logo: 'https://via.placeholder.com/200x100/4CAF50/ffffff?text=TOTEORGA',
+        category: 'E-commerce'
     },
     {
-        name: 'Sunfeast',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS81_IYPRf9uMc_wnI7p8uGIQospl0aU9zClg&s'
+        name: 'Peach Musk',
+        logo: 'https://via.placeholder.com/200x100/FF9800/ffffff?text=Peach+Musk',
+        category: 'Beauty & Skincare'
     },
     {
-        name: 'Britannia',
-        logo: 'https://interbrand.com/wp-content/uploads/2023/05/Britannia_images_Hero_600x400.jpg'
+        name: 'Inner Infinity',
+        logo: 'https://via.placeholder.com/200x100/9C27B0/ffffff?text=Inner+Infinity',
+        category: 'Coaching & Wellness'
     },
     {
-        name: 'Dabur',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2u00ob9NVXTD9GcJqg-6WKHX6vbFS79y1Sg&s'
+        name: 'Gurgaon Real Estate',
+        logo: 'https://via.placeholder.com/200x100/2196F3/ffffff?text=Real+Estate',
+        category: 'Real Estate'
     },
     {
-        name: 'Parle',
-        logo: 'https://www.adgully.com/img/400x300/202205/untitled-design-2022-05-09t174734-809.png.jpg'
+        name: 'Fashion Forward',
+        logo: 'https://via.placeholder.com/200x100/E91E63/ffffff?text=Fashion+Forward',
+        category: 'Fashion'
     },
     {
-        name: 'Haldiram',
-        logo: 'https://media.licdn.com/dms/image/v2/D5622AQGRFYWHtCBn-w/feedshare-shrink_800/feedshare-shrink_800/0/1681724738108?e=2147483647&v=beta&t=lG05VH-kPuCacaP8xLYviL4UkkaDh60QQp_2-UkI9oU'
+        name: 'Style Studio',
+        logo: 'https://via.placeholder.com/200x100/673AB7/ffffff?text=Style+Studio',
+        category: 'Fashion'
     },
     {
-        name: 'Amul',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7i_2Qs2TrlgEgpLP3E53xEdCq3JNK1SG6Xg&s'
+        name: 'TrendyBags Co',
+        logo: 'https://via.placeholder.com/200x100/795548/ffffff?text=TrendyBags',
+        category: 'E-commerce'
     }
 ]);
 </script>

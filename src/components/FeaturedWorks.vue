@@ -9,29 +9,67 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
-                <!-- Project Card 1 - Patanjali -->
+                <!-- Project Card 1 - Meta Ads Campaign -->
                 <div class="project-card" @mouseenter="handleMouseEnter(0)" @mouseleave="handleMouseLeave(0)">
                     <div class="project-image-wrapper">
-                        <img src="https://4.imimg.com/data4/TO/CY/MY-22977716/all-patanjali-products-get-5-less.jpg"
-                            alt="Patanjali Shishu Care" class="project-image" />
-                        <div class="project-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+                            alt="Meta Ads Campaign Performance" class="project-image" />
+                        <div class="project-overlay">
+                            <div class="project-metrics">5.26 ROAS</div>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">PATANJALI</h3>
-                        <p class="project-category">Personalization, Research, Packaging Design</p>
+                        <h3 class="project-title">META ADS CAMPAIGN</h3>
+                        <p class="project-category">Performance Marketing</p>
+                        <p class="project-description">Executed a successful Meta Ads campaign that resulted in 372 purchases and a strong return on ad spend</p>
                     </div>
                 </div>
 
-                <!-- Project Card 2 - Shuddh Harvest -->
+                <!-- Project Card 2 - E-commerce Website -->
                 <div class="project-card" @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave(1)">
                     <div class="project-image-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRRkrQPoxqpDTWdfUBRcfeU4HvqWJSyTOT8g&s"
-                            alt="Shuddh Harvest" class="project-image" />
-                        <div class="project-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+                            alt="E-commerce Website Development" class="project-image" />
+                        <div class="project-overlay">
+                            <div class="project-metrics">New Arrivals Showcase</div>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3 class="project-title">SHUDDH HARVEST</h3>
-                        <p class="project-category">Our Role: Brand Logo Design, Packaging Design</p>
+                        <h3 class="project-title">E-COMMERCE WEBSITE</h3>
+                        <p class="project-category">Website & E-Commerce Development</p>
+                        <p class="project-description">Designed and developed an e-commerce platform featuring multiple product categories and a seamless user experience</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 - Brand Photoshoot -->
+                <div class="project-card" @mouseenter="handleMouseEnter(2)" @mouseleave="handleMouseLeave(2)">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e732c777?w=600&h=400&fit=crop"
+                            alt="Brand Photoshoot Session" class="project-image" />
+                        <div class="project-overlay">
+                            <div class="project-metrics">Lifestyle & Product Photos</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">BRAND PHOTOSHOOT</h3>
+                        <p class="project-category">Content Creation: Photography</p>
+                        <p class="project-description">Conducted professional photoshoots for fashion and skincare brands, producing high-quality images for campaigns</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 - Marketplace Store Management -->
+                <div class="project-card" @mouseenter="handleMouseEnter(3)" @mouseleave="handleMouseLeave(3)">
+                    <div class="project-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+                            alt="Amazon Store Management" class="project-image" />
+                        <div class="project-overlay">
+                            <div class="project-metrics">Amazon Store Setup</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">MARKETPLACE MANAGEMENT</h3>
+                        <p class="project-category">Marketplace & Sales Support</p>
+                        <p class="project-description">Launched and managed a brand store on Amazon, including product listings and content for organizers and tote bags</p>
                     </div>
                 </div>
             </div>
@@ -196,6 +234,7 @@ const handleMouseLeave = () => {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 40px;
 }
 
@@ -245,6 +284,19 @@ const handleMouseLeave = () => {
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-metrics {
+    background: rgba(var(--primary-blue-rgb), 0.9);
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
 }
 
 .project-card:hover .project-overlay {
@@ -286,13 +338,29 @@ const handleMouseLeave = () => {
     font-size: 14px;
     font-weight: 400;
     color: var(--text-gray);
-    margin: 0;
+    margin: 0 0 10px 0;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.4s ease 0.1s;
 }
 
+.project-description {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.2s;
+}
+
 .project-card:hover .project-category {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover .project-description {
     opacity: 1;
     transform: translateY(0);
 }

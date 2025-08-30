@@ -5,8 +5,8 @@
     </a>
 
     <div class="d-block d-md-none mob_number_box">
-      <a class="text-decoration-none text-white" href="tel:+91 9711431917">
-        <i class="ri-phone-fill"></i> +91 9711431917
+      <a class="text-decoration-none text-white" href="tel:9711431917">
+        <i class="ri-phone-fill"></i> 9711431917
       </a>
     </div>
 
@@ -83,7 +83,7 @@
                 </p>
                 <div>
                   <a href="tel:9711431917" class="text-white call-link anime">
-                    +91 9711431917
+                    9711431917
                   </a>
                 </div>
               </div>

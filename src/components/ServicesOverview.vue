@@ -8,35 +8,33 @@
             <!-- Left Side - Heading and CTA -->
             <div class="left-content">
               <h2 class="main-heading intro-text">
-                <span class="heading-line-1">We're Everything you</span>
-                <span class="heading-line-2">need.</span>
+                <span class="heading-line-1">Your Full-Service Creative &</span>
+                <span class="heading-line-2">Marketing Partner</span>
               </h2>
+              <p class="overview-subheading">Strategy, design, content, and performance under one roof.</p>
               <div class="cta-wrapper">
                 <a href="#" class="cta-link">
-                  Request a proposal for your product
-                  <span class="bell-icon">🔔</span>
+                  Discuss Your Project
+                  <span class="bell-icon">→</span>
                 </a>
               </div>
             </div>
 
-            <!-- Right Side - Hash Tags Grid -->
+            <!-- Right Side - Industries Section -->
             <div class="right-content">
+              <h3 class="industries-title">Industries We Serve</h3>
               <div class="tags-grid">
                 <div class="tag-column">
-                  <a href="#" class="tag-link">#Food</a>
-                  <a href="#" class="tag-link">#Spices</a>
-                  <a href="#" class="tag-link">#Dairy Products</a>
-                  <a href="#" class="tag-link">#Frozen Food</a>
+                  <a href="#" class="tag-link">#Fashion</a>
+                  <a href="#" class="tag-link">#Beauty & Skincare</a>
+                  <a href="#" class="tag-link">#E-commerce & Retail</a>
                 </div>
                 <div class="tag-column">
-                  <a href="#" class="tag-link">#FMCG</a>
-                  <a href="#" class="tag-link">#Cosmetics</a>
-                  <a href="#" class="tag-link">#Beverages</a>
+                  <a href="#" class="tag-link">#Real Estate</a>
+                  <a href="#" class="tag-link">#Events</a>
+                  <a href="#" class="tag-link">#Corporate</a>
                 </div>
                 <div class="tag-column">
-                  <a href="#" class="tag-link">#Tea & Coffee</a>
-                  <a href="#" class="tag-link">#Dry Fruits</a>
-                  <a href="#" class="tag-link">#Pharma</a>
                 </div>
               </div>
             </div>
@@ -49,14 +47,13 @@
         <div class="container">
           <div class="agency-content">
             <h1 class="agency-heading">
-              INDIA'S LEADING BRANDING &<br />
-              CREATIVE MARKETING AGENCY
+              GURGAON'S CREATIVE<br />
+              MARKETING AGENCY
             </h1>
             <p class="agency-description">
-              With a passion for digital innovation, we are dedicated to helping brands
-              find their voice. Discover our dynamic projects: from website optimization
-              to social media campaigns, our diverse portfolio showcases impactful digital
-              solutions driving measurable results for our clients.
+              Helping Brands Scale, Stand Out, and Succeed.<br /><br />
+              As a full-service agency based in Gurgaon, we are built to help brands navigate the digital age. 
+              With experience serving over 20+ brands, we tailor every move to your goals with purpose, precision, and creativity to build your brand's presence, performance, and perception.
             </p>
           </div>
         </div>
@@ -198,6 +195,15 @@ onMounted(() => {
   display: block;
 }
 
+.overview-subheading {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  margin: var(--space-4) 0 var(--space-8) 0;
+  line-height: var(--line-height-relaxed);
+}
+
 /* CTA Wrapper */
 .cta-wrapper {
   margin-top: 20px;
@@ -227,10 +233,20 @@ onMounted(() => {
   transform-origin: 50% 4px;
 }
 
-/* Right Content - Tags Grid */
+/* Right Content - Industries Section */
 .right-content {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
+}
+
+.industries-title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-white);
+  margin-bottom: var(--space-6);
+  text-align: right;
 }
 
 .tags-grid {

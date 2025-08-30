@@ -9,9 +9,8 @@
           <span class="footer-brand-name">Fame Spread Media</span>
         </div>
         <p class="footer-description">
-          Tell us about your project<br />
-          Fancy a coffee and a chat? We would love to meet you. Drop us a line or slide into our DMs and we will help to
-          create buzz in your social handles
+          Every brand deserves fame.<br />
+          Fame Spread Media is a Gurgaon-based, full-service marketing and creative agency built to help brands succeed in the digital age.
         </p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
@@ -45,8 +44,9 @@
       <div class="footer-contact">
         <h3 class="contact-heading">CONTACT DETAILS</h3>
         <div class="contact-info">
-          <p>Mobile : <a href="tel:+919871521144">+91 9871521144</a></p>
-          <p>Email : <a href="mailto:hi@famespreadmedia.com">hi@famespreadmedia.com</a></p>
+          <p>Mobile : <a href="tel:+919711431917">+91 9711431917</a></p>
+          <p>Email : <a href="mailto:info@famespreadmedia.com">info@famespreadmedia.com</a></p>
+          <p>Instagram : <a href="https://instagram.com/famespreadmedia" target="_blank">@famespreadmedia</a></p>
         </div>
       </div>
     </div>

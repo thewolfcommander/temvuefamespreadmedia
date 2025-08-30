@@ -26,13 +26,20 @@
           </svg>
         </div>
         <h2 class="consultation-title">
-          <span class="free-text">Free</span>
-          <span class="consultation-text">consultation</span>
+          <span class="free-text">Let's Work</span>
+          <span class="consultation-text">Together!</span>
         </h2>
         <p class="consultation-description">
-          Have a new project in mind? Set up a discovery call or complete our
-          brief form, and let's collectively explore the potential opportunities.
+          Fame isn't luck—it's strategy, storytelling, and showing up right. 
+          Contact us to learn how we can build that kind of fame with you.
         </p>
+        
+        <!-- Trust Signals -->
+        <div class="trust-signals">
+          <div class="trust-item">✓ Full-Service Creative & Marketing Agency</div>
+          <div class="trust-item">✓ Strategy, Design & Content Under One Roof</div>
+          <div class="trust-item">✓ Serving Startups & Established Brands</div>
+        </div>
       </div>
 
       <!-- Right Side - Contact Form -->
@@ -177,8 +184,23 @@ const handleSubmit = async () => {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
-  margin: 0;
+  margin: 0 0 var(--space-6) 0;
   max-w: 480px;
+}
+
+/* Trust Signals */
+.trust-signals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.trust-item {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
 }
 
 /* Form Section */

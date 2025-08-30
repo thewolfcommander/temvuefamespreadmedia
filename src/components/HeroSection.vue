@@ -226,9 +226,9 @@ function goToSlide(index) {
 onMounted(() => {
   // Initialize main slider with partial slide visibility
   mainSlider = new Swiper(mainSliderEl.value, {
-    slidesPerView: 1.5,
+    slidesPerView: 1.3,
     centeredSlides: true,
-    spaceBetween: 50,
+    spaceBetween: 60,
     loop: true,
     speed: 800,
     autoplay: {
@@ -241,12 +241,16 @@ onMounted(() => {
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 1.2,
-        spaceBetween: 30,
+        slidesPerView: 1.1,
+        spaceBetween: 35,
       },
       1024: {
-        slidesPerView: 1.5,
-        spaceBetween: 50,
+        slidesPerView: 1.2,
+        spaceBetween: 45,
+      },
+      1440: {
+        slidesPerView: 1.3,
+        spaceBetween: 60,
       },
     },
     on: {
@@ -369,12 +373,12 @@ onBeforeUnmount(() => {
 
 .slide-content {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 0 80px;
   height: 100%;
 }
 
@@ -411,6 +415,53 @@ onBeforeUnmount(() => {
 
 .main-heading > span {
   color: var(--color-primary);
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  filter: blur(10px);
+  transition: none;
+}
+
+/* Active slide animates the span */
+.swiper-slide-active .main-heading > span {
+  animation: revealGlow 1.2s ease-out forwards,
+             subtlePulse 3s ease-in-out 1.2s infinite;
+}
+
+@keyframes revealGlow {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    filter: blur(10px);
+    text-shadow: 0 0 0 var(--color-primary);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.05);
+    filter: blur(0);
+    text-shadow: 0 0 30px var(--color-primary),
+                 0 0 60px var(--color-primary);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+    text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.5),
+                 0 0 40px rgba(var(--color-primary-rgb), 0.3);
+  }
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.5),
+                 0 0 40px rgba(var(--color-primary-rgb), 0.3);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(var(--color-primary-rgb), 0.7),
+                 0 0 50px rgba(var(--color-primary-rgb), 0.4),
+                 0 0 75px rgba(var(--color-primary-rgb), 0.2);
+  }
 }
 
 .sub-text {
@@ -527,8 +578,16 @@ onBeforeUnmount(() => {
 }
 
 /* Responsive Design */
+@media (max-width: 1440px) {
+  .slide-content {
+    max-width: 1400px;
+    padding: 0 60px;
+  }
+}
+
 @media (max-width: 1024px) {
   .slide-content {
+    max-width: 100%;
     padding: 0 40px;
   }
 

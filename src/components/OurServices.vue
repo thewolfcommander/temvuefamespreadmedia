@@ -35,6 +35,14 @@
                         <p class="service-description">
                             {{ service.description }}
                         </p>
+                        
+                        <!-- Service Features -->
+                        <ul class="service-features" v-if="service.features">
+                            <li v-for="feature in service.features" :key="feature" class="feature-item">
+                                {{ feature }}
+                            </li>
+                        </ul>
+                        
                         <a :href="service.link" class="learn-more-btn">
                             <span class="btn-text">Get a Quote</span>
                             <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -54,17 +62,29 @@ import { ref } from 'vue';
 
 const services = ref([
     {
-        title: 'Social Media Management',
-        description: "We boost client online presence with ethical, efficient campaigns across multiple channels. Our strategies are morally sound, effective, and secure, designed to maximize engagement and growth.",
-        link: '#/contact', // url where you want to sent user
+        title: 'Branding & Strategy',
+        description: "We craft bold brand identities and strategies that position your business for success, from logos to messaging.",
+        features: [
+            "Brand Identity & Logo Design",
+            "Brand Strategy & Positioning",
+            "Tone of Voice & Messaging Development",
+            "Packaging & Label Design"
+        ],
+        link: '#/contact',
         video: {
-            poster: '#', // image link in place of #
+            poster: '#',
             src: 'https://videos.pexels.com/video-files/6562012/6562012-uhd_2560_1440_25fps.mp4'
         }
     },
     {
-        title: 'Photography and Videography',
-        description: "We offer top-tier Photography and Videography services to bring your vision to life. From captivating images to dynamic videos, trust us to showcase your story with creativity and excellence.",
+        title: 'Social Media Marketing',
+        description: "From content strategy to community engagement, we provide full platform management to build a high-impact social presence.",
+        features: [
+            "Content Strategy & Calendar Planning",
+            "Reels & Video Production",
+            "Influencer & Creator Partnerships",
+            "Full Platform Management: Instagram, Facebook, LinkedIn, X, and YouTube"
+        ],
         link: '#/contact',
         video: {
             poster: '#',
@@ -72,16 +92,29 @@ const services = ref([
         }
     },
     {
-        title: 'Search Engine Optimization (SEO)',
-        description: "We help select optimal keywords to boost your website's visibility. Ensure search engines connect users to your services effortlessly, enhancing your online presence and driving relevant traffic.",
+        title: 'Content Creation',
+        description: "Our team produces stunning visual content, including photoshoots and video shoots, tailored for lifestyle, product, and campaign needs.",
+        features: [
+            "Photoshoots (Product, Lifestyle, Campaign)",
+            "Reels & Video Shoots (UGC-style, Cinematic, Product-focused)",
+            "Editing, Animation, Subtitling & Voiceovers",
+            "Scriptwriting & Storyboarding"
+        ],
         link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/4549682/4549682-hd_1920_1080_30fps.mp4'
         }
-    }, {
-        title: 'Website Development',
-        description: "Our expert team in Website Development creates stunning, user-friendly websites that drive results. We focus on responsive design, seamless navigation, and optimized performance to ensure your online presence stands out.",
+    },
+    {
+        title: 'Website & E-Commerce',
+        description: "We design and develop custom websites and e-commerce stores on platforms like Shopify and WordPress, optimized for sales and performance.",
+        features: [
+            "Website Design & Development (Shopify, WordPress, Custom)",
+            "E-commerce Store Setup & Optimization",
+            "Landing Pages & Sales Funnels",
+            "Website Maintenance & Hosting Support"
+        ],
         link: '#/contact',
         video: {
             poster: '#',
@@ -89,8 +122,14 @@ const services = ref([
         }
     },
     {
-        title: 'AD Manager',
-        description: "Our expert team in Ad Management specializes in creating and optimizing campaigns across platforms like Google, Facebook, Instagram, and beyond. We design data-driven, targeted ads that maximize reach, boost conversions, and deliver measurable ROI. With a focus on audience insights, budget efficiency, and continuous optimization, we ensure your brand captures attention and achieves impactful results.",
+        title: 'Performance Marketing',
+        description: "We drive measurable results with data-driven performance marketing campaigns across Meta, Google, and YouTube, focusing on ROI tracking.",
+        features: [
+            "Meta Ads & Google Ads",
+            "YouTube Advertising",
+            "Search Engine Optimization (SEO)",
+            "ROI Tracking & Campaign Reporting"
+        ],
         link: '#/contact',
         video: {
             poster: '#',
@@ -98,9 +137,15 @@ const services = ref([
         }
     },
     {
-        title: 'Social Media Optimization',
-        description: "Our expert team in Digital Marketing delivers customized solutions for eCommerce, Finance, Healthcare, Education, and more. We craft industry-specific strategies designed to boost visibility, drive engagement, and maximize growth. From targeted campaigns to data-driven optimization, we ensure your brand builds a strong online presence and connects with the right audience for lasting impact.",
-        link: '#',
+        title: 'Marketplace & Sales Support',
+        description: "We offer comprehensive support for major marketplaces like Amazon, Flipkart, Myntra, and Nykaa, from store setup to paid ads.",
+        features: [
+            "Marketplace Store Setup & Management",
+            "Product Listings & A+ Content",
+            "Paid Ads for Marketplaces",
+            "Promotions, Campaigns & Deal-Day Support"
+        ],
+        link: '#/contact',
         video: {
             poster: '#',
             src: 'https://videos.pexels.com/video-files/5076634/5076634-uhd_2732_1440_25fps.mp4'
@@ -271,8 +316,32 @@ const services = ref([
     font-weight: 400;
     line-height: 1.8;
     color: var(--text-gray);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: justify;
+}
+
+/* Service Features */
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.feature-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-light);
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.feature-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
 }
 
 /* Learn More Button */

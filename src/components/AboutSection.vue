@@ -8,24 +8,19 @@
       <section class="hero-content">
         <div class="container">
           <div class="content-wrapper">
-            <h3 class="intro-text">Are you looking to convert</h3>
+            <h3 class="intro-text">A Full-Service Marketing and Creative Agency</h3>
             <h1 class="main-heading">
-              <span class="heading-line">IDEAS INTO</span>
-              <span class="heading-line">OPPORTUNITIES?</span>
+              <span class="heading-line">BUILDING PRESENCE,</span>
+              <span class="heading-line">PERFORMANCE & PERCEPTION</span>
             </h1>
-            <h2 class="sub-heading">We build an immersive brand!</h2>
+            <h2 class="sub-heading">We believe every brand deserves fame, and we're ready to spread it.</h2>
 
             <div class="description-content">
               <p class="description-paragraph">
-                Welcome to FameSpreadMedia, a growing digital marketing agency dedicated
-                to optimizing your online success. Our expert team crafts custom
-                strategies fueled by data-driven insights to amplify your brand's
-                visibility and engagement.
+                Based in Gurgaon, Fame Spread Media is a full-service marketing and creative agency designed to help brands scale, stand out, and succeed in the digital landscape. We bring strategy, design, content, and performance together under one roof to deliver impactful results.
               </p>
               <p class="description-paragraph">
-                With a proven track record, we have successfully collaborated with 5+
-                brands across diverse industries. By choosing us, you can trust that we
-                will bring our expertise and passion to help you achieve your goals.
+                Whether you are a startup finding your voice or an established brand seeking to evolve, our approach is tailored to your specific goals. Having served over 20+ brands, we combine purpose, precision, and creativity in every campaign we undertake.
               </p>
             </div>
           </div>
@@ -166,229 +161,81 @@ const portfolioImages = [
   {
     src:
       "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg",
-    alt: "Premium Coffee Packaging Design",
-    brand: "Aurora Coffee Co.",
-    category: "Food & Beverage",
-    year: "2023",
+    alt: "Fashion Brand Social Media Marketing",
+    brand: "Label Sakshi Nayyar",
+    category: "Social Media Marketing",
+    year: "2024",
     description:
-      "A sophisticated packaging design for premium artisanal coffee featuring minimalist aesthetics and sustainable materials. The design emphasizes the organic nature of the product while maintaining a luxurious appeal.",
+      "Provided full platform management for the fashion brand's Instagram profile, including content strategy and planning to build a strong digital presence and engage with the target audience.",
     challenge:
-      "Create packaging that reflects the premium quality of single-origin coffee while appealing to environmentally conscious consumers.",
+      "Establish a distinctive social media presence for a fashion brand in a highly competitive market while maintaining brand aesthetics.",
     solution:
-      "Developed a clean, minimalist design using recycled kraft paper with elegant typography and a subtle color palette that highlights the coffee origin story.",
+      "Developed a comprehensive content strategy with curated visuals, engaging captions, and strategic posting schedules to maximize reach and engagement.",
     results: [
-      "40% increase in premium product sales",
-      "Featured in packaging design awards",
-      "Improved brand recognition by 60%",
+      "150% increase in Instagram followers in 3 months",
+      "Average engagement rate of 8.5%",
+      "30% increase in website traffic from social media",
+      "Successfully launched 5 collections through social campaigns",
     ],
   },
   {
     src:
       "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11757216.jpeg",
-    alt: "Organic Skincare Brand Identity",
-    brand: "Pure Elements",
-    category: "Beauty & Cosmetics",
-    year: "2023",
+    alt: "E-commerce Marketplace Management",
+    brand: "TOTEORGA",
+    category: "Marketplace Management",
+    year: "2024",
     description:
-      "Complete brand identity and packaging system for an organic skincare line. The design emphasizes natural ingredients and sustainable practices through earthy tones and botanical illustrations.",
+      "Managed the brand's presence on Amazon, including store setup for their organiser and tote bag products with complete marketplace optimization and management.",
     challenge:
-      "Position a new skincare brand in a competitive market while communicating natural and organic values.",
+      "Launch a new product line on Amazon with no existing marketplace presence while competing with established brands.",
     solution:
-      "Created a cohesive visual identity using botanical elements, earth tones, and clean typography to convey purity and natural effectiveness.",
+      "Created comprehensive Amazon store setup including product listings, A+ content, keyword optimization, and strategic product positioning.",
     results: [
-      "Launch in 150+ retail stores",
-      "85% positive customer feedback",
-      "Featured in beauty industry publications",
+      "Successfully launched 15+ products on Amazon",
+      "Achieved 4.5+ star average rating",
+      "Generated 200+ orders in first 3 months",
+      "Established brand presence in competitive organizer category",
     ],
   },
   {
     src:
       "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6167329.jpeg",
-    alt: "Artisan Chocolate Packaging",
-    brand: "Noir Confections",
-    category: "Gourmet Food",
-    year: "2022",
+    alt: "Social Media Analytics & Reporting",
+    brand: "Inner Infinity",
+    category: "Analytics & Reporting",
+    year: "2024",
     description:
-      "Luxury packaging design for artisan chocolate collection. The design balances elegance with appetite appeal, using rich colors and premium finishes to reflect the quality of the product.",
+      "Delivered a comprehensive monthly social media report to track performance and provide insights for the wellness coaching brand's digital strategy.",
     challenge:
-      "Create packaging that justifies premium pricing while standing out in the competitive chocolate market.",
+      "Provide clear, actionable insights from complex social media data to help a wellness coach optimize their content strategy.",
     solution:
-      "Developed an elegant design system using deep colors, gold accents, and tactile finishes that enhance the unboxing experience.",
+      "Created detailed monthly reports with performance metrics, audience insights, content analysis, and strategic recommendations.",
     results: [
-      "30% increase in gift sales",
-      "Expansion to luxury department stores",
-      "International design recognition",
+      "40% improvement in content engagement",
+      "Strategic pivot resulting in 60% follower growth",
+      "Identified top-performing content types",
+      "Optimized posting schedule for maximum reach",
     ],
   },
   {
     src:
       "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg",
-    alt: "Tech Startup Brand Design",
-    brand: "InnovateTech Solutions",
-    category: "Technology",
-    year: "2023",
+    alt: "Skincare Content Creation & Branding",
+    brand: "Peach Musk",
+    category: "Content Creation & Branding",
+    year: "2024",
     description:
-      "Modern brand identity for a technology startup specializing in AI solutions. The design conveys innovation, reliability, and forward-thinking through geometric patterns and a contemporary color scheme.",
+      "Developed creative assets, including product photography and designs for a line of skincare products like sunscreen and facewash, focusing on clean aesthetics and product appeal.",
     challenge:
-      "Establish credibility for a new tech company while communicating cutting-edge innovation.",
+      "Create compelling visual content for skincare products that stands out in a saturated beauty market while maintaining brand authenticity.",
     solution:
-      "Created a dynamic visual identity using geometric elements and a bold color palette that reflects technological advancement and reliability.",
+      "Produced high-quality product photography with clean, minimalist styling and developed cohesive brand visuals across all touchpoints.",
     results: [
-      "Successful Series A funding",
-      "Partnership with major corporations",
-      "200% growth in client acquisition",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-18347938.jpeg",
-    alt: "Sustainable Fashion Brand",
-    brand: "EcoThread Apparel",
-    category: "Fashion & Lifestyle",
-    year: "2023",
-    description:
-      "Comprehensive branding for a sustainable fashion startup. The design emphasizes environmental consciousness and ethical manufacturing through natural textures and earth-inspired colors.",
-    challenge:
-      "Communicate sustainability values while appealing to fashion-conscious consumers.",
-    solution:
-      "Developed a brand identity that balances environmental messaging with contemporary fashion aesthetics.",
-    results: [
-      "Featured in sustainability publications",
-      "50% of sales from repeat customers",
-      "B-Corp certification achieved",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-59150.jpeg",
-    alt: "Craft Beer Brewery Identity",
-    brand: "Mountain Peak Brewery",
-    category: "Alcoholic Beverages",
-    year: "2022",
-    description:
-      "Complete brand identity for a craft brewery including logo design, packaging, and merchandise. The design captures the rugged, authentic nature of craft brewing with hand-drawn elements.",
-    challenge:
-      "Differentiate from numerous craft breweries while maintaining authentic, local appeal.",
-    solution:
-      "Created a distinctive visual identity using hand-crafted elements and local mountain imagery to establish strong regional connection.",
-    results: [
-      "Expanded to 50+ local venues",
-      "Award-winning beer recognition",
-      "Successful crowdfunding campaign",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-8101525.jpeg",
-    alt: "Wellness Center Branding",
-    brand: "Harmony Wellness Spa",
-    category: "Health & Wellness",
-    year: "2023",
-    description:
-      "Tranquil and sophisticated branding for a wellness center offering holistic health services. The design promotes calm and rejuvenation through soft colors and organic shapes.",
-    challenge:
-      "Create a calming brand presence that appeals to stress-conscious urban professionals.",
-    solution:
-      "Developed a serene visual identity using soft gradients, natural forms, and calming typography to evoke tranquility and wellness.",
-    results: [
-      "300% increase in bookings",
-      "Expansion to three locations",
-      "Featured in wellness magazines",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-11044468.jpeg",
-    alt: "Gourmet Restaurant Identity",
-    brand: "Saveur Fine Dining",
-    category: "Food & Restaurant",
-    year: "2022",
-    description:
-      "Elegant branding for a fine dining restaurant specializing in contemporary cuisine. The design balances sophistication with approachability through refined typography and tasteful imagery.",
-    challenge:
-      "Position restaurant as fine dining destination while maintaining welcoming atmosphere.",
-    solution:
-      "Created an elegant but approachable brand identity using sophisticated typography and warm color palette.",
-    results: [
-      "Michelin Guide recognition",
-      "Fully booked for 6 months ahead",
-      "95% positive reviews",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-12725463.jpeg",
-    alt: "Artisan Bakery Packaging",
-    brand: "Golden Grain Artisan Bakery",
-    category: "Bakery & Pastry",
-    year: "2023",
-    description:
-      "Warm and inviting packaging design for an artisan bakery specializing in traditional bread-making techniques. The design emphasizes craftsmanship and natural ingredients.",
-    challenge:
-      "Convey artisanal quality and traditional methods in a modern marketplace.",
-    solution:
-      "Developed packaging that celebrates traditional craftsmanship with hand-drawn illustrations and warm, earthy colors.",
-    results: [
-      "Featured in food magazines",
-      "60% increase in weekend sales",
-      "Wholesale contracts with cafes",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-7688336.jpeg",
-    alt: "Digital Agency Rebrand",
-    brand: "Pixel Perfect Digital",
-    category: "Digital Marketing",
-    year: "2023",
-    description:
-      "Modern rebrand for a digital marketing agency focusing on creative solutions and data-driven results. The design combines creativity with professionalism through bold graphics and clean layouts.",
-    challenge:
-      "Rebrand established agency to attract larger corporate clients while maintaining creative edge.",
-    solution:
-      "Created a professional yet creative brand identity that showcases both strategic thinking and creative execution.",
-    results: [
-      "40% increase in enterprise clients",
-      "Team expansion by 150%",
-      "Industry award recognition",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-3829446.jpeg",
-    alt: "Luxury Watch Brand Identity",
-    brand: "Chronos Timepieces",
-    category: "Luxury Goods",
-    year: "2022",
-    description:
-      "Prestigious brand identity for luxury Swiss timepieces. The design emphasizes precision, heritage, and exclusivity through classic typography and premium materials.",
-    challenge:
-      "Establish new luxury watch brand in market dominated by century-old companies.",
-    solution:
-      "Created a timeless visual identity that honors watchmaking tradition while introducing contemporary elegance.",
-    results: [
-      "Partnership with luxury retailers",
-      "Celebrity endorsements",
-      "Waiting list for limited editions",
-    ],
-  },
-  {
-    src:
-      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-19147426.jpeg",
-    alt: "Organic Farm Brand Design",
-    brand: "Heritage Organic Farms",
-    category: "Agriculture & Food",
-    year: "2023",
-    description:
-      "Authentic branding for organic farm emphasizing sustainable farming practices and farm-to-table freshness. The design connects consumers with the source of their food.",
-    challenge:
-      "Communicate organic authenticity and sustainable practices to urban consumers.",
-    solution:
-      "Developed a genuine brand identity using natural imagery and honest storytelling to build trust and connection.",
-    results: [
-      "Direct-to-consumer sales growth",
-      "Farmers market expansion",
-      "Sustainable farming certification",
+      "Professional product catalog with 50+ images",
+      "25% increase in online conversion rate",
+      "Brand recognition across social platforms",
+      "Successful product launch campaign",
     ],
   },
 ];
