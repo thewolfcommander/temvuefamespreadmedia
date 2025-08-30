@@ -281,8 +281,9 @@ onMounted(() => {
 /* Agency Section */
 .agency-section {
   background-color: var(--bg-black);
-  /* padding: 120px 0; */
+  padding: 120px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* margin-top: 100px; */
 }
 
 .agency-content {
