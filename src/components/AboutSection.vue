@@ -441,8 +441,10 @@ const closeLightbox = () => {
 
 /* Portfolio Section */
 .portfolio-section {
-  background: var(--bg-dark);
+  background: var(--color-black);
   padding: 0 0 var(--space-16);
+  margin-top: 100px;
+  margin-bottom: 64px;
 }
 
 .portfolio-container {
@@ -454,7 +456,7 @@ const closeLightbox = () => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  background: rgba(var(--color-white-rgb), 0.1);
+  background: rgba(var(--color-black), 0.1);
 }
 
 .portfolio-item {
@@ -672,8 +674,8 @@ const closeLightbox = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 999;
+  background: var(--color-black);
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -686,10 +688,11 @@ const closeLightbox = () => {
   max-width: 1400px;
   max-height: 90vh;
   width: 100%;
-  background: var(--bg-dark);
+  background: var(--color-black);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-secondary);
 }
 
 .close-button {
@@ -724,7 +727,7 @@ const closeLightbox = () => {
 }
 
 .lightbox-image-section {
-  background: var(--bg-black);
+  background: var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -748,7 +751,7 @@ const closeLightbox = () => {
 }
 
 .lightbox-content-section {
-  background: var(--bg-dark);
+  background: var(--color-black);
   padding: var(--space-8);
   overflow-y: auto;
   display: flex;

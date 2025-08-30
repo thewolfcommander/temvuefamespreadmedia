@@ -42,7 +42,7 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 9999999;
   width: 80px;
   height: 80px;
   transition: all 0.1s ease-out;
