@@ -4,14 +4,7 @@
             <!-- Header -->
             <div class="section-header">
                 <h2 class="section-title intro-text ">Featured works</h2>
-                <a href="#" class="view-projects-btn">
-                    <span class="btn-text">View Projects</span>
-                    <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5" />
-                        <path d="M11 8L15 12L11 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
+
             </div>
 
             <!-- Projects Grid -->

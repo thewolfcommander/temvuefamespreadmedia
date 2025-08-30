@@ -49,20 +49,21 @@
       <div class="row">
         <div class="col-lg-4">
           <ul>
-            <li><a class="nav__link" href="#about" @click="closeNav">About Us</a></li>
-            <li><a class="nav__link" href="#work" @click="closeNav">Our Projects</a></li>
-            <li><a class="nav__link" href="#branding" @click="closeNav">Founder Story</a></li>
-            <li><a class="nav__link" href="#packaging" @click="closeNav">Testimonials</a></li>
-            <li><a class="nav__link" href="#case-study" @click="closeNav">Contact Us</a></li>
+            <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
+            <li><a class="nav__link" @click="scrollToSection('who-we-are')">About Us</a></li>
+            <li><a class="nav__link" @click="scrollToSection('founders-story')">Founder Story</a></li>
+            <li><a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a></li>
+            <li><a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
           <ul>
-            <li><a class="nav__link" href="#logo" @click="closeNav">Social Media Management</a></li>
-            <li><a class="nav__link" href="#web" @click="closeNav">Content Creation</a></li>
-            <li><a class="nav__link" href="#marketing" @click="closeNav">SEO</a></li>
-            <li><a class="nav__link" href="#contact" @click="closeNav">Website Development</a></li>
-            <li><a class="nav__link" href="#blog" @click="closeNav">AD Manager</a></li>
+            <li><a class="nav__link" @click="scrollToSection('social-media-management')">Social Media Management</a>
+            </li>
+            <li><a class="nav__link" @click="scrollToSection('photography-and-videography')">Content Creation</a></li>
+            <li><a class="nav__link" @click="scrollToSection('search-engine-optimization-seo')">SEO</a></li>
+            <li><a class="nav__link" @click="scrollToSection('website-development')">Website Development</a></li>
+            <li><a class="nav__link" @click="scrollToSection('ad-manager')">AD Manager</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -96,20 +97,99 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 // 1. Import your logo asset from the assets folder
 import logo from '../assets/logo.svg';
 import fullLogo from '../assets/fullLogo.png';
 
 // 2. Create a "reactive" variable to track the menu's open/closed state
 const isNavOpen = ref(false);
+const router = useRouter();
 
 // 3. Create functions to control the state, replacing the old JavaScript
 function toggleNav() {
   isNavOpen.value = !isNavOpen.value;
+  // Disable/enable body scroll
+  if (isNavOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
 }
 
 function closeNav() {
   isNavOpen.value = false;
+  // Re-enable body scroll when closing nav
+  document.body.style.overflow = 'auto';
+}
+
+// Define which sections are on which pages
+const sectionPages = {
+  'founders-story': '/about',
+  'who-we-are': '/about',
+  'testimonials': '/',
+  'contact-us': '/',
+  'social-media-management': '/',
+  'photography-and-videography': '/',
+  'search-engine-optimization-seo': '/',
+  'website-development': '/',
+  'ad-manager': '/'
+};
+
+function scrollToSection(sectionId) {
+  closeNav(); // Close the navigation first
+
+  const targetPage = sectionPages[sectionId] || '/';
+  const currentPath = router.currentRoute.value.path;
+
+  setTimeout(() => {
+    // If we're already on the correct page, just scroll
+    if (currentPath === targetPage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    } else {
+      // Navigate to the correct page first, then scroll
+      router.push(targetPage).then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          } else {
+            console.log(`Section with ID '${sectionId}' not found on page ${targetPage}`);
+          }
+        }, 500); // Wait for page to load
+      });
+    }
+  }, 100); // Small delay to allow nav to close
+}
+
+// Alternative function for navigation that always goes to home first (for home page sections)
+function navigateToSection(sectionId) {
+  closeNav();
+
+  // Always navigate to home page first
+  router.push('/').then(() => {
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      } else {
+        console.log(`Section with ID '${sectionId}' not found even on home page`);
+      }
+    }, 300);
+  });
 }
 </script>
 

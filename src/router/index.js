@@ -10,14 +10,6 @@ const routes = [
     }
   },
   {
-    path: '/services',
-    name: 'Services',
-    component: () => import('../views/Services.vue'),
-    meta: {
-      title: 'Our Services - Fame Spread Media'
-    }
-  },
-  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue'),

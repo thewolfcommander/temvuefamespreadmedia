@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-page">
+  <div id="get-a-quote" class="contact-page">
     <!-- Hero Section -->
     <section class="contact-hero">
       <div class="container">
@@ -37,48 +37,24 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="name" class="form-label">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  v-model="formData.name"
-                  placeholder="Type your name"
-                  required
-                  class="form-input"
-                />
+                <input type="text" id="name" v-model="formData.name" placeholder="Type your name" required
+                  class="form-input" />
               </div>
 
               <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  v-model="formData.email"
-                  placeholder="Type your email"
-                  required
-                  class="form-input"
-                />
+                <input type="email" id="email" v-model="formData.email" placeholder="Type your email" required
+                  class="form-input" />
               </div>
 
               <div class="form-group">
                 <label for="city" class="form-label">City</label>
-                <input
-                  type="text"
-                  id="city"
-                  v-model="formData.city"
-                  placeholder="City*"
-                  required
-                  class="form-input"
-                />
+                <input type="text" id="city" v-model="formData.city" placeholder="City*" required class="form-input" />
               </div>
 
               <div class="form-group">
                 <label for="service" class="form-label">Service</label>
-                <select
-                  id="service"
-                  v-model="formData.service"
-                  required
-                  class="form-input form-select"
-                >
+                <select id="service" v-model="formData.service" required class="form-input form-select">
                   <option value="" disabled>Service Required:</option>
                   <option value="branding">Branding & Identity</option>
                   <option value="packaging">Packaging Design</option>
@@ -93,40 +69,22 @@
                 <label for="phone" class="form-label">Phone</label>
                 <div class="phone-input-wrapper">
                   <span class="country-code">🇮🇳</span>
-                  <input
-                    type="tel"
-                    id="phone"
-                    v-model="formData.phone"
-                    placeholder="Type your phone"
-                    required
-                    pattern="[0-9]{10}"
-                    class="form-input phone-input"
-                  />
+                  <input type="tel" id="phone" v-model="formData.phone" placeholder="Type your phone" required
+                    pattern="[0-9]{10}" class="form-input phone-input" />
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="company" class="form-label">Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  v-model="formData.company"
-                  placeholder="Company name (Optional)"
-                  class="form-input"
-                />
+                <input type="text" id="company" v-model="formData.company" placeholder="Company name (Optional)"
+                  class="form-input" />
               </div>
             </div>
 
             <div class="form-group message-group">
               <label for="message" class="form-label">Message</label>
-              <textarea
-                id="message"
-                v-model="formData.message"
-                placeholder="Type your Message"
-                required
-                rows="8"
-                class="form-textarea"
-              ></textarea>
+              <textarea id="message" v-model="formData.message" placeholder="Type your Message" required rows="8"
+                class="form-textarea"></textarea>
             </div>
 
             <div class="form-footer">
@@ -161,10 +119,22 @@ const isSubmitting = ref(false)
 
 const handleSubmit = async () => {
   isSubmitting.value = true
-  
+
   try {
-    await saveToGoogleSheets(formData.value)
-    
+    const orderedData = {
+      name: formData.value.name,
+      email: formData.value.email,
+      city: formData.value.city,
+      phone: formData.value.phone,
+      message: formData.value.message,
+      timestamp: new Date().toISOString(),
+      service: formData.value.service,
+      company: formData.value.company,
+      source: 'Fame Spread Media Contact Form'
+    }
+
+    await saveToGoogleSheets(orderedData)
+
     // Reset form
     formData.value = {
       name: '',
@@ -175,7 +145,7 @@ const handleSubmit = async () => {
       company: '',
       message: ''
     }
-    
+
     alert('Thank you for contacting us! We will get back to you soon.')
   } catch (error) {
     console.error('Error submitting form:', error)
