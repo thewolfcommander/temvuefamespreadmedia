@@ -226,12 +226,13 @@ function navigateToSection(sectionId) {
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: var(--bg-black);
+  background-color: var(--bg-dark);
   z-index: 9999;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
 .nav_toggle_wrapper .mini-logo {
