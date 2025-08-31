@@ -17,10 +17,14 @@
 
             <div class="description-content">
               <p class="description-paragraph">
-                Based in Gurgaon, Fame Spread Media is a full-service marketing and creative agency designed to help brands scale, stand out, and succeed in the digital landscape. We bring strategy, design, content, and performance together under one roof to deliver impactful results.
+                Based in Gurgaon, Fame Spread Media is a full-service marketing and creative agency designed to help
+                brands scale, stand out, and succeed in the digital landscape. We bring strategy, design, content, and
+                performance together under one roof to deliver impactful results.
               </p>
               <p class="description-paragraph">
-                Whether you are a startup finding your voice or an established brand seeking to evolve, our approach is tailored to your specific goals. Having served over 20+ brands, we combine purpose, precision, and creativity in every campaign we undertake.
+                Whether you are a startup finding your voice or an established brand seeking to evolve, our approach is
+                tailored to your specific goals. Having served over 20+ brands, we combine purpose, precision, and
+                creativity in every campaign we undertake.
               </p>
             </div>
           </div>
@@ -31,12 +35,8 @@
       <section class="portfolio-section">
         <div class="portfolio-container">
           <div class="portfolio-grid">
-            <div
-              v-for="(image, index) in portfolioImages"
-              :key="index"
-              class="portfolio-item"
-              @click="openLightbox(image)"
-            >
+            <div v-for="(image, index) in portfolioImages" :key="index" class="portfolio-item"
+              @click="openLightbox(image)">
               <div class="image-wrapper">
                 <img :src="image.src" :alt="image.alt" class="portfolio-image" />
                 <div class="overlay">
@@ -44,25 +44,12 @@
                     <h4 class="brand-name">{{ image.brand }}</h4>
                     <p class="brand-category">{{ image.category }}</p>
                     <div class="view-project">
-                      <svg
-                        width="24"
-                        height="24"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        ></path>
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        ></path>
+                      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                        </path>
                       </svg>
                       <span>View Project</span>
                     </div>
@@ -79,19 +66,8 @@
         <div v-if="showLightbox" class="lightbox-overlay" @click="closeLightbox">
           <div class="lightbox-content" @click.stop>
             <button class="close-button" @click="closeLightbox">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
+              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
 
@@ -99,11 +75,7 @@
               <!-- Image Section -->
               <div class="lightbox-image-section">
                 <div class="lightbox-image-wrapper">
-                  <img
-                    :src="selectedImage?.src"
-                    :alt="selectedImage?.alt"
-                    class="lightbox-image"
-                  />
+                  <img :src="selectedImage?.src" :alt="selectedImage?.alt" class="lightbox-image" />
                 </div>
               </div>
 
@@ -238,6 +210,45 @@ const portfolioImages = [
       "Successful product launch campaign",
     ],
   },
+  {
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg",
+    alt: "Skincare Content Creation & Branding",
+    brand: "Peach Musk",
+    category: "Content Creation & Branding",
+    year: "2024",
+    description:
+      "Developed creative assets, including product photography and designs for a line of skincare products like sunscreen and facewash, focusing on clean aesthetics and product appeal.",
+    challenge:
+      "Create compelling visual content for skincare products that stands out in a saturated beauty market while maintaining brand authenticity.",
+    solution:
+      "Produced high-quality product photography with clean, minimalist styling and developed cohesive brand visuals across all touchpoints.",
+    results: [
+      "Professional product catalog with 50+ images",
+      "25% increase in online conversion rate",
+      "Brand recognition across social platforms",
+      "Successful product launch campaign",
+    ],
+  }, {
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/images/pexels-photo-6483579.jpeg",
+    alt: "Skincare Content Creation & Branding",
+    brand: "Peach Musk",
+    category: "Content Creation & Branding",
+    year: "2024",
+    description:
+      "Developed creative assets, including product photography and designs for a line of skincare products like sunscreen and facewash, focusing on clean aesthetics and product appeal.",
+    challenge:
+      "Create compelling visual content for skincare products that stands out in a saturated beauty market while maintaining brand authenticity.",
+    solution:
+      "Produced high-quality product photography with clean, minimalist styling and developed cohesive brand visuals across all touchpoints.",
+    results: [
+      "Professional product catalog with 50+ images",
+      "25% increase in online conversion rate",
+      "Brand recognition across social platforms",
+      "Successful product launch campaign",
+    ],
+  }
 ];
 
 const selectedImage = ref(null);
@@ -266,11 +277,9 @@ const closeLightbox = () => {
 /* Top accent line */
 .top-accent-line {
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--color-primary) 0%,
-    rgba(var(--color-primary-rgb), 0.1) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--color-primary) 0%,
+      rgba(var(--color-primary-rgb), 0.1) 100%);
   width: 100%;
 }
 
