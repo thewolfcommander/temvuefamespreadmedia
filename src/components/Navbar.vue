@@ -1,12 +1,8 @@
 <template>
   <div class="nav_toggle_wrapper">
     <a href="#">
-      <img
-        src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
-        class="mini-logo"
-        alt="logo"
-        @click="closeNav"
-      />
+      <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
+        class="mini-logo" alt="logo" @click="closeNav" />
     </a>
 
     <div class="d-block d-md-none mob_number_box">
@@ -35,11 +31,7 @@
       <a href="https://twitter.com/" class="text-decoration-none" target="_blank">
         <i class="ri-twitter-x-fill fill-anime"></i>
       </a>
-      <a
-        href="https://www.linkedin.com/company/"
-        class="text-decoration-none"
-        target="_blank"
-      >
+      <a href="https://www.linkedin.com/company/" class="text-decoration-none" target="_blank">
         <i class="ri-linkedin-fill fill-anime"></i>
       </a>
       <a href="https://www.instagram.com/" class="text-decoration-none" target="_blank">
@@ -52,12 +44,8 @@
     <div class="container ps-lg-5">
       <li class="logo">
         <a class="nav__link mb-5 d-none d-md-block" href="#" @click="closeNav">
-          <img
-            src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
-            class="img-fluid"
-            alt="logo"
-            style="width: 250px"
-          />
+          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
+            class="img-fluid" alt="logo" style="width: 250px" />
           <div class="main-heading">Fame Spread Media</div>
         </a>
       </li>
@@ -69,14 +57,10 @@
               <a class="nav__link" @click="scrollToSection('who-we-are')">About Us</a>
             </li>
             <li>
-              <a class="nav__link" @click="scrollToSection('founders-story')"
-                >Founder Story</a
-              >
+              <a class="nav__link" @click="scrollToSection('founders-story')">Founder Story</a>
             </li>
             <li>
-              <a class="nav__link" @click="scrollToSection('testimonials')"
-                >Testimonials</a
-              >
+              <a class="nav__link" @click="scrollToSection('testimonials')">Testimonials</a>
             </li>
             <li>
               <a class="nav__link" @click="scrollToSection('contact-us')">Contact Us</a>
@@ -86,29 +70,23 @@
         <div class="col-lg-4">
           <ul>
             <li>
-              <a class="nav__link" @click="scrollToSection('social-media-management')"
-                >Social Media Management</a
-              >
+              <a class="nav__link" @click="scrollToSection('branding-and-strategy')">Branding and Strategy</a>
             </li>
             <li>
-              <a class="nav__link" @click="scrollToSection('photography-and-videography')"
-                >Content Creation</a
-              >
+              <a class="nav__link" @click="scrollToSection('social-media-marketing')">Social Media Marketing</a>
             </li>
             <li>
-              <a
-                class="nav__link"
-                @click="scrollToSection('search-engine-optimization-seo')"
-                >SEO</a
-              >
+              <a class="nav__link" @click="scrollToSection('content-creation')">Content Creation</a>
             </li>
             <li>
-              <a class="nav__link" @click="scrollToSection('website-development')"
-                >Website Development</a
-              >
+              <a class="nav__link" @click="scrollToSection('website-and-e-commerce')">Website and E-Commerce</a>
             </li>
             <li>
-              <a class="nav__link" @click="scrollToSection('ad-manager')">AD Manager</a>
+              <a class="nav__link" @click="scrollToSection('performance-marketing')">Performance Marketing</a>
+            </li>
+            <li>
+              <a class="nav__link" @click="scrollToSection('marketplace-and-sales-support')">Marketplace & Sales
+                Support</a>
             </li>
           </ul>
         </div>
@@ -126,11 +104,8 @@
                   Digital Marketing Agency Services.
                 </p>
                 <p>
-                  <a
-                    href="mailto:famespreadmedia@gmail.com"
-                    class="nav__link call-link2 text-lowercase"
-                    style="font-size: 16px"
-                  >
+                  <a href="mailto:famespreadmedia@gmail.com" class="nav__link call-link2 text-lowercase"
+                    style="font-size: 16px">
                     famespreadmedia@gmail.com
                   </a>
                 </p>
