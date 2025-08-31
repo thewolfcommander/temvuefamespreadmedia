@@ -4,13 +4,14 @@
       <!-- Left Section: Logo and Description -->
       <div class="footer-left">
         <div class="footer-brand">
-          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png" alt="Fame Spread Media"
-            class="footer-logo" />
+          <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/FSM-logo/FSM-Trans-Logo.png"
+            alt="Fame Spread Media" class="footer-logo" />
           <span class="footer-brand-name">Fame Spread Media</span>
         </div>
         <p class="footer-description">
           Every brand deserves fame.<br />
-          Fame Spread Media is a Gurgaon-based, full-service marketing and creative agency built to help brands succeed in the digital age.
+          Fame Spread Media is a Gurgaon-based, full-service marketing and creative agency built to help brands succeed
+          in the digital age.
         </p>
         <div class="social-icons">
           <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
@@ -25,18 +26,20 @@
       <!-- Center Section: Navigation Links -->
       <div class="footer-nav">
         <div class="nav-column">
-          <a href="#" class="nav-link">HOME</a>
-          <a href="#" class="nav-link">ABOUT US</a>
-          <a href="#" class="nav-link">OUR WORK</a>
-          <a href="#" class="nav-link">TESTIMONIALS</a>
-          <a href="#" class="nav-link">CONTACT US</a>
+          <a class="nav-link" href="#" @click="closeNav">Home</a>
+          <a class="nav-link" href="#" @click="scrollToSection('who-we-are')">About Us</a>
+          <a class="nav-link" href="#" @click="scrollToSection('founders-story')">Founder Story</a>
+          <a class="nav-link" href="#" @click="scrollToSection('testimonials')">Testimonials</a>
+          <a class="nav-link" href="#" @click="scrollToSection('contact-us')">Contact Us</a>
         </div>
         <div class="nav-column">
-          <a href="#" class="nav-link">SOCIAL MEDIA MANAGEMENT</a>
-          <a href="#" class="nav-link">CONTENT CREATION</a>
-          <a href="#" class="nav-link">SEO</a>
-          <a href="#" class="nav-link">WEB DEVELOPMENT</a>
-          <a href="#" class="nav-link">AD MANAGEMENT</a>
+          <a class="nav-link" href="#" @click="scrollToSection('social-media-marketing')">Social Media Marketing</a>
+          <a class="nav-link" href="#" @click="scrollToSection('branding-and-strategy')">Branding and Strategy</a>
+          <a class="nav-link" href="#" @click="scrollToSection('content-creation')">Content Creation</a>
+          <a class="nav-link" href="#" @click="scrollToSection('website-and-e-commerce')">Website and E-Commerce</a>
+          <a class="nav-link" href="#" @click="scrollToSection('performance-marketing')">Performance Marketing</a>
+          <a class="nav-link" href="#" @click="scrollToSection('marketplace-and-sales-support')">Marketplace & Sales
+            Support</a>
         </div>
       </div>
 
@@ -66,12 +69,6 @@
       </p>
     </div>
 
-    <!-- Chat Button -->
-    <!-- <div class="chat-button">
-      <span>LET'S CHAT!</span>
-      <div class="chat-arrow">→</div>
-    </div> -->
-
     <!-- Curved Design Element -->
     <div class="footer-curve"></div>
   </footer>
@@ -79,8 +76,68 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useRouter } from "vue-router";
 
 const currentYear = computed(() => new Date().getFullYear());
+const router = useRouter();
+
+// Define which sections are on which pages (same as navbar)
+const sectionPages = {
+  "founders-story": "/about",
+  "who-we-are": "/about",
+  testimonials: "/",
+  "contact-us": "/",
+  "social-media-marketing": "/",
+  "branding-and-strategy": "/",
+  "content-creation": "/",
+  "website-and-e-commerce": "/",
+  "performance-marketing": "/",
+  "marketplace-and-sales-support": "/",
+};
+
+function closeNav() {
+  // Navigate to home page
+  router.push("/").then(() => {
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
+function scrollToSection(sectionId) {
+  const targetPage = sectionPages[sectionId] || "/";
+  const currentPath = router.currentRoute.value.path;
+
+  setTimeout(() => {
+    // If we're already on the correct page, just scroll
+    if (currentPath === targetPage) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      // Navigate to the correct page first, then scroll
+      router.push(targetPage).then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          } else {
+            console.log(`Section with ID '${sectionId}' not found on page ${targetPage}`);
+          }
+        }, 500); // Wait for page to load
+      });
+    }
+  }, 100); // Small delay
+}
 </script>
 
 <style scoped>
