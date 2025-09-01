@@ -32,8 +32,48 @@
 <script setup>
 import { ref } from 'vue';
 
-// Client logos data - Using actual client logos
+// Client logos data - Using actual client logos from R2 CDN
 const clients = ref([
+    {
+        name: 'Kiran Nayar Herbals',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Kiran%20Nayar%20Herbals.jpg',
+        category: 'Healthcare'
+    },
+    {
+        name: 'Seva',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Seva%20Logo.JPG',
+        category: 'Service'
+    },
+    {
+        name: 'Shaambhavi',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Shaambhavi.jpg',
+        category: 'Wellness'
+    },
+    {
+        name: 'Sakshi Nayyar',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Sakshi%20Nayyar/SN%201%20.PNG',
+        category: 'Fashion'
+    },
+    // {
+    //     name: 'Peach & Musk',
+    //     logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Peach%20%26%20Musk/Peach%20%26%20Musk%20Logo.jpg',
+    //     category: 'Beauty'
+    // },
+    {
+        name: 'Sand Sky Estates',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Sand%20Sky%20Estates/IMG_2283.PNG',
+        category: 'Real Estate'
+    },
+    {
+        name: 'TLC',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/TLC/TheLearningCurve-Logo.png',
+        category: 'Service'
+    },
+    {
+        name: 'Toteorga',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Toteorga/Toteorga.png',
+        category: 'Fashion'
+    },
     {
         name: 'Sakshi Nayyar',
         logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/SAKSHI%20NAYYAR-min%20(1).jpg',
@@ -198,7 +238,6 @@ const clients = ref([
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 80px 60px;
     align-items: center;
     justify-items: center;
@@ -222,14 +261,18 @@ const clients = ref([
 }
 
 .client-logo-wrapper {
-    width: 100%;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
+    background: #f8f8f8;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .client-logo-wrapper::before {
@@ -243,21 +286,24 @@ const clients = ref([
     transform: translate(-50%, -50%);
     transition: width 0.4s ease, height 0.4s ease;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .client-logo-wrapper:hover::before {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
 }
 
 .client-logo {
-    /* max-width: 160px; */
-    /* max-height: 160px; */
-    width: 120px;
+    max-width: 70%;
+    max-height: 70%;
+    width: auto;
     height: auto;
     filter: grayscale(100%) opacity(0.6);
     transition: var(--transition);
     object-fit: contain;
+    position: relative;
+    z-index: 2;
 }
 
 .client-logo-wrapper:hover .client-logo {
@@ -344,13 +390,14 @@ const clients = ref([
     }
 
     .client-logo-wrapper {
-        height: 60px;
+        width: 100px;
+        height: 100px;
         margin-bottom: 1.3rem;
     }
 
     .client-logo {
-        max-width: 120px;
-        max-height: 50px;
+        max-width: 60%;
+        max-height: 60%;
     }
 }
 
@@ -381,9 +428,14 @@ const clients = ref([
         gap: 35px 20px;
     }
 
+    .client-logo-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
     .client-logo {
-        max-width: 140px;
-        max-height: 84px;
+        max-width: 60%;
+        max-height: 60%;
     }
 
     /* Disable hover effects on mobile */
