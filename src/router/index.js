@@ -42,6 +42,14 @@ const routes = [
     }
   },
   {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: () => import('../views/Portfolio.vue'),
+    meta: {
+      title: 'Portfolio - Fame Spread Media'
+    }
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('../views/NotFound.vue'),
