@@ -7,71 +7,10 @@
 
             </div>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Project Card 1 - Meta Ads Campaign -->
-                <div class="project-card" @mouseenter="handleMouseEnter(0)" @mouseleave="handleMouseLeave(0)">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
-                            alt="Meta Ads Campaign Performance" class="project-image" />
-                        <div class="project-overlay">
-                            <div class="project-metrics">5.26 ROAS</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">META ADS CAMPAIGN</h3>
-                        <p class="project-category">Performance Marketing</p>
-                        <p class="project-description">Executed a successful Meta Ads campaign that resulted in 372 purchases and a strong return on ad spend</p>
-                    </div>
-                </div>
 
-                <!-- Project Card 2 - E-commerce Website -->
-                <div class="project-card" @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave(1)">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
-                            alt="E-commerce Website Development" class="project-image" />
-                        <div class="project-overlay">
-                            <div class="project-metrics">New Arrivals Showcase</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">E-COMMERCE WEBSITE</h3>
-                        <p class="project-category">Website & E-Commerce Development</p>
-                        <p class="project-description">Designed and developed an e-commerce platform featuring multiple product categories and a seamless user experience</p>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 - Brand Photoshoot -->
-                <div class="project-card" @mouseenter="handleMouseEnter(2)" @mouseleave="handleMouseLeave(2)">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e732c777?w=600&h=400&fit=crop"
-                            alt="Brand Photoshoot Session" class="project-image" />
-                        <div class="project-overlay">
-                            <div class="project-metrics">Lifestyle & Product Photos</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">BRAND PHOTOSHOOT</h3>
-                        <p class="project-category">Content Creation: Photography</p>
-                        <p class="project-description">Conducted professional photoshoots for fashion and skincare brands, producing high-quality images for campaigns</p>
-                    </div>
-                </div>
-
-                <!-- Project Card 4 - Marketplace Store Management -->
-                <div class="project-card" @mouseenter="handleMouseEnter(3)" @mouseleave="handleMouseLeave(3)">
-                    <div class="project-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
-                            alt="Amazon Store Management" class="project-image" />
-                        <div class="project-overlay">
-                            <div class="project-metrics">Amazon Store Setup</div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="project-title">MARKETPLACE MANAGEMENT</h3>
-                        <p class="project-category">Marketplace & Sales Support</p>
-                        <p class="project-description">Launched and managed a brand store on Amazon, including product listings and content for organizers and tote bags</p>
-                    </div>
-                </div>
+            <!-- Compact Gallery Section -->
+            <div class="gallery-section">
+                <CompactGallery />
             </div>
         </div>
     </section>
@@ -79,6 +18,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import CompactGallery from './CompactGallery.vue';
 
 const hoveredCard = ref(null);
 
@@ -365,6 +305,63 @@ const handleMouseLeave = () => {
     transform: translateY(0);
 }
 
+/* Gallery Section */
+.gallery-section {
+    margin-top: 120px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.gallery-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0 0 16px 0;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+.gallery-subtitle {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .section-title {
@@ -373,6 +370,10 @@ const handleMouseLeave = () => {
 
     .project-image-wrapper {
         height: 400px;
+    }
+
+    .gallery-title {
+        font-size: 40px;
     }
 }
 
@@ -399,6 +400,19 @@ const handleMouseLeave = () => {
 
     .project-title {
         font-size: 28px;
+    }
+
+    .gallery-section {
+        margin-top: 80px;
+        padding-top: 60px;
+    }
+
+    .gallery-title {
+        font-size: 36px;
+    }
+
+    .gallery-subtitle {
+        font-size: 16px;
     }
 }
 
@@ -458,6 +472,24 @@ const handleMouseLeave = () => {
     .project-category {
         font-size: 12px;
     }
+
+    .gallery-section {
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+
+    .gallery-header {
+        margin-bottom: 40px;
+    }
+
+    .gallery-title {
+        font-size: 28px;
+    }
+
+    .gallery-subtitle {
+        font-size: 15px;
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -499,6 +531,19 @@ const handleMouseLeave = () => {
     .project-category {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .gallery-section {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .gallery-title {
+        font-size: 24px;
+    }
+
+    .gallery-subtitle {
+        font-size: 14px;
     }
 }
 </style>
