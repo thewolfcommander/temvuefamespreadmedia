@@ -295,8 +295,8 @@ const clients = ref([
 }
 
 .client-logo {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 85%;
+    max-height: 85%;
     width: auto;
     height: auto;
     filter: grayscale(100%) opacity(0.6);
@@ -396,8 +396,8 @@ const clients = ref([
     }
 
     .client-logo {
-        max-width: 60%;
-        max-height: 60%;
+        max-width: 75%;
+        max-height: 75%;
     }
 }
 
@@ -434,8 +434,8 @@ const clients = ref([
     }
 
     .client-logo {
-        max-width: 60%;
-        max-height: 60%;
+        max-width: 75%;
+        max-height: 75%;
     }
 
     /* Disable hover effects on mobile */

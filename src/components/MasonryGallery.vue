@@ -701,10 +701,75 @@ const mediaItems = ref([
       'Delivery': 'High Resolution'
     },
     tags: ['commercial', 'branding', 'professional']
+  },
+  // Graphic Design Category
+  {
+    id: 28,
+    type: 'image',
+    title: 'Creative Brand Design',
+    category: 'Graphic Design',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/(5).jpg',
+    date: 'September 2023',
+    description: 'Innovative graphic design showcasing modern brand identity and visual communication.',
+    details: {
+      'Software': 'Adobe Creative Suite',
+      'Type': 'Brand Design',
+      'Format': 'Digital',
+      'Resolution': 'Print Ready'
+    },
+    tags: ['design', 'branding', 'creative']
+  },
+  {
+    id: 29,
+    type: 'image',
+    title: 'Digital Marketing Graphics',
+    category: 'Graphic Design',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/(6).PNG',
+    date: 'September 2023',
+    description: 'Eye-catching digital graphics designed for social media and marketing campaigns.',
+    details: {
+      'Software': 'Adobe Photoshop',
+      'Purpose': 'Social Media',
+      'Dimensions': 'Multi-format',
+      'Style': 'Modern'
+    },
+    tags: ['digital', 'marketing', 'social']
+  },
+  {
+    id: 30,
+    type: 'image',
+    title: 'Visual Identity System',
+    category: 'Graphic Design',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/IMG_4269.PNG',
+    date: 'September 2023',
+    description: 'Comprehensive visual identity system including logo, typography, and brand guidelines.',
+    details: {
+      'Software': 'Adobe Illustrator',
+      'Type': 'Brand Identity',
+      'Components': 'Logo, Typography, Colors',
+      'Application': 'Cross-platform'
+    },
+    tags: ['identity', 'logo', 'guidelines']
+  },
+  {
+    id: 31,
+    type: 'image',
+    title: 'Campaign Visual Design',
+    category: 'Graphic Design',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/IMG_4276.PNG',
+    date: 'September 2023',
+    description: 'Strategic campaign visuals designed to engage audiences and drive brand awareness.',
+    details: {
+      'Software': 'Adobe InDesign',
+      'Campaign': 'Multi-channel',
+      'Target': 'B2C',
+      'Deliverables': 'Print & Digital'
+    },
+    tags: ['campaign', 'advertising', 'visual']
   }
 ])
 
-const categories = ref(['All', 'Animated Video', 'Brand Promotion', 'Event Video', 'Talking Head', 'UGC Video', 'Fashion Video', 'Photography'])
+const categories = ref(['All', 'Animated Video', 'Brand Promotion', 'Event Video', 'Talking Head', 'UGC Video', 'Fashion Video', 'Photography', 'Graphic Design'])
 const activeCategory = ref('All')
 const lightboxItem = ref(null)
 const currentLightboxIndex = ref(0)
