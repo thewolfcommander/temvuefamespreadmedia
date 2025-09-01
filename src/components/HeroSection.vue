@@ -2,9 +2,9 @@
   <div class="hero-container">
     <!-- CTA Buttons -->
     <div class="cta-div">
-      <a href="tel:+919871521144" class="phone-number"> +91 9871521144 </a>
-      <a href="#/contact" class="quote-button">
-        <span class="quote-button-text">Get a Quote</span>
+      <a href="#/contact" class="phone-number"> Get a Quote </a>
+      <a href="#/portfolio" class="quote-button">
+        <span class="quote-button-text">View our Portfolio</span>
       </a>
     </div>
 

@@ -40,7 +40,7 @@
       <div class="container">
         <div class="story-grid">
           <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600" alt="Founder" />
+            <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/IMG_0164.JPEG" alt="Founder" />
             <div class="image-overlay"></div>
           </div>
           <div class="story-content">

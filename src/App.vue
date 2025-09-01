@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import CustomCursor from "./components/CustomCursor.vue";
@@ -15,7 +15,7 @@ onMounted(() => {
 });
 
 const goToPortfolio = () => {
-  router.push('/portfolio');
+  router.push("/portfolio");
 };
 </script>
 
@@ -23,26 +23,32 @@ const goToPortfolio = () => {
   <div id="app">
     <!-- Background Logo -->
     <div class="hero-background-logo"></div>
-    
+
     <!-- Custom Cursor -->
     <!-- <CustomCursor /> -->
-    
+
     <Navbar />
     <div class="main-content-wrapper">
       <router-view />
     </div>
     <Footer />
-    
+
     <!-- Portfolio FAB CTA -->
-    <Transition name="fab">
-      <button 
+    <Transition name="fab" v-if="false">
+      <button
         v-if="showFab"
         class="portfolio-fab"
         @click="goToPortfolio"
         aria-label="View our portfolio"
       >
         <span class="fab-text">View our portfolio</span>
-        <svg class="fab-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg
+          class="fab-arrow"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
@@ -65,7 +71,7 @@ const goToPortfolio = () => {
   transform: translateY(-50%);
   width: 120vw;
   height: 120vh;
-  background-image: url('https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/branding-bg.svg');
+  background-image: url("https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/assets/branding-bg.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -117,7 +123,7 @@ const goToPortfolio = () => {
 }
 
 .portfolio-fab::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -191,7 +197,7 @@ const goToPortfolio = () => {
 
 /* Pulse animation for attention */
 .portfolio-fab::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,7 +230,7 @@ const goToPortfolio = () => {
     padding: 14px 20px;
     font-size: 14px;
   }
-  
+
   .fab-arrow {
     width: 16px;
     height: 16px;

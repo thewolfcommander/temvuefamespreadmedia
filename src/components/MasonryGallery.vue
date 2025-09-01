@@ -25,6 +25,7 @@
           <div class="media-wrapper">
             <!-- Show video preview -->
             <video 
+              v-if="item.type === 'video'"
               :src="item.src"
               muted 
               loop
@@ -35,12 +36,21 @@
               @loadeddata="onVideoLoaded"
             ></video>
             
+            <!-- Show image preview -->
+            <img 
+              v-else
+              :src="item.src"
+              :alt="item.title"
+              loading="lazy"
+              class="image-preview"
+            >
+            
             <div class="overlay">
               <div class="overlay-content">
                 <h3>{{ item.title }}</h3>
                 <p>{{ item.category }}</p>
               </div>
-              <div class="play-icon">
+              <div v-if="item.type === 'video'" class="play-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
@@ -181,7 +191,8 @@
                   :class="['thumb', { active: index === currentLightboxIndex }]"
                   @click.stop="openLightbox(item, index)"
                 >
-                  <video :src="item.src" muted preload="metadata" class="thumb-video"></video>
+                  <video v-if="item.type === 'video'" :src="item.src" muted preload="metadata" class="thumb-video"></video>
+                  <img v-else :src="item.src" :alt="item.title" class="thumb-image">
                 </div>
               </div>
 
@@ -544,10 +555,156 @@ const mediaItems = ref([
       'Director': 'Creative Team'
     },
     tags: ['luxury', 'brand', 'fashion']
+  },
+  // Photography - Brand Campaign Images
+  {
+    id: 19,
+    type: 'image',
+    title: 'Peach & Musk Brand Photography',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk.jpg',
+    date: 'August 2023',
+    description: 'Professional brand photography showcasing Peach & Musk skincare products with elegant styling and lighting.',
+    details: {
+      'Camera': 'Canon EOS R5',
+      'Lens': '85mm f/1.8',
+      'Lighting': 'Studio Setup',
+      'Style': 'Product Photography'
+    },
+    tags: ['brand', 'skincare', 'product']
+  },
+  {
+    id: 20,
+    type: 'image',
+    title: 'Peach & Musk Product Showcase',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk2.jpg',
+    date: 'August 2023',
+    description: 'Creative product photography highlighting the premium quality and aesthetic appeal of skincare products.',
+    details: {
+      'Camera': 'Canon EOS R5',
+      'Lens': '50mm f/1.4',
+      'Setup': 'Natural Light',
+      'Post-Processing': 'Adobe Lightroom'
+    },
+    tags: ['product', 'beauty', 'commercial']
+  },
+  {
+    id: 21,
+    type: 'image',
+    title: 'Beauty Product Campaign',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk_3.jpg',
+    date: 'August 2023',
+    description: 'Sophisticated beauty photography capturing the essence of luxury skincare with artistic composition.',
+    details: {
+      'Camera': 'Sony A7R IV',
+      'Lens': '90mm Macro',
+      'Technique': 'Focus Stacking',
+      'Retouching': 'High-end'
+    },
+    tags: ['beauty', 'luxury', 'macro']
+  },
+  {
+    id: 22,
+    type: 'image',
+    title: 'Skincare Brand Visual',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk_4.jpg',
+    date: 'August 2023',
+    description: 'Clean and minimalist product photography emphasizing the natural ingredients and premium packaging.',
+    details: {
+      'Camera': 'Nikon Z7II',
+      'Lens': '105mm f/2.8',
+      'Background': 'Seamless White',
+      'Style': 'Minimalist'
+    },
+    tags: ['minimalist', 'clean', 'branding']
+  },
+  // Photography - Portrait & Lifestyle Shoots
+  {
+    id: 23,
+    type: 'image',
+    title: 'Professional Portrait Session',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_1.JPG',
+    date: 'July 2023',
+    description: 'Dynamic portrait photography capturing personality and professionalism for corporate branding.',
+    details: {
+      'Camera': 'Canon 5D Mark IV',
+      'Lens': '85mm f/1.2',
+      'Lighting': '3-Point Setup',
+      'Location': 'Studio'
+    },
+    tags: ['portrait', 'professional', 'corporate']
+  },
+  {
+    id: 24,
+    type: 'image',
+    title: 'Creative Portrait Study',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_2.JPG',
+    date: 'July 2023',
+    description: 'Artistic portrait photography with creative lighting and composition for personal branding.',
+    details: {
+      'Camera': 'Sony A7 III',
+      'Lens': '135mm f/1.8',
+      'Technique': 'Natural Light',
+      'Processing': 'Film Emulation'
+    },
+    tags: ['portrait', 'artistic', 'natural']
+  },
+  {
+    id: 25,
+    type: 'image',
+    title: 'Lifestyle Photography',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_3.JPG',
+    date: 'July 2023',
+    description: 'Lifestyle photography capturing authentic moments and expressions for brand storytelling.',
+    details: {
+      'Camera': 'Fujifilm X-T4',
+      'Lens': '56mm f/1.2',
+      'Style': 'Documentary',
+      'Color Grading': 'Warm Tones'
+    },
+    tags: ['lifestyle', 'authentic', 'storytelling']
+  },
+  {
+    id: 26,
+    type: 'image',
+    title: 'Fashion Portrait Series',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_4.JPG',
+    date: 'July 2023',
+    description: 'High-fashion portrait photography with dramatic lighting and sophisticated styling.',
+    details: {
+      'Camera': 'Canon EOS R6',
+      'Lens': '70-200mm f/2.8',
+      'Lighting': 'Dramatic Setup',
+      'Styling': 'High Fashion'
+    },
+    tags: ['fashion', 'dramatic', 'editorial']
+  },
+  {
+    id: 27,
+    type: 'image',
+    title: 'Commercial Portrait Work',
+    category: 'Photography',
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_5.JPG',
+    date: 'July 2023',
+    description: 'Commercial photography focused on brand representation and professional image building.',
+    details: {
+      'Camera': 'Nikon D850',
+      'Lens': '105mm f/1.4',
+      'Setup': 'Corporate Style',
+      'Delivery': 'High Resolution'
+    },
+    tags: ['commercial', 'branding', 'professional']
   }
 ])
 
-const categories = ref(['All', 'Animated Video', 'Brand Promotion', 'Event Video', 'Talking Head', 'UGC Video', 'Fashion Video'])
+const categories = ref(['All', 'Animated Video', 'Brand Promotion', 'Event Video', 'Talking Head', 'UGC Video', 'Fashion Video', 'Photography'])
 const activeCategory = ref('All')
 const lightboxItem = ref(null)
 const currentLightboxIndex = ref(0)
@@ -858,7 +1015,8 @@ onUnmounted(() => {
   overflow: hidden;
 }
 
-.video-preview {
+.video-preview,
+.image-preview {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -866,7 +1024,8 @@ onUnmounted(() => {
   pointer-events: none;
 }
 
-.masonry-item:hover .video-preview {
+.masonry-item:hover .video-preview,
+.masonry-item:hover .image-preview {
   transform: scale(1.1);
 }
 
@@ -1343,7 +1502,8 @@ onUnmounted(() => {
   transform: scale(1.1);
 }
 
-.thumb-video {
+.thumb-video,
+.thumb-image {
   width: 100%;
   height: 100%;
   object-fit: cover;

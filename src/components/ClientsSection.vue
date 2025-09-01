@@ -32,47 +32,47 @@
 <script setup>
 import { ref } from 'vue';
 
-// Client logos data - Organized by industry categories
+// Client logos data - Using actual client logos
 const clients = ref([
     {
-        name: 'Label Sakshi Nayyar',
-        logo: 'https://via.placeholder.com/200x100/ff6b8a/ffffff?text=Label+Sakshi+Nayyar',
+        name: 'Sakshi Nayyar',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/SAKSHI%20NAYYAR-min%20(1).jpg',
         category: 'Fashion'
     },
     {
-        name: 'TOTEORGA',
-        logo: 'https://via.placeholder.com/200x100/4CAF50/ffffff?text=TOTEORGA',
+        name: 'Bio Ayurveda',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/bio_ayurveda_client_logo.PNG',
+        category: 'Healthcare'
+    },
+    {
+        name: 'Chauhan Jewellers',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/chauhan_jewellers_client_logo.PNG',
+        category: 'Jewelry'
+    },
+    {
+        name: 'Heer by Mona',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/heer_by_mona_client_logo.png',
+        category: 'Fashion'
+    },
+    {
+        name: 'House of Solesaga',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/house_of_solesaga_client_logo.PNG',
+        category: 'Fashion'
+    },
+    {
+        name: 'Jyotsana Mehta',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/jyotsana_mehta_client_logo.PNG',
+        category: 'Personal Brand'
+    },
+    {
+        name: 'True India',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/true_india_client_logo.PNG',
         category: 'E-commerce'
     },
     {
-        name: 'Peach Musk',
-        logo: 'https://via.placeholder.com/200x100/FF9800/ffffff?text=Peach+Musk',
-        category: 'Beauty & Skincare'
-    },
-    {
-        name: 'Inner Infinity',
-        logo: 'https://via.placeholder.com/200x100/9C27B0/ffffff?text=Inner+Infinity',
-        category: 'Coaching & Wellness'
-    },
-    {
-        name: 'Gurgaon Real Estate',
-        logo: 'https://via.placeholder.com/200x100/2196F3/ffffff?text=Real+Estate',
-        category: 'Real Estate'
-    },
-    {
-        name: 'Fashion Forward',
-        logo: 'https://via.placeholder.com/200x100/E91E63/ffffff?text=Fashion+Forward',
-        category: 'Fashion'
-    },
-    {
-        name: 'Style Studio',
-        logo: 'https://via.placeholder.com/200x100/673AB7/ffffff?text=Style+Studio',
-        category: 'Fashion'
-    },
-    {
-        name: 'TrendyBags Co',
-        logo: 'https://via.placeholder.com/200x100/795548/ffffff?text=TrendyBags',
-        category: 'E-commerce'
+        name: 'Urban Farmer',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/urban_farmer_client_logo.PNG',
+        category: 'Agriculture'
     }
 ]);
 </script>
@@ -223,7 +223,7 @@ const clients = ref([
 
 .client-logo-wrapper {
     width: 100%;
-    height: 80px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,9 +251,9 @@ const clients = ref([
 }
 
 .client-logo {
-    max-width: 160px;
-    max-height: 90px;
-    width: auto;
+    /* max-width: 160px; */
+    /* max-height: 160px; */
+    width: 120px;
     height: auto;
     filter: grayscale(100%) opacity(0.6);
     transition: var(--transition);

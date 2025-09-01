@@ -6,6 +6,7 @@
       <AboutSection />
     </div>
     <div class="sections-wrapper">
+      <PortfolioPreview />
       <OurServices />
       <ServicesOverview />
       <FeaturedWorks />
@@ -27,6 +28,7 @@ import FeaturedWorks from "@/components/FeaturedWorks.vue";
 import ClientsSection from "@/components/ClientsSection.vue";
 import ContactFormSection from "@/components/ContactFormSection.vue";
 import TestimonialSection from "@/components/TestimonialSection.vue";
+import PortfolioPreview from "@/components/PortfolioPreview.vue";
 import Rollingnumber from "../components/Rollingnumber.vue";
 
 const appStore = useAppStore();

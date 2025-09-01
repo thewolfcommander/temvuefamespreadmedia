@@ -28,7 +28,7 @@
       </section>
 
       <!-- Portfolio Gallery Section -->
-      <section class="portfolio-section">
+      <section class="portfolio-section" v-if="false">
         <div class="portfolio-container">
           <div class="portfolio-grid">
             <div

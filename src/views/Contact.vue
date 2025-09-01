@@ -273,7 +273,7 @@ const handleSubmit = async () => {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-text-white);
   border: none;
   padding: var(--space-3) var(--space-6);
@@ -287,7 +287,7 @@ const handleSubmit = async () => {
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 25px rgba(234, 102, 113, 0.3);
 }
 
 .form-grid {
