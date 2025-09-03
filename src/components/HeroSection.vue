@@ -219,7 +219,7 @@ function animateSlideContent(swiper) {
 // Function to go to specific slide
 function goToSlide(index) {
   if (mainSlider) {
-    mainSlider.slideTo(index);
+    mainSlider.slideToLoop(index);
   }
 }
 
