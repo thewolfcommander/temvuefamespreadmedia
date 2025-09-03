@@ -13,7 +13,7 @@
               </h2>
               <p class="overview-subheading">Strategy, design, content, and performance under one roof.</p>
               <div class="cta-wrapper">
-                <a href="#" class="cta-link">
+                <a href="#/contact" class="cta-link">
                   Discuss Your Project
                   <span class="bell-icon">→</span>
                 </a>
@@ -52,8 +52,9 @@
             </h1>
             <p class="agency-description">
               Helping Brands Scale, Stand Out, and Succeed.<br /><br />
-              As a full-service agency based in Gurgaon, we are built to help brands navigate the digital age. 
-              With experience serving over 20+ brands, we tailor every move to your goals with purpose, precision, and creativity to build your brand's presence, performance, and perception.
+              As a full-service agency based in Gurgaon, we are built to help brands navigate the digital age.
+              With experience serving over 20+ brands, we tailor every move to your goals with purpose, precision, and
+              creativity to build your brand's presence, performance, and perception.
             </p>
           </div>
         </div>
@@ -243,10 +244,10 @@ onMounted(() => {
 .industries-title {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text-white);
   margin-bottom: var(--space-6);
-  text-align: right;
+  text-align: left;
 }
 
 .tags-grid {
@@ -338,6 +339,7 @@ onMounted(() => {
 
 /* Animations */
 @keyframes ring {
+
   0%,
   100% {
     transform: rotate(0deg);
