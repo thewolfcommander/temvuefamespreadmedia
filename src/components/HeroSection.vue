@@ -24,7 +24,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img src="https://pub-81eabec09c654d8aab43f205d466d388.r2.dev/3.webp" alt="Branding & Strategy" />
+                <img src="https://pub-4418003ce598489da80f01f8a66e75db.r2.dev/3.webp" alt="Branding & Strategy" />
               </div>
             </div>
           </div>
