@@ -24,8 +24,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img src="https://pub-81eabec09c654d8aab43f205d466d388.r2.dev/Branding-Photoroom (1).png"
-                  alt="Branding & Strategy" />
+                <img src="https://pub-81eabec09c654d8aab43f205d466d388.r2.dev/3.webp" alt="Branding & Strategy" />
               </div>
             </div>
           </div>
