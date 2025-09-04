@@ -24,10 +24,8 @@
                 </p>
               </div>
               <div class="content-right">
-                <img
-                  src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/packaging-design.webp"
-                  alt="Branding & Strategy"
-                />
+                <img src="https://pub-81eabec09c654d8aab43f205d466d388.r2.dev/Branding-Photoroom (1).png"
+                  alt="Branding & Strategy" />
               </div>
             </div>
           </div>
@@ -43,10 +41,8 @@
                 </p>
               </div>
               <div class="content-right">
-                <img
-                  src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/website-design.webp"
-                  alt="Social Media Marketing"
-                />
+                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/website-design.webp"
+                  alt="Social Media Marketing" />
               </div>
             </div>
           </div>
@@ -64,8 +60,7 @@
               <div class="content-right">
                 <img
                   src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/social-media-creative-design.webp"
-                  alt="Website & E-Commerce"
-                />
+                  alt="Website & E-Commerce" />
               </div>
             </div>
           </div>
@@ -81,10 +76,8 @@
                 </p>
               </div>
               <div class="content-right">
-                <img
-                  src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/logo-design.webp"
-                  alt="Performance Marketing"
-                />
+                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/logo-design.webp"
+                  alt="Performance Marketing" />
               </div>
             </div>
           </div>
@@ -100,10 +93,8 @@
                 </p>
               </div>
               <div class="content-right">
-                <img
-                  src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/brand-identity-design.webp"
-                  alt="Marketplace & Sales"
-                />
+                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/brand-identity-design.webp"
+                  alt="Marketplace & Sales" />
               </div>
             </div>
           </div>
@@ -115,43 +106,23 @@
         <div class="timeline-track">
           <div class="timeline-line"></div>
           <div class="timeline-items">
-            <div
-              class="timeline-item"
-              :class="{ active: currentSlide === 0 }"
-              @click="goToSlide(0)"
-            >
+            <div class="timeline-item" :class="{ active: currentSlide === 0 }" @click="goToSlide(0)">
               <div class="timeline-dot"></div>
               <span class="timeline-label">Branding</span>
             </div>
-            <div
-              class="timeline-item"
-              :class="{ active: currentSlide === 1 }"
-              @click="goToSlide(1)"
-            >
+            <div class="timeline-item" :class="{ active: currentSlide === 1 }" @click="goToSlide(1)">
               <div class="timeline-dot"></div>
               <span class="timeline-label">Social Media</span>
             </div>
-            <div
-              class="timeline-item"
-              :class="{ active: currentSlide === 2 }"
-              @click="goToSlide(2)"
-            >
+            <div class="timeline-item" :class="{ active: currentSlide === 2 }" @click="goToSlide(2)">
               <div class="timeline-dot"></div>
               <span class="timeline-label">Website</span>
             </div>
-            <div
-              class="timeline-item"
-              :class="{ active: currentSlide === 3 }"
-              @click="goToSlide(3)"
-            >
+            <div class="timeline-item" :class="{ active: currentSlide === 3 }" @click="goToSlide(3)">
               <div class="timeline-dot"></div>
               <span class="timeline-label">Performance</span>
             </div>
-            <div
-              class="timeline-item"
-              :class="{ active: currentSlide === 4 }"
-              @click="goToSlide(4)"
-            >
+            <div class="timeline-item" :class="{ active: currentSlide === 4 }" @click="goToSlide(4)">
               <div class="timeline-dot"></div>
               <span class="timeline-label">Marketplace</span>
             </div>
@@ -309,12 +280,10 @@ onBeforeUnmount(() => {
 }
 
 .quote-button {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-primary-dark),
-    var(--color-primary-light)
-  );
+  background: linear-gradient(135deg,
+      var(--color-primary),
+      var(--color-primary-dark),
+      var(--color-primary-light));
   padding: var(--space-3) var(--space-6);
   border-radius: var(--radius-full);
   text-decoration: none;
@@ -395,7 +364,8 @@ onBeforeUnmount(() => {
   color: var(--color-text-white);
   margin-bottom: 20px;
   line-height: 1.05;
-  text-transform: uppercase; /* remove if you want "Proof of Fame" casing */
+  text-transform: uppercase;
+  /* remove if you want "Proof of Fame" casing */
   letter-spacing: 0.5px;
 
   /* render nicely on dark backgrounds */
@@ -407,13 +377,18 @@ onBeforeUnmount(() => {
 
   /* layered drop shadows (tight → long) + slight top highlight */
   text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.12),
-    /* rim light from above */ 0 1px 1px rgba(0, 0, 0, 0.4),
-    /* contact shadow for depth */ 0 3px 6px rgba(0, 0, 0, 0.38),
-    /* short, soft shadow */ 0 8px 18px rgba(0, 0, 0, 0.45),
-    /* medium throw */ 0 18px 44px rgba(0, 0, 0, 0.55); /* long ambient shadow */
+    /* rim light from above */
+    0 1px 1px rgba(0, 0, 0, 0.4),
+    /* contact shadow for depth */
+    0 3px 6px rgba(0, 0, 0, 0.38),
+    /* short, soft shadow */
+    0 8px 18px rgba(0, 0, 0, 0.45),
+    /* medium throw */
+    0 18px 44px rgba(0, 0, 0, 0.55);
+  /* long ambient shadow */
 }
 
-.main-heading > span {
+.main-heading>span {
   color: var(--color-primary);
   display: inline-block;
   position: relative;
@@ -424,9 +399,9 @@ onBeforeUnmount(() => {
 }
 
 /* Active slide animates the span */
-.swiper-slide-active .main-heading > span {
+.swiper-slide-active .main-heading>span {
   animation: revealGlow 1.2s ease-out forwards,
-             subtlePulse 3s ease-in-out 1.2s infinite;
+    subtlePulse 3s ease-in-out 1.2s infinite;
 }
 
 @keyframes revealGlow {
@@ -436,31 +411,36 @@ onBeforeUnmount(() => {
     filter: blur(10px);
     text-shadow: 0 0 0 var(--color-primary);
   }
+
   50% {
     opacity: 1;
     transform: translateY(0) scale(1.05);
     filter: blur(0);
     text-shadow: 0 0 30px var(--color-primary),
-                 0 0 60px var(--color-primary);
+      0 0 60px var(--color-primary);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
     filter: blur(0);
     text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.5),
-                 0 0 40px rgba(var(--color-primary-rgb), 0.3);
+      0 0 40px rgba(var(--color-primary-rgb), 0.3);
   }
 }
 
 @keyframes subtlePulse {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 20px rgba(var(--color-primary-rgb), 0.5),
-                 0 0 40px rgba(var(--color-primary-rgb), 0.3);
+      0 0 40px rgba(var(--color-primary-rgb), 0.3);
   }
+
   50% {
     text-shadow: 0 0 25px rgba(var(--color-primary-rgb), 0.7),
-                 0 0 50px rgba(var(--color-primary-rgb), 0.4),
-                 0 0 75px rgba(var(--color-primary-rgb), 0.2);
+      0 0 50px rgba(var(--color-primary-rgb), 0.4),
+      0 0 75px rgba(var(--color-primary-rgb), 0.2);
   }
 }
 
