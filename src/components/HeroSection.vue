@@ -40,7 +40,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/website-design.webp"
+                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/herosection/smm.webp"
                   alt="Social Media Marketing" />
               </div>
             </div>
@@ -57,8 +57,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img
-                  src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/social-media-creative-design.webp"
+                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/herosection/website.webp"
                   alt="Website & E-Commerce" />
               </div>
             </div>
@@ -75,7 +74,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/logo-design.webp"
+                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/herosection/performance.webp"
                   alt="Performance Marketing" />
               </div>
             </div>
@@ -92,7 +91,7 @@
                 </p>
               </div>
               <div class="content-right">
-                <img src="https://www.expandbuzz.com/wp-content/themes/expandbuzz/assets/img/brand-identity-design.webp"
+                <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/herosection/market.webp"
                   alt="Marketplace & Sales" />
               </div>
             </div>
