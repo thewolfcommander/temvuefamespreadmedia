@@ -5,30 +5,40 @@
       <div class="container">
         <div class="section-header">
           <div class="accent-line"></div>
-          <h1 class="section-title">Who We Are?</h1>
+          <h1 class="section-title">Who We Are</h1>
         </div>
 
         <div class="content-grid">
           <div class="text-content">
             <p class="description">
-              Fame Spread Media is a group of young enthusiasts who have a common crave: i.e.
-              Developing a better future by building aesthetic brands with powerful branding and
-              marketing strategies.
+              Based in Gurgaon, Fame Spread Media is a full-service marketing and creative
+              agency dedicated to helping brands scale, stand out, and thrive in the
+              digital age. We combine strategy, design, content, and performance under one
+              roof to create bold brand identities and high-impact campaigns that deliver
+              results.
             </p>
             <p class="description">
-              Hello, Fame Spread Media is a group of "Creative Aspirants". You can call us either bold
-              thinkers or authentic creatives, but whatever we do leads to a revolution. We give
-              preference to independence and space and are always responsible for you. We get
-              into the real market and understand the taste of people as well as keep a strong eye
-              on the current trends, to make your brand stand out. Our team is fulfilled with proven
-              abundance of ideas, directing impactful custom-made strategies and engaging
-              actions now and forever.
+              Whether you're a startup discovering your voice or an established brand
+              looking to evolve, we craft every solution with purpose, precision, and
+              creativity. We don't just run campaigns — we build presence, performance,
+              and perception.
+            </p>
+            <p class="description">
+              From branding and strategy to social media marketing, content creation,
+              website and e-commerce development, performance marketing, WhatsApp
+              marketing, marketplace support, sales enablement, and analytics, we provide
+              end-to-end solutions that help your brand grow.
+            </p>
+            <p class="description">
+              Because when your brand is ready to grow, we're ready to spread the fame.
             </p>
           </div>
           <div class="image-content">
             <div class="team-image">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
-                alt="Fame Spread Media Team" />
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+                alt="Fame Spread Media Team"
+              />
             </div>
           </div>
         </div>
@@ -40,42 +50,29 @@
       <div class="container">
         <div class="story-grid">
           <div class="story-image">
-            <img src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/IMG_0164.JPEG" alt="Founder" />
+            <img
+              src="https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/IMG_0164.JPEG"
+              alt="Founder"
+            />
             <div class="image-overlay"></div>
           </div>
           <div class="story-content">
             <div class="accent-line"></div>
-            <h2 class="story-title">Our journey</h2>
+            <h2 class="story-title">Our Journey</h2>
             <p class="story-text">
-              It all starts when a bunch of professional mortals
-              who are having tremendous experience in their
-              segments combine together to start an
-              enterprise where they can explore more of what
-              they have done and give life to many new and
-              existing brands.
+              Fame Spread Media was born from a spark — a mix of passion, curiosity and the desire to make an impact. Ridham Singh Bhatia (Founder & CEO) was an engineering student running his own clothing brand on the side. But as the brand grew and went viral, people didn't just notice the products — they noticed the strategy, the creativity and the way ideas turned into results. That's when our true purpose became clear: helping brands grow, telling their stories and creating impact that lasts.
             </p>
             <p class="story-text">
-              We still love to consider ourselves as "keen
-              learners" as we believe every work that we
-              encounter helps us to gain more knowledge and
-              grow in more heights. With an overall experience
-              of 10 years, we got the privilege to associate with
-              more than 1000+ brands and completed 5000+
-              projects.
+              Our first client came to us two years ago — and today they're still with us, a testament to the trust, dedication and results we deliver. Since then, we've worked on countless projects and nearly 20+ brands, each one teaching us something new, pushing us further and helping us evolve.
             </p>
             <p class="story-text">
-              As a creative group, we clearly know what it
-              makes for a brand to get highlighted through all
-              forms of challenges. So, what are you waiting
-              for? Get in touch with us to upfit or give a new
-              outlook for your brand.
+              We're a team of Gen Z thinkers, creators and doers — always on the move, always available and always exploring new ways to help brands stand out.
             </p>
-            <p class="story-signature">get me connected .....</p>
+            <p class="story-signature">"As Steve Jobs once said, 'The people who are crazy enough to think they can change the world are the ones who do.' That's the energy we bring to every brand, every story, every campaign."</p>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Existing Components -->
     <ClientsSection />
@@ -85,9 +82,9 @@
 </template>
 
 <script setup>
-import ClientsSection from '@/components/ClientsSection.vue'
-import ContactFormSection from '@/components/ContactFormSection.vue'
-import TestimonialSection from '@/components/TestimonialSection.vue'
+import ClientsSection from "@/components/ClientsSection.vue";
+import ContactFormSection from "@/components/ContactFormSection.vue";
+import TestimonialSection from "@/components/TestimonialSection.vue";
 </script>
 
 <style scoped>
