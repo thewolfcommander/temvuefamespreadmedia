@@ -665,7 +665,7 @@ onBeforeUnmount(() => {
 @media (max-width: 480px) {
   .hero-section {
     min-height: 85vh;
-    margin-top: 2rem;
+    margin-top: 0.2rem;
     padding-bottom: 2rem;
   }
 

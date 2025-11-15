@@ -5,11 +5,11 @@
         class="mini-logo" alt="logo" @click="closeNav" />
     </a>
 
-    <div class="d-block d-md-none mob_number_box">
+    <!-- <div class="d-block d-md-none mob_number_box">
       <a class="text-decoration-none text-white" href="tel:9711431917">
         <i class="ri-phone-fill"></i> 9711431917
       </a>
-    </div>
+    </div> -->
 
     <div type="button" name="btn_nav" class="nav_toggle" @click="toggleNav">
       <div class="open-close-btn">
@@ -50,7 +50,7 @@
         </a>
       </li>
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 mobile-nav-col">
           <ul>
             <li><a class="nav__link" href="#" @click="closeNav">Home</a></li>
             <li>
@@ -67,7 +67,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 desktop-services-col">
           <ul>
             <li>
               <a class="nav__link" @click="scrollToSection('branding-and-strategy')">Branding and Strategy</a>
@@ -90,7 +90,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 desktop-contact-col">
           <ul>
             <li>
               <div class="nav__link nav_link_text">
@@ -446,6 +446,7 @@ function navigateToSection(sectionId) {
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    z-index: 10000;
   }
 
   .nav_toggle_wrapper .mini-logo {
@@ -468,10 +469,41 @@ function navigateToSection(sectionId) {
 
   .nav {
     transform: translateY(-100%);
+    padding-top: 80px;
+    overflow-y: auto;
   }
 
   .nav.active {
     transform: translateY(0);
+  }
+
+  /* Hide services and contact columns on mobile */
+  .desktop-services-col,
+  .desktop-contact-col {
+    display: none !important;
+  }
+
+  /* Make navigation column full width on mobile */
+  .mobile-nav-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  /* Adjust navigation link size for mobile */
+  .nav li a {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 8px 0;
+  }
+
+  /* Center align mobile navigation */
+  .nav .container {
+    text-align: center;
+  }
+
+  .nav ul {
+    padding: 0;
   }
 }
 </style>

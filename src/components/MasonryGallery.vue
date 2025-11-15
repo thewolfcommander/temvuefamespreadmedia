@@ -24,10 +24,11 @@
         >
           <div class="media-wrapper">
             <!-- Show video preview -->
-            <video 
+            <video
               v-if="item.type === 'video'"
               :src="item.src"
-              muted 
+              :poster="item.thumbnail"
+              muted
               loop
               preload="metadata"
               class="video-preview"
@@ -191,7 +192,7 @@
                   :class="['thumb', { active: index === currentLightboxIndex }]"
                   @click.stop="openLightbox(item, index)"
                 >
-                  <video v-if="item.type === 'video'" :src="item.src" muted preload="metadata" class="thumb-video"></video>
+                  <video v-if="item.type === 'video'" :src="item.src" :poster="item.thumbnail" muted preload="metadata" class="thumb-video"></video>
                   <img v-else :src="item.src" :alt="item.title" class="thumb-image">
                 </div>
               </div>
@@ -269,6 +270,7 @@ const mediaItems = ref([
     title: 'Animated Brand Story',
     category: 'Animated Video',
     src: videoLinks['Animated Video'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story.png',
     date: 'March 2024',
     description: 'Engaging animated storytelling that brings brand narratives to life with creative motion graphics.',
     details: {
@@ -285,6 +287,7 @@ const mediaItems = ref([
     title: 'Product Animation Showcase',
     category: 'Animated Video',
     src: videoLinks['Animated Video'][1],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story-2.png',
     date: 'March 2024',
     description: '3D product animation highlighting features and benefits.',
     details: {
@@ -301,6 +304,7 @@ const mediaItems = ref([
     title: 'Motion Graphics Excellence',
     category: 'Animated Video',
     src: videoLinks['Animated Video'][2],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story-3.png',
     date: 'February 2024',
     description: 'Premium brand promotion video showcasing company values and vision.',
     details: {
@@ -318,6 +322,7 @@ const mediaItems = ref([
     title: 'Corporate Brand Film',
     category: 'Brand Promotion',
     src: videoLinks['Brand Promotion'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/corporate-brand-film.png',
     date: 'February 2024',
     description: 'Dynamic product launch video with cinematic storytelling.',
     details: {
@@ -334,6 +339,7 @@ const mediaItems = ref([
     title: 'Product Launch Campaign',
     category: 'Brand Promotion',
     src: videoLinks['Brand Promotion'][1],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/product-launch-campaign.png',
     date: 'January 2024',
     description: 'Comprehensive event coverage capturing key moments and highlights.',
     details: {
@@ -350,6 +356,7 @@ const mediaItems = ref([
     title: 'Brand Story Showcase',
     category: 'Brand Promotion',
     src: videoLinks['Brand Promotion'][2],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/brand-story-showcase.png',
     date: 'January 2024',
     description: 'Live event coverage of exclusive product launch.',
     details: {
@@ -367,6 +374,7 @@ const mediaItems = ref([
     title: 'Annual Conference Highlights',
     category: 'Event Video',
     src: videoLinks['Event Video'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/annual-conference-highlights.png',
     date: 'December 2023',
     description: 'Professional interview setup with industry leaders sharing insights.',
     details: {
@@ -383,6 +391,7 @@ const mediaItems = ref([
     title: 'Product Launch Event',
     category: 'Event Video',
     src: videoLinks['Event Video'][1],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/product-launch-event.png',
     date: 'December 2023',
     description: 'Client testimonials and expert opinions.',
     details: {
@@ -399,6 +408,7 @@ const mediaItems = ref([
     title: 'Grand Opening Ceremony',
     category: 'Event Video',
     src: videoLinks['Event Video'][2],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/grand-opening-ceremony.png',
     date: 'November 2023',
     description: 'Authentic user-generated content showcasing real customer experiences.',
     details: {
@@ -416,6 +426,7 @@ const mediaItems = ref([
     title: 'CEO Interview Series',
     category: 'Talking Head',
     src: videoLinks['Talking Head'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/industry-leader-insight.png',
     date: 'November 2023',
     description: 'Compilation of authentic customer reviews and experiences.',
     details: {
@@ -432,6 +443,7 @@ const mediaItems = ref([
     title: 'Expert Testimonials',
     category: 'Talking Head',
     src: videoLinks['Talking Head'][1],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/expert-testimonial.png',
     date: 'October 2023',
     description: 'High-fashion runway show featuring latest collections.',
     details: {
@@ -448,6 +460,7 @@ const mediaItems = ref([
     title: 'Industry Leader Insights',
     category: 'Talking Head',
     src: videoLinks['Talking Head'][2],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/expert-testimonial.png',
     date: 'October 2023',
     description: 'Artistic fashion film with editorial styling.',
     details: {
@@ -465,6 +478,7 @@ const mediaItems = ref([
     title: 'Community Stories',
     category: 'UGC Video',
     src: videoLinks['UGC Video'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/community-stories.png',
     date: 'November 2023',
     description: 'Authentic user-generated content showcasing real customer experiences.',
     details: {
@@ -514,6 +528,7 @@ const mediaItems = ref([
     title: 'Fashion Week Runway',
     category: 'Fashion Video',
     src: videoLinks['Fashion Video'][0],
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/fashion-week-runway.png',
     date: 'October 2023',
     description: 'High-fashion runway show featuring latest collections.',
     details: {
@@ -1078,13 +1093,21 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.video-preview,
-.image-preview {
+.video-preview {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }

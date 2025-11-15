@@ -99,6 +99,13 @@ const goToPortfolio = () => {
   }
 }
 
+/* Mobile margin-top to account for fixed navbar */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    margin-top: 60px;
+  }
+}
+
 /* Portfolio FAB Button */
 .portfolio-fab {
   position: fixed;

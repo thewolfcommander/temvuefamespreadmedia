@@ -13,17 +13,18 @@
             @click="navigateToPortfolio"
           >
             <div class="media-wrapper">
-              <video 
+              <video
                 v-if="item.type === 'video'"
                 :src="item.src"
-                muted 
+                :poster="item.thumbnail"
+                muted
                 loop
                 preload="metadata"
                 class="media-content"
                 @mouseenter="playPreview"
                 @mouseleave="pausePreview"
               />
-              <img 
+              <img
                 v-else
                 :src="item.src"
                 :alt="item.title"
@@ -76,7 +77,8 @@ const previewItems = ref([
     type: 'video',
     title: 'Animated Brand Story',
     category: 'Animated Video',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Animated%20video/(13).mp4'
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Animated%20video/(13).mp4',
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story.png'
   },
   {
     id: 19,
@@ -90,7 +92,8 @@ const previewItems = ref([
     type: 'video',
     title: 'Corporate Brand Film',
     category: 'Brand Promotion',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Brand%20Promotion%20Videos/(3).mp4'
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Brand%20Promotion%20Videos/(3).mp4',
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/corporate-brand-film.png'
   },
   {
     id: 23,
@@ -104,7 +107,8 @@ const previewItems = ref([
     type: 'video',
     title: 'Fashion Week Runway',
     category: 'Fashion Video',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/fashion%20video/(19).mp4'
+    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/fashion%20video/(19).mp4',
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/fashion-week-runway.png'
   }
 ])
 
@@ -234,13 +238,21 @@ onMounted(() => {
   position: relative;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .media-content {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   transition: transform 0.6s ease;
+}
+
+video.media-content {
+  object-fit: cover;
+}
+
+img.media-content {
+  object-fit: contain;
 }
 
 .overlay {

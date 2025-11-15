@@ -3,8 +3,8 @@
     <!-- Gallery Grid -->
     <div class="gallery-grid" ref="galleryGrid">
       <TransitionGroup name="gallery-item">
-        <div 
-          v-for="(item, index) in displayItems" 
+        <div
+          v-for="(item, index) in displayItems"
           :key="item.id"
           class="gallery-item"
           @click="openLightbox(item, index)"
@@ -12,26 +12,27 @@
         >
           <div class="media-wrapper">
             <!-- Show video preview -->
-            <video 
+            <video
               v-if="item.type === 'video'"
               :src="item.src"
-              muted 
+              :poster="item.thumbnail"
+              muted
               loop
               preload="metadata"
               class="video-preview"
               @mouseenter="playPreview"
               @mouseleave="pausePreview"
             ></video>
-            
+
             <!-- Show image preview -->
-            <img 
+            <img
               v-else
               :src="item.src"
               :alt="item.title"
               loading="lazy"
               class="image-preview"
-            >
-            
+            />
+
             <div class="overlay">
               <div class="overlay-content">
                 <h4>{{ item.title }}</h4>
@@ -39,7 +40,7 @@
               </div>
               <div v-if="item.type === 'video'" class="play-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"/>
+                  <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
             </div>
@@ -54,8 +55,8 @@
         <span>View All Works</span>
         <div class="btn-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14"/>
-            <path d="M12 5l7 7-7 7"/>
+            <path d="M5 12h14" />
+            <path d="M12 5l7 7-7 7" />
           </svg>
         </div>
       </router-link>
@@ -76,16 +77,16 @@
 
             <!-- Media Display -->
             <div class="media-display">
-              <img 
-                v-if="lightboxItem.type === 'image'" 
-                :src="lightboxItem.src" 
+              <img
+                v-if="lightboxItem.type === 'image'"
+                :src="lightboxItem.src"
                 :alt="lightboxItem.title"
                 class="lightbox-image"
-              >
+              />
               <div v-else class="video-container">
-                <video 
+                <video
                   ref="videoPlayer"
-                  :src="lightboxItem.src" 
+                  :src="lightboxItem.src"
                   @click="togglePlayPause"
                   @timeupdate="updateProgress"
                   @loadedmetadata="onVideoLoaded"
@@ -100,7 +101,11 @@
               <h2>{{ lightboxItem.title }}</h2>
               <p class="category">{{ lightboxItem.category }}</p>
               <div class="actions">
-                <router-link to="/portfolio" class="view-portfolio-btn" @click="closeLightbox">
+                <router-link
+                  to="/portfolio"
+                  class="view-portfolio-btn"
+                  @click="closeLightbox"
+                >
                   View Full Portfolio
                 </router-link>
               </div>
@@ -108,22 +113,32 @@
 
             <!-- Navigation -->
             <div class="lightbox-nav">
-              <button 
-                class="nav-btn prev" 
+              <button
+                class="nav-btn prev"
                 @click.stop="navigateGallery(-1)"
                 :disabled="currentLightboxIndex === 0"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
               </button>
-              
-              <button 
-                class="nav-btn next" 
+
+              <button
+                class="nav-btn next"
                 @click.stop="navigateGallery(1)"
                 :disabled="currentLightboxIndex === displayItems.length - 1"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </button>
@@ -136,217 +151,229 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
-import { gsap } from 'gsap'
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
+import { useRouter } from "vue-router";
+import { gsap } from "gsap";
 
-const router = useRouter()
-const galleryGrid = ref(null)
-const videoPlayer = ref(null)
+const router = useRouter();
+const galleryGrid = ref(null);
+const videoPlayer = ref(null);
 
 // Lightbox state
-const lightboxItem = ref(null)
-const currentLightboxIndex = ref(0)
-const isPlaying = ref(false)
-const progress = ref(0)
+const lightboxItem = ref(null);
+const currentLightboxIndex = ref(0);
+const isPlaying = ref(false);
+const progress = ref(0);
 
 // Selected media items for compact display (first 8 items)
 const displayItems = ref([
   {
     id: 1,
-    type: 'video',
-    title: 'Animated Brand Story',
-    category: 'Animated Video',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Animated%20video/(13).mp4'
+    type: "video",
+    title: "Animated Brand Story",
+    category: "Animated Video",
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Animated%20video/(13).mp4",
+    thumbnail:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story.png",
   },
   {
     id: 19,
-    type: 'image',
-    title: 'Peach & Musk Brand Photography',
-    category: 'Photography',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk.jpg'
+    type: "image",
+    title: "Peach & Musk Brand Photography",
+    category: "Photography",
+    src: "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk.jpg",
   },
   {
     id: 4,
-    type: 'video',
-    title: 'Corporate Brand Film',
-    category: 'Brand Promotion',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Brand%20Promotion%20Videos/(3).mp4'
+    type: "video",
+    title: "Corporate Brand Film",
+    category: "Brand Promotion",
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Brand%20Promotion%20Videos/(3).mp4",
+    thumbnail:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/corporate-brand-film.png",
   },
   {
     id: 23,
-    type: 'image',
-    title: 'Professional Portrait Session',
-    category: 'Photography',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_1.JPG'
+    type: "image",
+    title: "Professional Portrait Session",
+    category: "Photography",
+    src: "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_1.JPG",
   },
   {
     id: 16,
-    type: 'video',
-    title: 'Fashion Week Runway',
-    category: 'Fashion Video',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/fashion%20video/(19).mp4'
+    type: "video",
+    title: "Fashion Week Runway",
+    category: "Fashion Video",
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/fashion%20video/(19).mp4",
+    thumbnail:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/fashion-week-runway.png",
   },
   {
     id: 21,
-    type: 'image',
-    title: 'Beauty Product Campaign',
-    category: 'Photography',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk_3.jpg'
+    type: "image",
+    title: "Beauty Product Campaign",
+    category: "Photography",
+    src: "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/peach&musk_3.jpg",
   },
   {
     id: 13,
-    type: 'video',
-    title: 'Community Stories',
-    category: 'UGC Video',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/UGC%20Video/(17).mp4'
+    type: "video",
+    title: "Community Stories",
+    category: "UGC Video",
+    src:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/UGC%20Video/(17).mp4",
+    thumbnail:
+      "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/community-stories.png",
   },
   {
     id: 25,
-    type: 'image',
-    title: 'Lifestyle Photography',
-    category: 'Photography',
-    src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_3.JPG'
-  }
-])
+    type: "image",
+    title: "Lifestyle Photography",
+    category: "Photography",
+    src: "https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/shoot_image_3.JPG",
+  },
+]);
 
 const navigateToPortfolio = () => {
-  router.push('/portfolio')
-}
+  router.push("/portfolio");
+};
 
 // Lightbox functions
 const openLightbox = async (item, index) => {
-  lightboxItem.value = item
-  currentLightboxIndex.value = index
-  document.body.style.overflow = 'hidden'
-  
+  lightboxItem.value = item;
+  currentLightboxIndex.value = index;
+  document.body.style.overflow = "hidden";
+
   // Auto-play video when opened
-  if (item.type === 'video') {
-    await nextTick()
+  if (item.type === "video") {
+    await nextTick();
     if (videoPlayer.value) {
-      videoPlayer.value.play()
-      isPlaying.value = true
+      videoPlayer.value.play();
+      isPlaying.value = true;
     }
   }
-}
+};
 
 const closeLightbox = () => {
   if (videoPlayer.value) {
-    videoPlayer.value.pause()
-    isPlaying.value = false
+    videoPlayer.value.pause();
+    isPlaying.value = false;
   }
-  lightboxItem.value = null
-  document.body.style.overflow = ''
-}
+  lightboxItem.value = null;
+  document.body.style.overflow = "";
+};
 
 const navigateGallery = async (direction) => {
-  const newIndex = currentLightboxIndex.value + direction
+  const newIndex = currentLightboxIndex.value + direction;
   if (newIndex >= 0 && newIndex < displayItems.value.length) {
     if (videoPlayer.value) {
-      videoPlayer.value.pause()
-      isPlaying.value = false
+      videoPlayer.value.pause();
+      isPlaying.value = false;
     }
-    
-    currentLightboxIndex.value = newIndex
-    lightboxItem.value = displayItems.value[newIndex]
-    
-    if (displayItems.value[newIndex].type === 'video') {
-      await nextTick()
+
+    currentLightboxIndex.value = newIndex;
+    lightboxItem.value = displayItems.value[newIndex];
+
+    if (displayItems.value[newIndex].type === "video") {
+      await nextTick();
       if (videoPlayer.value) {
-        videoPlayer.value.play()
-        isPlaying.value = true
+        videoPlayer.value.play();
+        isPlaying.value = true;
       }
     }
   }
-}
+};
 
 const togglePlayPause = () => {
-  if (!videoPlayer.value) return
-  
+  if (!videoPlayer.value) return;
+
   if (isPlaying.value) {
-    videoPlayer.value.pause()
+    videoPlayer.value.pause();
   } else {
-    videoPlayer.value.play()
+    videoPlayer.value.play();
   }
-  isPlaying.value = !isPlaying.value
-}
+  isPlaying.value = !isPlaying.value;
+};
 
 const updateProgress = () => {
-  if (!videoPlayer.value) return
-  const current = videoPlayer.value.currentTime
-  const total = videoPlayer.value.duration
+  if (!videoPlayer.value) return;
+  const current = videoPlayer.value.currentTime;
+  const total = videoPlayer.value.duration;
   if (total) {
-    progress.value = (current / total) * 100
+    progress.value = (current / total) * 100;
   }
-}
+};
 
 const onVideoLoaded = () => {
   // Video loaded
-}
+};
 
 // Keyboard navigation
 const handleKeyboard = (event) => {
-  if (!lightboxItem.value) return
-  
-  switch(event.key) {
-    case 'Escape':
-      closeLightbox()
-      break
-    case 'ArrowLeft':
-      navigateGallery(-1)
-      break
-    case 'ArrowRight':
-      navigateGallery(1)
-      break
+  if (!lightboxItem.value) return;
+
+  switch (event.key) {
+    case "Escape":
+      closeLightbox();
+      break;
+    case "ArrowLeft":
+      navigateGallery(-1);
+      break;
+    case "ArrowRight":
+      navigateGallery(1);
+      break;
   }
-}
+};
 
 const playPreview = (event) => {
-  const video = event.target
-  if (video && video.tagName === 'VIDEO') {
-    video.currentTime = 0
-    video.play().catch(e => console.log('Preview play failed:', e))
+  const video = event.target;
+  if (video && video.tagName === "VIDEO") {
+    video.currentTime = 0;
+    video.play().catch((e) => console.log("Preview play failed:", e));
   }
-}
+};
 
 const pausePreview = (event) => {
-  const video = event.target
-  if (video && video.tagName === 'VIDEO') {
-    video.pause()
-    video.currentTime = 0
+  const video = event.target;
+  if (video && video.tagName === "VIDEO") {
+    video.pause();
+    video.currentTime = 0;
   }
-}
+};
 
 onMounted(() => {
   // Add keyboard listener
-  window.addEventListener('keydown', handleKeyboard)
-  
+  window.addEventListener("keydown", handleKeyboard);
+
   // Animate gallery items on mount
-  gsap.set('.gallery-item', { opacity: 0, y: 30, scale: 0.9 })
-  gsap.set('.view-all-container', { opacity: 0, y: 20 })
-  
-  gsap.to('.gallery-item', {
+  gsap.set(".gallery-item", { opacity: 0, y: 30, scale: 0.9 });
+  gsap.set(".view-all-container", { opacity: 0, y: 20 });
+
+  gsap.to(".gallery-item", {
     opacity: 1,
     y: 0,
     scale: 1,
     duration: 0.6,
     stagger: 0.08,
-    ease: 'power2.out',
-    delay: 0.2
-  })
-  
-  gsap.to('.view-all-container', {
+    ease: "power2.out",
+    delay: 0.2,
+  });
+
+  gsap.to(".view-all-container", {
     opacity: 1,
     y: 0,
     duration: 0.6,
-    ease: 'power2.out',
-    delay: 1
-  })
-})
+    ease: "power2.out",
+    delay: 1,
+  });
+});
 
 onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyboard)
-})
+  window.removeEventListener("keydown", handleKeyboard);
+});
 </script>
 
 <style scoped>
@@ -382,13 +409,20 @@ onUnmounted(() => {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.video-preview,
-.image-preview {
+.video-preview {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -456,7 +490,7 @@ onUnmounted(() => {
 .gallery-item:hover .play-icon {
   transform: translate(-50%, -50%) scale(1.1);
   background: var(--color-accent);
-  color: white;
+  color: var(--color-black);
 }
 
 .view-all-container {
@@ -470,7 +504,11 @@ onUnmounted(() => {
   align-items: center;
   gap: 12px;
   padding: 16px 32px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   text-decoration: none;
@@ -484,7 +522,7 @@ onUnmounted(() => {
 }
 
 .view-all-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -500,7 +538,11 @@ onUnmounted(() => {
 
 .view-all-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
   border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
@@ -542,15 +584,15 @@ onUnmounted(() => {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
   }
-  
+
   .gallery-item {
     height: 250px;
   }
-  
+
   .view-all-container {
     margin-top: 40px;
   }
-  
+
   .view-all-btn {
     padding: 14px 28px;
     font-size: 0.95rem;
@@ -562,21 +604,21 @@ onUnmounted(() => {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .gallery-item {
     height: 220px;
   }
-  
+
   /* Disable hover effects on mobile */
   .gallery-item:hover {
     transform: none;
   }
-  
+
   .gallery-item:hover .video-preview,
   .gallery-item:hover .image-preview {
     transform: none;
   }
-  
+
   .overlay {
     opacity: 1;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
@@ -774,23 +816,23 @@ onUnmounted(() => {
     width: 95%;
     height: 95%;
   }
-  
+
   .media-info {
     padding: 20px;
     max-height: 200px;
     overflow-y: auto;
   }
-  
+
   .lightbox-nav {
     left: 10px;
     right: 10px;
   }
-  
+
   .nav-btn {
     width: 40px;
     height: 40px;
   }
-  
+
   .nav-btn svg {
     width: 20px;
     height: 20px;
