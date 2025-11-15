@@ -670,7 +670,7 @@ onBeforeUnmount(() => {
   }
 
   .main-slider {
-    height: 65vh;
+    height: 75vh;
   }
 
   .main-heading {
