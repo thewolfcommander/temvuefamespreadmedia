@@ -16,12 +16,20 @@
                 </div>
             </div>
 
-            <!-- Clients Grid -->
-            <div class="clients-grid">
-                <div v-for="(client, index) in clients" :key="client.name" class="client-item"
-                    :style="{ animationDelay: `${index * 50}ms` }">
-                    <div class="client-logo-wrapper">
-                        <img :src="client.logo" :alt="client.name" class="client-logo" />
+            <!-- Clients Marquee -->
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <!-- First set of clients -->
+                    <div v-for="(client, index) in clients" :key="`client-1-${index}`" class="client-item">
+                        <div class="client-logo-wrapper">
+                            <img :src="client.logo" :alt="client.name" class="client-logo" />
+                        </div>
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div v-for="(client, index) in clients" :key="`client-2-${index}`" class="client-item">
+                        <div class="client-logo-wrapper">
+                            <img :src="client.logo" :alt="client.name" class="client-logo" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,11 +82,11 @@ const clients = ref([
         logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Toteorga/Toteorga.png',
         category: 'Fashion'
     },
-    {
-        name: 'Sakshi Nayyar',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/SAKSHI%20NAYYAR-min%20(1).jpg',
-        category: 'Fashion'
-    },
+    // {
+    //     name: 'Sakshi Nayyar',
+    //     logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/SAKSHI%20NAYYAR-min%20(1).jpg',
+    //     category: 'Fashion'
+    // },
     {
         name: 'Bio Ayurveda',
         logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/bio_ayurveda_client_logo.PNG',
@@ -129,14 +137,19 @@ const clients = ref([
 
 /* Section Styles */
 .clients-section {
-
     position: relative;
+    overflow: hidden;
+    /* Prevent horizontal scroll */
 }
 
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro-text {
@@ -234,45 +247,97 @@ const clients = ref([
     text-align: justify;
 }
 
-/* Clients Grid */
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 80px 60px;
-    align-items: center;
-    justify-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
+/* Marquee Container */
+.marquee-container {
+    width: 100%;
+    /* Full viewport width */
+    /* margin-left: calc(-50vw + 50%); */
+    /* Center and expand to full width */
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
+    /* Generous top and bottom spacing */
+    background-color: #e8dfd3;
+    /* Slightly darker warm beige background */
+    margin-top: 60px;
+}
+
+/* Fade effect on left edge */
+.marquee-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Fade effect on right edge */
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to left, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Marquee Track - Infinite scrolling animation */
+.marquee-track {
+    display: flex;
+    gap: 40px;
+    animation: marquee 60s linear infinite;
+    /* Slow, smooth animation */
+    width: max-content;
+    will-change: transform;
+    /* Performance optimization */
+}
+
+/* Pause animation on hover for better UX */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+        /* Move by 50% since we duplicated the items */
+        /* Using translate3d for hardware acceleration */
+    }
 }
 
 /* Client Item */
 .client-item {
-    width: 100%;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    flex-shrink: 0;
+    /* Prevent items from shrinking */
+    opacity: 1;
+    transition: var(--transition);
 }
 
 .client-logo-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: var(--transition);
     position: relative;
-    background: #f8f8f8;
-    border-radius: 50%;
+    /* background: var(--color-white); */
+    /* border-radius: 50%; */
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 4px 20px rgba(193, 122, 96, 0.15); */
+    /* Soft shadow with primary color */
 }
 
 .client-logo-wrapper::before {
@@ -282,7 +347,7 @@ const clients = ref([
     left: 50%;
     width: 0;
     height: 0;
-    background: radial-gradient(circle, rgba(193, 122, 96, 0.15) 0%, transparent 70%);
+    /* background: radial-gradient(circle, rgba(193, 122, 96, 0.15) 0%, transparent 70%); */
     transform: translate(-50%, -50%);
     transition: width 0.4s ease, height 0.4s ease;
     border-radius: 50%;
@@ -322,15 +387,17 @@ const clients = ref([
         gap: 60px;
     }
 
-    .clients-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 60px 40px;
+    .marquee-track {
+        gap: 60px;
+    }
+
+    .marquee-container {
+        padding: 70px 0;
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 992px) {
-    .clients-section {}
-
     .section-header {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -349,9 +416,13 @@ const clients = ref([
         padding-top: 0;
     }
 
-    .clients-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px 35px;
+    .marquee-track {
+        gap: 50px;
+    }
+
+    .marquee-container {
+        padding: 60px 0;
+        margin-top: 40px;
     }
 }
 
@@ -359,8 +430,6 @@ const clients = ref([
     .container {
         padding: 0 30px;
     }
-
-    .clients-section {}
 
     .section-header {
         margin-bottom: 50px;
@@ -384,20 +453,31 @@ const clients = ref([
         text-align: left;
     }
 
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 30px;
+    .marquee-track {
+        gap: 40px;
+        padding-left: 30px;
+        /* Add starting padding for better mobile experience */
+    }
+
+    .marquee-container {
+        padding: 50px 0;
+        margin-top: 30px;
+    }
+
+    /* Adjust fade width for tablets */
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 100px;
     }
 
     .client-logo-wrapper {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 1.3rem;
+        width: 120px;
+        height: 120px;
     }
 
     .client-logo {
-        max-width: 75%;
-        max-height: 75%;
+        max-width: 80%;
+        max-height: 80%;
     }
 }
 
@@ -423,19 +503,33 @@ const clients = ref([
         line-height: 1.7;
     }
 
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px 20px;
+    .marquee-track {
+        gap: 30px;
+        padding-left: 20px;
+        /* Add starting padding for small mobile */
+        animation: marquee 40s linear infinite;
+        /* Faster on mobile for better experience */
+    }
+
+    .marquee-container {
+        padding: 40px 0;
+        margin-top: 25px;
+    }
+
+    /* Adjust fade width for mobile */
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 60px;
     }
 
     .client-logo-wrapper {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
     }
 
     .client-logo {
-        max-width: 75%;
-        max-height: 75%;
+        max-width: 80%;
+        max-height: 80%;
     }
 
     /* Disable hover effects on mobile */
@@ -445,6 +539,53 @@ const clients = ref([
 
     .client-item:hover {
         transform: none;
+    }
+
+    /* Don't pause animation on mobile */
+    .marquee-track:hover {
+        animation-play-state: running;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .marquee-track {
+        gap: 25px;
+        padding-left: 15px;
+    }
+
+    .client-logo-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .marquee-container {
+        padding: 35px 0;
+    }
+
+    /* Smaller fade width for extra small devices */
+    .marquee-container::before,
+    .marquee-container::after {
+        width: 40px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .marquee-container {
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
+    }
+
+    .marquee-track {
+        -webkit-transform: translate3d(0, 0, 0);
+        /* Force hardware acceleration on mobile */
+        transform: translate3d(0, 0, 0);
+    }
+
+    .client-logo-wrapper {
+        -webkit-tap-highlight-color: transparent;
+        /* Remove tap highlight on touch devices */
     }
 }
 </style>
