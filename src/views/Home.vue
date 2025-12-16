@@ -50,7 +50,7 @@ onMounted(() => {
 }
 
 .sections-wrapper>* {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
 }

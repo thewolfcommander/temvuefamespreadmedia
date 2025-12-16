@@ -113,7 +113,7 @@ onMounted(() => {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 /* We're Everything You Need Section */
@@ -282,7 +282,7 @@ onMounted(() => {
 /* Agency Section */
 .agency-section {
   background-color: var(--bg-black);
-  padding: 120px 0;
+  padding: 80px 0 0 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   /* margin-top: 100px; */
 }

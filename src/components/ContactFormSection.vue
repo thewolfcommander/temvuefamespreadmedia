@@ -131,8 +131,8 @@ const handleSubmit = async () => {
 <style scoped>
 .contact-form-section {
   background: var(--bg-dark);
-  min-height: 100vh;
-  padding: var(--space-20) 0;
+  min-height: 70vh;
+  padding: 0;
   position: relative;
   display: flex;
   align-items: center;

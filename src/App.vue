@@ -95,7 +95,7 @@ const goToPortfolio = () => {
 
 @media (min-width: 1024px) {
   .main-content-wrapper {
-    padding: 0 60px;
+    padding: 0 40px;
   }
 }
 

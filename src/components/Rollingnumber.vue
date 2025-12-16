@@ -22,25 +22,25 @@ import { ref, onMounted, reactive } from 'vue'
 // Stats data
 const stats = ref([
     {
-        number: 150,
+        number: 60,
         suffix: '+',
         label: 'Project Done',
         icon: 'fas fa-chart-line'
     },
     {
-        number: 75,
+        number: 25,
         suffix: '+',
         label: 'Happy Customers',
         icon: 'fas fa-users'
     },
     {
-        number: 20,
-        suffix: '+',
-        label: 'Award Winning',
+        number: 100,
+        suffix: 'M',
+        label: 'ARR Delivered',
         icon: 'fas fa-trophy'
     },
     {
-        number: 45,
+        number: 15,
         suffix: '+',
         label: 'Team Members',
         icon: 'fas fa-user-friends'

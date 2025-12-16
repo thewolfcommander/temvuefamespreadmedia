@@ -167,7 +167,7 @@ const services = ref([
 /* Section Styles */
 .services-section {
     background-color: var(--bg-black);
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     min-height: 100vh;
 }
 
