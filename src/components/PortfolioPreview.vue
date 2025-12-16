@@ -78,7 +78,7 @@ const previewItems = ref([
     title: 'Animated Brand Story',
     category: 'Animated Video',
     src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Animated%20video/(13).mp4',
-    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/animated-brand-story.png'
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails-new/animated-brand-story.png'
   },
   {
     id: 19,
@@ -93,7 +93,7 @@ const previewItems = ref([
     title: 'Corporate Brand Film',
     category: 'Brand Promotion',
     src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/Brand%20Promotion%20Videos/(3).mp4',
-    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/corporate-brand-film.png'
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails-new/corporate-brand-film.png'
   },
   {
     id: 23,
@@ -108,7 +108,7 @@ const previewItems = ref([
     title: 'Fashion Week Runway',
     category: 'Fashion Video',
     src: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Videos/fashion%20video/(19).mp4',
-    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails/fashion-week-runway.png'
+    thumbnail: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/thumbnails-new/fashion-week-runway.png'
   }
 ])
 
