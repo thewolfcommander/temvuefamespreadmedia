@@ -43,83 +43,103 @@ import { ref } from 'vue';
 // Client logos data - Using actual client logos from R2 CDN
 const clients = ref([
     {
-        name: 'Kiran Nayar Herbals',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Kiran%20Nayar%20Herbals.jpg',
+        name: 'AO - House of Healing',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/AO-%20House%20of%20Healing/AO-%20House%20of%20Healing.png',
+        category: 'Wellness'
+    },
+    {
+        name: 'Bioayurveda',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Bioayurveda/Bioayurveda.png',
         category: 'Healthcare'
     },
     {
+        name: 'Building Bharat',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Building%20Bharat/Building%20Bharat.png',
+        category: 'Media'
+    },
+    {
+        name: 'DPS Hinjawadi',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/DPS%20Hinjawadi/DPS%20Hinjawadi.png',
+        category: 'Education'
+    },
+    {
+        name: 'Fame Spread Media',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Fame%20Spread%20Media/FSM.PNG',
+        category: 'Marketing'
+    },
+    {
+        name: 'Inner Infinity',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Inner%20Infinity/Inner%20Infinity.png',
+        category: 'Wellness'
+    },
+    {
+        name: 'Jyotsana Mehta',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/ID%20Jyotsana%20Mehta/ID%20Jyotsana%20Mehta.png',
+        category: 'Interior Design'
+    },
+    {
+        name: 'Kiran Nayar Herbals',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Kiran%20Nayar%20Herbals.jpg',
+        category: 'Healthcare'
+    },
+    {
+        name: 'Luvo Bakes',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Luvo%20Bakes/Luvo%20Bakes.png',
+        category: 'Food & Beverage'
+    },
+    {
+        name: 'Miniso',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Miniso/Mini%20So.png',
+        category: 'Retail'
+    },
+    {
+        name: 'Peach & Musk',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Peach%20%26%20Musk/Peach%20%26%20Musk.png',
+        category: 'Beauty'
+    },
+    {
+        name: 'Sakshi Nayyar',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Sakshi%20Nayyar/SN%201%20.PNG',
+        category: 'Fashion'
+    },
+    {
+        name: 'Sand Sky Estates',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Sand%20Sky%20Estates/IMG_2283.PNG',
+        category: 'Real Estate'
+    },
+    {
         name: 'Seva',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Seva%20Logo.JPG',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Seva%20Logo.JPG',
         category: 'Service'
     },
     {
         name: 'Shaambhavi',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Shaambhavi.jpg',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Shaambhavi.jpg',
         category: 'Wellness'
     },
     {
-        name: 'Sakshi Nayyar',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Sakshi%20Nayyar/SN%201%20.PNG',
+        name: 'Sninee',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Sninee/Sninee.png',
         category: 'Fashion'
-    },
-    // {
-    //     name: 'Peach & Musk',
-    //     logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Peach%20%26%20Musk/Peach%20%26%20Musk%20Logo.jpg',
-    //     category: 'Beauty'
-    // },
-    {
-        name: 'Sand Sky Estates',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Sand%20Sky%20Estates/IMG_2283.PNG',
-        category: 'Real Estate'
     },
     {
         name: 'TLC',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/TLC/TheLearningCurve-Logo.png',
-        category: 'Service'
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/TLC/IMG_7094.PNG',
+        category: 'Education'
     },
     {
         name: 'Toteorga',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/Logo%20Files/Toteorga/Toteorga.png',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Toteorga/Toteorga.png',
         category: 'Fashion'
-    },
-    // {
-    //     name: 'Sakshi Nayyar',
-    //     logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/SAKSHI%20NAYYAR-min%20(1).jpg',
-    //     category: 'Fashion'
-    // },
-    {
-        name: 'Bio Ayurveda',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/bio_ayurveda_client_logo.PNG',
-        category: 'Healthcare'
-    },
-    {
-        name: 'Chauhan Jewellers',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/chauhan_jewellers_client_logo.PNG',
-        category: 'Jewelry'
-    },
-    {
-        name: 'Heer by Mona',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/heer_by_mona_client_logo.png',
-        category: 'Fashion'
-    },
-    {
-        name: 'House of Solesaga',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/house_of_solesaga_client_logo.PNG',
-        category: 'Fashion'
-    },
-    {
-        name: 'Jyotsana Mehta',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/jyotsana_mehta_client_logo.PNG',
-        category: 'Personal Brand'
     },
     {
         name: 'True India',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/true_india_client_logo.PNG',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/True%20India/True%20India.png',
         category: 'E-commerce'
     },
     {
         name: 'Urban Farmer',
-        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/urban_farmer_client_logo.PNG',
+        logo: 'https://pub-d52e6487b06345a0b5b78c56edc9e666.r2.dev/clients/Logo%20Files%20/Urban%20Farmer/Urban%20Farmer.png',
         category: 'Agriculture'
     }
 ]);
@@ -255,9 +275,10 @@ const clients = ref([
     /* Center and expand to full width */
     overflow: hidden;
     position: relative;
-    padding: 40px 0;
+    padding: 20px 0;
     /* Generous top and bottom spacing */
-    background-color: #e8dfd3;
+    /* background-color: #e8dfd3; */
+    background-color: white;
     /* Slightly darker warm beige background */
     margin-top: 60px;
 }
@@ -268,9 +289,10 @@ const clients = ref([
     position: absolute;
     top: 0;
     left: 0;
-    width: 150px;
+    width: 60px;
     height: 100%;
-    background: linear-gradient(to right, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%);
+    /* background: linear-gradient(to right, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%); */
+    background: white;
     z-index: 10;
     pointer-events: none;
 }
@@ -281,9 +303,10 @@ const clients = ref([
     position: absolute;
     top: 0;
     right: 0;
-    width: 150px;
+    width: 60px;
     height: 100%;
-    background: linear-gradient(to left, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%);
+    /* background: linear-gradient(to left, #e8dfd3 0%, rgba(232, 223, 211, 0) 100%); */
+    background: white;
     z-index: 10;
     pointer-events: none;
 }
@@ -291,7 +314,7 @@ const clients = ref([
 /* Marquee Track - Infinite scrolling animation */
 .marquee-track {
     display: flex;
-    gap: 40px;
+    gap: 20px;
     animation: marquee 60s linear infinite;
     /* Slow, smooth animation */
     width: max-content;
@@ -325,8 +348,8 @@ const clients = ref([
 }
 
 .client-logo-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -360,11 +383,11 @@ const clients = ref([
 }
 
 .client-logo {
-    max-width: 85%;
-    max-height: 85%;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
-    filter: grayscale(100%) opacity(0.6);
+    /* filter: grayscale(100%) opacity(0.6); */
     transition: var(--transition);
     object-fit: contain;
     position: relative;
