@@ -6,8 +6,8 @@
     </a>
 
     <!-- <div class="d-block d-md-none mob_number_box">
-      <a class="text-decoration-none text-white" href="tel:9711431917">
-        <i class="ri-phone-fill"></i> 9711431917
+      <a class="text-decoration-none text-white" href="tel:8787373715">
+        <i class="ri-phone-fill"></i> 8787373715
       </a>
     </div> -->
 
@@ -110,8 +110,8 @@
                   </a>
                 </p>
                 <div>
-                  <a href="tel:9711431917" class="text-white call-link anime">
-                    9711431917
+                  <a href="tel:8787373715" class="text-white call-link anime">
+                    8787373715
                   </a>
                 </div>
               </div>

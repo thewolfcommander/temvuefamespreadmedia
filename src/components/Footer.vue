@@ -70,7 +70,7 @@
       <div class="footer-contact">
         <h3 class="contact-heading">CONTACT DETAILS</h3>
         <div class="contact-info">
-          <p>Mobile : <a href="tel:+919711431917">+91 9711431917</a></p>
+          <p>Mobile : <a href="tel:+918787373715">+91 8787373715</a></p>
           <p>
             Email : <a href="mailto:info@famespreadmedia.com">info@famespreadmedia.com</a>
           </p>

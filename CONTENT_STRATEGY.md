@@ -207,7 +207,7 @@ footer_content: {
   
   // Enhanced contact info
   contact: {
-    phone: ["+91 9871521144", "+91 9711431917"],
+    phone: ["+91 9871521144", "+91 8787373715"],
     email: "hi@famespreadmedia.com",
     whatsapp: "+91 9871521144",
     hours: "Mon-Sat: 9:00 AM - 7:00 PM"
