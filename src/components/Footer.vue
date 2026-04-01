@@ -86,7 +86,7 @@
 
     <!-- Address Section -->
     <div class="footer-address">
-      <p>Address: Plot 25B, Industrial Area, Sector 32, Gurugram, Haryana-122001</p>
+      <p>Address: Plot 9, 4th Bay, Industrial Area, Sector 32, Gurugram, Haryana-122001</p>
     </div>
 
     <!-- Copyright Section -->
